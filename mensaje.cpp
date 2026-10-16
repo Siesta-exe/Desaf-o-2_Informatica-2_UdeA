@@ -1,3 +1,3 @@
 #include "mensaje.h"
 
-mensaje::mensaje() {}
+Mensaje::Mensaje() {}
