@@ -1,69 +1,62 @@
-#include "Mensaje.h"
-#include <cstring>
+#include "mensaje.h"
+#include "utilidades.h"
 
-namespace {
-// Hasta 512 caracteres más el terminador; nunca leer más allá de este límite.
-int longitudValida(const char* origen) {
-    if (!origen) return -1;
-    int longitud = 0;
-    while (longitud <= 512 && origen[longitud] != '\0') ++longitud;
-    return (longitud >= 1 && longitud <= 512) ? longitud : -1;
-}
-char* copiarTexto(const char* origen, int longitud) {
-    if (longitud < 0) return nullptr;
-    char* copia = new char[longitud + 1];
-    for (int i = 0; i < longitud; ++i) copia[i] = origen[i];
-    copia[longitud] = '\0';
-    return copia;
-}
-}
+using namespace util;
 
-Mensaje::Mensaje() : emisor(-1), receptor(-1), fechaEnvio(0), texto(nullptr), leido(false) {}
-Mensaje::Mensaje(int origen, int destino, long long fecha, const char* contenido, bool fueLeido)
-    : emisor(origen), receptor(destino), fechaEnvio(fecha), texto(nullptr), leido(fueLeido) {
-    const int n = longitudValida(contenido);
-    if (n >= 0) texto = copiarTexto(contenido, n);
-}
+Mensaje::Mensaje() : contenido(nullptr), fechaEnvio(0), emisor(-1), leido(false) {}
+
+Mensaje::Mensaje(const char* contenido, long long fechaEnvio, int emisor, bool leido)
+    : contenido(copiar(contenido)), fechaEnvio(fechaEnvio), emisor(emisor), leido(leido) {}
+
 Mensaje::Mensaje(const Mensaje& otro)
-    : emisor(otro.emisor), receptor(otro.receptor), fechaEnvio(otro.fechaEnvio),
-    texto(copiarTexto(otro.texto, longitudValida(otro.texto))), leido(otro.leido) {}
+    : contenido(copiar(otro.contenido)), fechaEnvio(otro.fechaEnvio),
+      emisor(otro.emisor), leido(otro.leido) {}
+
 Mensaje& Mensaje::operator=(const Mensaje& otro) {
     if (this != &otro) {
-        char* nuevo = copiarTexto(otro.texto, longitudValida(otro.texto));
-        delete[] texto;
-        texto = nuevo;
-        emisor = otro.emisor;
-        receptor = otro.receptor;
+        char* nuevo = copiar(otro.contenido);
+        delete[] contenido;
+        contenido = nuevo;
         fechaEnvio = otro.fechaEnvio;
+        emisor = otro.emisor;
         leido = otro.leido;
     }
     return *this;
 }
-bool Mensaje::operator==(const Mensaje& otro) const {
-    const bool mismoTexto = (!texto || !otro.texto)
-    ? texto == otro.texto : std::strcmp(texto, otro.texto) == 0;
-    return emisor == otro.emisor && receptor == otro.receptor &&
-           fechaEnvio == otro.fechaEnvio && leido == otro.leido && mismoTexto;
-}
-Mensaje::~Mensaje() { delete[] texto; }
-int Mensaje::getEmisor() const { return emisor; }
-void Mensaje::setEmisor(int valor) { emisor = valor; }
-int Mensaje::getReceptor() const { return receptor; }
-void Mensaje::setReceptor(int valor) { receptor = valor; }
+
+Mensaje::~Mensaje() { delete[] contenido; }
+
+const char* Mensaje::getContenido() const { return seguro(contenido); }
 long long Mensaje::getFechaEnvio() const { return fechaEnvio; }
-void Mensaje::setFechaEnvio(long long valor) { fechaEnvio = valor; }
-const char* Mensaje::getTexto() const { return texto; }
-bool Mensaje::setTexto(const char* valor) {
-    const int n = longitudValida(valor);
-    if (n < 0) return false;
-    char* nuevo = copiarTexto(valor, n);
-    delete[] texto;
-    texto = nuevo;
-    return true;
+int Mensaje::getEmisor() const { return emisor; }
+bool Mensaje::isLeido() const { return leido; }
+
+void Mensaje::setContenido(const char* valor) {
+    char* nuevo = copiar(valor);
+    delete[] contenido;
+    contenido = nuevo;
 }
-bool Mensaje::getLeido() const { return leido; }
+void Mensaje::setFechaEnvio(long long valor) { fechaEnvio = valor; }
+void Mensaje::setEmisor(int valor) { emisor = valor; }
 void Mensaje::setLeido(bool valor) { leido = valor; }
 void Mensaje::marcarLeido() { leido = true; }
-bool Mensaje::estaEnRango(long long inicio, long long fin) const {
-    return inicio <= fin && fechaEnvio >= inicio && fechaEnvio <= fin;
+
+void Mensaje::intercambiar(Mensaje& otro) {
+    char* c = contenido; contenido = otro.contenido; otro.contenido = c;
+    long long f = fechaEnvio; fechaEnvio = otro.fechaEnvio; otro.fechaEnvio = f;
+    int e = emisor; emisor = otro.emisor; otro.emisor = e;
+    bool l = leido; leido = otro.leido; otro.leido = l;
+}
+
+size_t Mensaje::obtenerMemoria() const {
+    size_t mem = sizeof(*this);
+    if (contenido) mem += (longitud(contenido) + 1) * sizeof(char);
+    return mem;
+}
+
+std::ostream& operator<<(std::ostream& os, const Mensaje& m) {
+    char fecha[20];
+    formatearFecha(m.fechaEnvio, fecha, true);
+    os << "[" << fecha << "] " << m.getContenido();
+    return os;
 }

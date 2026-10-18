@@ -1,33 +1,39 @@
 #ifndef MENSAJE_H
 #define MENSAJE_H
 
+#include <cstddef>
+#include <ostream>
+
 class Mensaje {
 private:
+    char* contenido;
+    long long fechaEnvio;
     int emisor;
-    int receptor;
-    long long fechaEnvio; // clave cronologica normalizada
-    char* texto; // longitud valida: 1 a 512 caracteres
     bool leido;
 
 public:
     Mensaje();
-    Mensaje(int origen, int destino, long long fecha, const char* contenido, bool fueLeido);
+    Mensaje(const char* contenido, long long fechaEnvio, int emisor, bool leido = false);
     Mensaje(const Mensaje& otro);
     Mensaje& operator=(const Mensaje& otro);
-    bool operator==(const Mensaje& otro) const;
     ~Mensaje();
 
-    int getEmisor() const;
-    void setEmisor(int valor);
-    int getReceptor() const;
-    void setReceptor(int valor);
+    const char* getContenido() const;
     long long getFechaEnvio() const;
+    int getEmisor() const;
+    bool isLeido() const;
+
+    void setContenido(const char* valor);
     void setFechaEnvio(long long valor);
-    const char* getTexto() const;
-    bool setTexto(const char* valor);
-    bool getLeido() const;
+    void setEmisor(int valor);
     void setLeido(bool valor);
     void marcarLeido();
-    bool estaEnRango(long long inicio, long long fin) const;
+
+    void intercambiar(Mensaje& otro);
+
+    size_t obtenerMemoria() const;
+
+    friend std::ostream& operator<<(std::ostream& os, const Mensaje& m);
 };
+
 #endif

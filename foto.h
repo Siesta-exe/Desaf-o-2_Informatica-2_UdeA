@@ -1,31 +1,41 @@
 #ifndef FOTO_H
 #define FOTO_H
 
+#include <cstddef>
+#include <ostream>
+
 class Foto {
 private:
-    long long fechaCaptura;
-    unsigned long long tamano;
     char* ruta;
-    unsigned int likes;
+    long long fechaCaptura;
+    int tamano;
+    int likes;
 
 public:
     Foto();
-    Foto(long long fecha, unsigned long long bytes, const char* rutaArchivo, unsigned int cantidadLikes);
+    Foto(const char* ruta, long long fechaCaptura, int tamano, int likes = 0);
     Foto(const Foto& otra);
     Foto& operator=(const Foto& otra);
-    bool operator==(const Foto& otra) const;
     ~Foto();
 
-    long long getFechaCaptura() const;
-    void setFechaCaptura(long long valor);
-    unsigned long long getTamano() const;
-    void setTamano(unsigned long long valor);
     const char* getRuta() const;
-    void setRuta(const char* valor);
-    unsigned int getLikes() const;
-    void setLikes(unsigned int valor);
+    long long getFechaCaptura() const;
+    int getTamano() const;
+    int getLikes() const;
 
-    bool incrementarLike();
-    bool decrementarLike();
+    void setRuta(const char* valor);
+    void setFechaCaptura(long long valor);
+    void setTamano(int valor);
+    void setLikes(int valor);
+
+    void darLike();
+    void quitarLike();
+
+    void intercambiar(Foto& otra);
+
+    size_t obtenerMemoria() const;
+
+    friend std::ostream& operator<<(std::ostream& os, const Foto& f);
 };
+
 #endif
