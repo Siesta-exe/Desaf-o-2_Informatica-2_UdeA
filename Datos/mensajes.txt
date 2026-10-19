@@ -1,390 +1,1501 @@
-MENSAJES 389
-1|0|1768458373|Hola, ¿ya terminaste el informe del desafio de Informatica?|1
-2|0|1769083462|Nos vemos manana en la biblioteca central para estudiar.|1
-3|0|1769684094|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|1
-4|0|1770252013|¿A que hora es la clase de laboratorio este miercoles?|1
-5|0|1770859898|Hola companero, te comparto los apuntes del parcial pasado.|1
-6|0|1771494482|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
-7|0|1772072543|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|1
-8|0|1772680978|Estan muy cheveres las fotos de la UdeA que agregaste al album.|1
-9|0|1773306807|Hola, pasame por fa el enlace del repositorio del proyecto.|1
-10|0|1773927301|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|1
-11|0|1774513320|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
-12|0|1775127323|Nos faltan por definir los casos de prueba para la sustentacion.|1
-13|0|1775726456|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|1
-14|0|1776317946|Felicitaciones por la presentacion del proyecto, salio excelente.|1
-15|0|1776917276|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|1
-16|0|1777549637|Te deje los ejercicios de punteros y memoria dinamica en el correo.|1
-17|0|1778116457|¿Confirmamos la sala de estudio para el viernes por la tarde?|1
-18|0|1778731938|Muy bacanas las fotos del carrusel, le di like a la tercera.|1
-1|0|1779360874|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|1
-2|0|1779962063|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|1
-3|0|1780552479|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
-4|0|1781170389|Nos vemos en el bloque 21 antes de que empiece la clase.|1
-5|0|1781766644|Hola companero, ¿sabes si ya publicaron las notas del taller?|1
-6|0|1782355924|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|1
-7|0|1782977910|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|1
-0|1|1792357334|Hola gabi, como estas?|0
-0|2|1768458373|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
-3|2|1769684094|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|1
-4|2|1770859898|Estan muy cheveres las fotos de la UdeA que agregaste al album.|1
-5|2|1772072543|Hola, pasame por fa el enlace del repositorio del proyecto.|1
-6|2|1773306807|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|1
-7|2|1774513320|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
-8|2|1775726456|Nos faltan por definir los casos de prueba para la sustentacion.|1
-9|2|1776917276|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|1
-10|2|1778116457|Felicitaciones por la presentacion del proyecto, salio excelente.|0
-11|2|1779360874|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|0
-12|2|1780552479|Te deje los ejercicios de punteros y memoria dinamica en el correo.|0
-13|2|1781766644|¿Confirmamos la sala de estudio para el viernes por la tarde?|0
-14|2|1782977910|Muy bacanas las fotos del carrusel, le di like a la tercera.|0
-0|3|1783351023|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|0
-0|4|1784678709|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|0
-2|4|1786525590|Nos faltan por definir los casos de prueba para la sustentacion.|1
-9|10|1778592226|Te deje los ejercicios de punteros y memoria dinamica en el correo.|1
-10|11|1781341502|Nos faltan por definir los casos de prueba para la sustentacion.|1
-0|16|1771645859|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
-10|34|1772986864|Hola companero, ¿sabes si ya publicaron las notas del taller?|0
-4|36|1775719679|Hola companero, te comparto los apuntes del parcial pasado.|1
-8|37|1768708749|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|1
-35|37|1777272176|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|1
-2|38|1784513125|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|1
-7|39|1770413544|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
-4|39|1782980400|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|1
-5|40|1774980808|Nos vemos manana en la biblioteca central para estudiar.|0
-6|43|1770595886|Nos vemos manana en la biblioteca central para estudiar.|0
-3|43|1783836143|Nos faltan por definir los casos de prueba para la sustentacion.|0
-5|44|1779315063|¿A que hora es la clase de laboratorio este miercoles?|1
-1|45|1780943126|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|0
-44|46|1774813672|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|1
-3|46|1778339939|Nos faltan por definir los casos de prueba para la sustentacion.|1
-47|48|1779938716|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|0
-3|49|1773227042|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|0
-54|55|1785481411|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|1
-56|58|1783200481|Te deje los ejercicios de punteros y memoria dinamica en el correo.|1
-62|64|1781596416|¿A que hora es la clase de laboratorio este miercoles?|1
-66|67|1784540425|Nos vemos manana en la biblioteca central para estudiar.|1
-69|70|1778875308|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|0
-93|94|1770543525|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|1
-117|118|1774542065|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|1
-127|128|1784978069|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|0
-137|138|1770691499|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|1
-141|142|1774451151|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|1
-145|146|1774427431|Hola companero, ¿sabes si ya publicaron las notas del taller?|1
-151|152|1783662575|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|1
-158|159|1781906606|Felicitaciones por la presentacion del proyecto, salio excelente.|0
-164|165|1778887221|Hola companero, te comparto los apuntes del parcial pasado.|0
-180|181|1776006736|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|0
-138|181|1778682104|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
-183|184|1785760609|Felicitaciones por la presentacion del proyecto, salio excelente.|0
-184|185|1775927989|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
-185|187|1773810559|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
-200|202|1775888503|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|0
-31|207|1782376044|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|0
-218|219|1769746508|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|0
-221|222|1785178197|Nos faltan por definir los casos de prueba para la sustentacion.|0
-38|227|1775556567|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|1
-239|240|1778810788|Nos faltan por definir los casos de prueba para la sustentacion.|1
-228|241|1782177983|Hola companero, te comparto los apuntes del parcial pasado.|1
-244|245|1774024259|Nos vemos manana en la biblioteca central para estudiar.|1
-78|245|1785228397|Nos vemos manana en la biblioteca central para estudiar.|1
-261|262|1780281192|¿A que hora es la clase de laboratorio este miercoles?|1
-79|264|1775970285|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
-149|264|1785313595|Felicitaciones por la presentacion del proyecto, salio excelente.|0
-214|265|1773075363|Hola, ¿ya terminaste el informe del desafio de Informatica?|0
-275|276|1775792778|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|1
-276|277|1782566526|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|0
-47|280|1775723971|Te deje los ejercicios de punteros y memoria dinamica en el correo.|0
-282|283|1770466774|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|0
-214|289|1783985871|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|0
-292|293|1770740590|Hola companero, ¿sabes si ya publicaron las notas del taller?|1
-296|298|1773649870|¿Confirmamos la sala de estudio para el viernes por la tarde?|1
-191|299|1783659187|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|0
-203|320|1781699697|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|1
-64|321|1775142600|Nos faltan por definir los casos de prueba para la sustentacion.|1
-325|326|1771931679|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|0
-328|329|1772720058|Estan muy cheveres las fotos de la UdeA que agregaste al album.|1
-333|334|1778965970|Hola, ¿ya terminaste el informe del desafio de Informatica?|0
-320|335|1771535768|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|1
-49|336|1783676732|Nos vemos en el bloque 21 antes de que empiece la clase.|0
-335|336|1785105620|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|0
-216|337|1783603176|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
-340|341|1784208367|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|0
-313|341|1784725468|¿A que hora es la clase de laboratorio este miercoles?|1
-347|348|1778306142|Estan muy cheveres las fotos de la UdeA que agregaste al album.|1
-350|351|1769908548|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|0
-85|354|1771218553|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|0
-359|360|1778569431|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|0
-276|362|1770123617|Hola companero, ¿sabes si ya publicaron las notas del taller?|1
-126|362|1779027392|Nos vemos manana en la biblioteca central para estudiar.|1
-362|363|1781799392|Felicitaciones por la presentacion del proyecto, salio excelente.|0
-362|364|1774422138|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|0
-365|366|1774620977|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|1
-365|367|1777509478|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|0
-364|367|1780235490|Nos vemos en el bloque 21 antes de que empiece la clase.|1
-330|373|1781934966|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|0
-9|376|1779327399|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|0
-375|376|1780958263|Nos faltan por definir los casos de prueba para la sustentacion.|0
-393|394|1785734504|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
-374|395|1782234303|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|0
-397|398|1775631224|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|1
-399|400|1769853395|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|1
-315|402|1783585490|Hola companero, ¿sabes si ya publicaron las notas del taller?|1
-342|417|1776620331|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|0
-13|422|1780571557|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|0
-425|426|1776880259|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|1
-145|433|1784475555|Nos faltan por definir los casos de prueba para la sustentacion.|0
-433|434|1773476630|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|1
-203|436|1773865038|¿A que hora es la clase de laboratorio este miercoles?|0
-435|436|1774647118|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|0
-440|441|1777277637|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
-334|442|1772881160|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
-241|443|1775027246|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
-390|444|1770635844|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|1
-60|446|1774992663|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|1
-237|452|1778839212|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|1
-456|457|1768746863|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|1
-457|458|1774478575|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|0
-64|459|1786218309|Hola companero, ¿sabes si ya publicaron las notas del taller?|0
-459|460|1778159368|Hola companero, te comparto los apuntes del parcial pasado.|0
-164|462|1781563668|Felicitaciones por la presentacion del proyecto, salio excelente.|0
-252|463|1777077322|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|0
-461|463|1777923034|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|1
-122|464|1780831506|¿Confirmamos la sala de estudio para el viernes por la tarde?|0
-41|465|1781939372|Nos vemos manana en la biblioteca central para estudiar.|1
-405|467|1778275176|Nos vemos en el bloque 21 antes de que empiece la clase.|1
-247|468|1776165095|Hola, ¿ya terminaste el informe del desafio de Informatica?|0
-424|470|1772901544|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|1
-475|476|1783158712|Hola, ¿ya terminaste el informe del desafio de Informatica?|0
-486|487|1786005121|Felicitaciones por la presentacion del proyecto, salio excelente.|0
-489|490|1783559698|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|1
-214|490|1783968490|Nos vemos en el bloque 21 antes de que empiece la clase.|0
-50|493|1774376064|Hola, pasame por fa el enlace del repositorio del proyecto.|1
-205|493|1777729750|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|0
-435|496|1775643810|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|0
-497|498|1782908795|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|1
-330|500|1777202186|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
-71|502|1772132722|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|0
-336|509|1786344175|Nos vemos en el bloque 21 antes de que empiece la clase.|1
-513|514|1773333253|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|1
-514|515|1770678441|Nos faltan por definir los casos de prueba para la sustentacion.|1
-252|515|1782559976|Hola, pasame por fa el enlace del repositorio del proyecto.|0
-440|515|1782794869|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|0
-515|517|1776169017|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|0
-291|519|1778419229|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|0
-527|529|1781453147|Muy bacanas las fotos del carrusel, le di like a la tercera.|0
-530|531|1772338904|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|0
-530|532|1772500056|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|0
-112|542|1780498983|Nos faltan por definir los casos de prueba para la sustentacion.|1
-99|550|1773420257|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|0
-551|553|1782993784|Muy bacanas las fotos del carrusel, le di like a la tercera.|0
-473|554|1769437387|Hola companero, te comparto los apuntes del parcial pasado.|1
-555|556|1775731462|Nos vemos manana en la biblioteca central para estudiar.|1
-557|558|1776314060|Nos vemos manana en la biblioteca central para estudiar.|1
-558|559|1773843841|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|0
-18|564|1782925174|Hola, ¿ya terminaste el informe del desafio de Informatica?|1
-415|565|1771634561|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|1
-564|565|1773480631|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|0
-563|568|1778872076|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|1
-571|572|1778384338|¿Confirmamos la sala de estudio para el viernes por la tarde?|1
-14|573|1778048394|Nos vemos manana en la biblioteca central para estudiar.|1
-351|576|1783567741|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
-576|577|1775420392|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|0
-185|577|1783637915|Hola companero, te comparto los apuntes del parcial pasado.|0
-304|578|1773445704|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|0
-295|578|1784599526|¿Confirmamos la sala de estudio para el viernes por la tarde?|0
-463|581|1780725134|Te deje los ejercicios de punteros y memoria dinamica en el correo.|0
-581|582|1774803900|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|0
-256|587|1770562967|¿A que hora es la clase de laboratorio este miercoles?|1
-586|587|1781190510|¿A que hora es la clase de laboratorio este miercoles?|0
-587|588|1778070515|¿Confirmamos la sala de estudio para el viernes por la tarde?|1
-100|590|1769684041|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
-591|592|1782262316|Nos faltan por definir los casos de prueba para la sustentacion.|0
-445|592|1784347751|Nos vemos manana en la biblioteca central para estudiar.|0
-593|594|1784208836|¿Confirmamos la sala de estudio para el viernes por la tarde?|1
-594|595|1774745227|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
-323|599|1781737915|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|0
-602|604|1781954476|Te deje los ejercicios de punteros y memoria dinamica en el correo.|0
-605|607|1770029846|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|0
-326|609|1778345907|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|0
-611|612|1780199731|Hola, ¿ya terminaste el informe del desafio de Informatica?|1
-592|613|1780722595|Felicitaciones por la presentacion del proyecto, salio excelente.|1
-403|623|1782086530|Te deje los ejercicios de punteros y memoria dinamica en el correo.|0
-269|625|1772532511|Muy bacanas las fotos del carrusel, le di like a la tercera.|0
-349|629|1779654234|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|0
-246|632|1776639545|Te deje los ejercicios de punteros y memoria dinamica en el correo.|1
-192|633|1781510373|Felicitaciones por la presentacion del proyecto, salio excelente.|0
-391|637|1776972850|Felicitaciones por la presentacion del proyecto, salio excelente.|1
-190|638|1785689890|Nos faltan por definir los casos de prueba para la sustentacion.|0
-565|640|1783911433|Nos vemos manana en la biblioteca central para estudiar.|1
-642|643|1770957456|Estan muy cheveres las fotos de la UdeA que agregaste al album.|0
-407|650|1781010382|Hola, ¿ya terminaste el informe del desafio de Informatica?|1
-256|651|1777455810|Nos vemos en el bloque 21 antes de que empiece la clase.|0
-658|659|1781994553|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
-653|660|1769826274|Hola companero, te comparto los apuntes del parcial pasado.|1
-563|661|1775348956|¿Confirmamos la sala de estudio para el viernes por la tarde?|0
-149|663|1768640091|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|0
-563|663|1783304278|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|0
-663|664|1771200694|Hola, ¿ya terminaste el informe del desafio de Informatica?|0
-174|665|1774283782|Hola, pasame por fa el enlace del repositorio del proyecto.|0
-589|669|1782919345|Hola, pasame por fa el enlace del repositorio del proyecto.|1
-301|672|1771827749|Nos vemos en el bloque 21 antes de que empiece la clase.|0
-278|674|1783201836|Hola companero, ¿sabes si ya publicaron las notas del taller?|0
-569|676|1769916844|Estan muy cheveres las fotos de la UdeA que agregaste al album.|0
-678|679|1777150214|Nos faltan por definir los casos de prueba para la sustentacion.|0
-680|681|1775796816|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|0
-352|691|1785435321|Muy bacanas las fotos del carrusel, le di like a la tercera.|1
-596|692|1778138574|Muy bacanas las fotos del carrusel, le di like a la tercera.|1
-696|697|1773473839|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|0
-150|697|1779207633|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
-464|698|1778879468|Estan muy cheveres las fotos de la UdeA que agregaste al album.|0
-369|701|1774844625|Hola, pasame por fa el enlace del repositorio del proyecto.|1
-324|705|1776575823|¿A que hora es la clase de laboratorio este miercoles?|0
-481|711|1772473500|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|1
-525|712|1783968953|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|1
-713|715|1770391662|Nos vemos en el bloque 21 antes de que empiece la clase.|0
-721|722|1770522828|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
-537|722|1785096276|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|1
-392|725|1784443734|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|1
-50|726|1770304265|Hola, pasame por fa el enlace del repositorio del proyecto.|1
-725|726|1783596011|¿A que hora es la clase de laboratorio este miercoles?|0
-725|727|1769104079|Nos vemos manana en la biblioteca central para estudiar.|0
-334|727|1786080276|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|1
-727|728|1779642691|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|1
-198|729|1782301080|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|1
-536|730|1770112082|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
-158|730|1774546830|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|0
-63|732|1779598589|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|1
-732|733|1781514028|Hola companero, te comparto los apuntes del parcial pasado.|0
-349|734|1771694581|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|1
-588|734|1772119688|Te deje los ejercicios de punteros y memoria dinamica en el correo.|0
-19|734|1773420479|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
-734|736|1782853402|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|0
-738|739|1772278301|Hola, ¿ya terminaste el informe del desafio de Informatica?|1
-562|740|1778744186|Te deje los ejercicios de punteros y memoria dinamica en el correo.|0
-530|741|1782654696|Te deje los ejercicios de punteros y memoria dinamica en el correo.|1
-18|743|1778214151|¿A que hora es la clase de laboratorio este miercoles?|0
-219|745|1781541481|¿Confirmamos la sala de estudio para el viernes por la tarde?|1
-666|746|1780201430|Estan muy cheveres las fotos de la UdeA que agregaste al album.|0
-257|746|1780858133|Hola companero, te comparto los apuntes del parcial pasado.|1
-598|750|1780859205|Te deje los ejercicios de punteros y memoria dinamica en el correo.|0
-191|755|1773225333|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|1
-754|755|1775823036|Estan muy cheveres las fotos de la UdeA que agregaste al album.|1
-451|757|1774259057|Te deje los ejercicios de punteros y memoria dinamica en el correo.|0
-702|757|1785221020|¿Confirmamos la sala de estudio para el viernes por la tarde?|0
-431|759|1782204461|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|0
-379|763|1784860532|Estan muy cheveres las fotos de la UdeA que agregaste al album.|1
-102|765|1786132853|Felicitaciones por la presentacion del proyecto, salio excelente.|1
-765|766|1775070509|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
-595|767|1772989310|Estan muy cheveres las fotos de la UdeA que agregaste al album.|0
-174|771|1783731051|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|0
-424|773|1776849659|Nos vemos en el bloque 21 antes de que empiece la clase.|1
-773|775|1778300677|Te deje los ejercicios de punteros y memoria dinamica en el correo.|1
-774|775|1783788005|¿Confirmamos la sala de estudio para el viernes por la tarde?|0
-663|779|1783029656|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|1
-347|782|1781939911|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|0
-782|783|1779866708|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|1
-695|783|1784971669|Nos vemos en el bloque 21 antes de que empiece la clase.|1
-455|790|1775513786|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|0
-710|790|1781390643|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|0
-788|790|1783713371|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|0
-296|796|1773434398|Nos faltan por definir los casos de prueba para la sustentacion.|1
-425|797|1770282353|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|0
-103|800|1772876370|Hola, ¿ya terminaste el informe del desafio de Informatica?|1
-806|808|1778688043|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|1
-779|814|1771217824|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|1
-813|814|1785205501|Hola companero, te comparto los apuntes del parcial pasado.|0
-610|815|1769046378|¿A que hora es la clase de laboratorio este miercoles?|0
-816|817|1781766933|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|0
-818|820|1776897331|Hola companero, te comparto los apuntes del parcial pasado.|0
-820|821|1777104560|Nos vemos en el bloque 21 antes de que empiece la clase.|0
-569|823|1769010973|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|1
-832|833|1779635913|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|0
-833|834|1769850720|Felicitaciones por la presentacion del proyecto, salio excelente.|0
-836|837|1771836121|Felicitaciones por la presentacion del proyecto, salio excelente.|0
-717|838|1776919459|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|0
-788|838|1783778668|Hola companero, te comparto los apuntes del parcial pasado.|0
-436|838|1785734781|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|0
-582|852|1770452039|Nos faltan por definir los casos de prueba para la sustentacion.|0
-187|853|1770397739|Nos vemos en el bloque 21 antes de que empiece la clase.|0
-381|854|1771128301|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|1
-74|859|1781710334|Estan muy cheveres las fotos de la UdeA que agregaste al album.|1
-860|861|1771000693|Nos vemos en el bloque 21 antes de que empiece la clase.|1
-392|867|1775700629|Estan muy cheveres las fotos de la UdeA que agregaste al album.|1
-454|869|1786296763|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|1
-759|872|1786231587|Nos vemos manana en la biblioteca central para estudiar.|1
-872|874|1778476361|Felicitaciones por la presentacion del proyecto, salio excelente.|1
-875|877|1780507728|Hola companero, te comparto los apuntes del parcial pasado.|1
-443|879|1774211098|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|1
-400|879|1783757432|¿A que hora es la clase de laboratorio este miercoles?|0
-876|880|1778239659|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|1
-879|880|1780196096|¿Confirmamos la sala de estudio para el viernes por la tarde?|0
-881|882|1781394512|Nos vemos en el bloque 21 antes de que empiece la clase.|1
-741|883|1768882688|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|0
-57|886|1773144671|Nos faltan por definir los casos de prueba para la sustentacion.|1
-885|886|1778835642|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
-577|888|1775255949|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
-688|891|1786163247|Hola, pasame por fa el enlace del repositorio del proyecto.|0
-730|892|1779559679|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|0
-352|892|1781272185|Te deje los ejercicios de punteros y memoria dinamica en el correo.|0
-70|896|1772077313|¿A que hora es la clase de laboratorio este miercoles?|0
-516|897|1769145472|Estan muy cheveres las fotos de la UdeA que agregaste al album.|1
-896|897|1780087444|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
-434|900|1784213274|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|0
-886|902|1775277590|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|1
-214|903|1778730768|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|0
-845|904|1776176115|¿A que hora es la clase de laboratorio este miercoles?|0
-773|908|1770364361|Felicitaciones por la presentacion del proyecto, salio excelente.|1
-303|909|1780910005|¿A que hora es la clase de laboratorio este miercoles?|0
-910|911|1772290429|Muy bacanas las fotos del carrusel, le di like a la tercera.|0
-617|911|1776584169|Hola companero, te comparto los apuntes del parcial pasado.|1
-284|912|1770434531|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
-329|912|1779941126|Felicitaciones por la presentacion del proyecto, salio excelente.|1
-912|913|1780547977|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
-914|915|1785070645|Hola companero, te comparto los apuntes del parcial pasado.|0
-839|918|1782788503|Te deje los ejercicios de punteros y memoria dinamica en el correo.|1
-275|926|1772540025|Hola, ¿ya terminaste el informe del desafio de Informatica?|1
-265|929|1778882596|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|0
-608|929|1783114384|Te deje los ejercicios de punteros y memoria dinamica en el correo.|0
-927|930|1784307409|Hola, ¿ya terminaste el informe del desafio de Informatica?|1
-855|931|1772742264|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
-856|935|1777272619|Muy bacanas las fotos del carrusel, le di like a la tercera.|0
-123|936|1773641523|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|1
-403|936|1774385818|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|0
-936|937|1771035308|Hola companero, te comparto los apuntes del parcial pasado.|1
-675|938|1776590410|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|0
-230|938|1782205437|Nos faltan por definir los casos de prueba para la sustentacion.|0
-594|940|1774342328|Felicitaciones por la presentacion del proyecto, salio excelente.|1
-683|940|1779076772|Te deje los ejercicios de punteros y memoria dinamica en el correo.|0
-939|940|1782526440|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|0
-741|941|1780420391|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|1
-88|942|1780665328|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|1
-875|944|1769142637|Hola, pasame por fa el enlace del repositorio del proyecto.|0
-570|944|1777525453|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
-716|945|1780098210|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
-375|946|1769210628|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|0
-945|946|1776088303|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|0
-115|946|1776160707|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|1
-108|949|1777661071|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|0
-192|951|1772005944|Felicitaciones por la presentacion del proyecto, salio excelente.|1
-856|951|1780610570|Estan muy cheveres las fotos de la UdeA que agregaste al album.|0
-180|952|1776472182|Te deje los ejercicios de punteros y memoria dinamica en el correo.|1
-186|953|1769348577|Hola companero, ¿sabes si ya publicaron las notas del taller?|0
-956|958|1771603149|Te deje los ejercicios de punteros y memoria dinamica en el correo.|1
-571|958|1778441226|¿A que hora es la clase de laboratorio este miercoles?|1
-164|959|1779327862|Hola, ¿ya terminaste el informe del desafio de Informatica?|1
-958|959|1784865550|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|0
-279|967|1776987224|Hola companero, ¿sabes si ya publicaron las notas del taller?|0
-796|968|1780493930|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|0
-88|970|1773699850|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|1
-631|976|1781038622|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
-681|977|1783443570|Hola companero, te comparto los apuntes del parcial pasado.|1
-979|980|1769986169|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|0
-96|983|1779289108|Hola, pasame por fa el enlace del repositorio del proyecto.|0
-621|985|1768968002|¿A que hora es la clase de laboratorio este miercoles?|1
-129|987|1768518143|Nos vemos manana en la biblioteca central para estudiar.|1
-224|989|1784763983|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
-992|993|1774784645|¿Confirmamos la sala de estudio para el viernes por la tarde?|1
-369|995|1774286941|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|1
-565|998|1786096544|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|1
-998|999|1775671696|Muy bacanas las fotos del carrusel, le di like a la tercera.|1
+MENSAJES 1500
+836|142|1768006185|Quedo genial el diseno modular con archivos .h y .cpp separados.|0
+720|97|1768036450|Felicitaciones por la presentacion del proyecto, salio excelente.|1
+298|439|1768052490|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|1
+725|446|1768056749|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|0
+168|388|1768072322|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|1
+338|240|1768091872|Hola, ¿ya terminaste el informe del desafio de Informatica?|0
+807|922|1768095145|Muy bacanas las fotos del carrusel, le di like a la tercera.|0
+405|260|1768101182|¿Me ayudas a revisar por que se cae el programa al cerrar sesion?|0
+745|228|1768116544|Quedo genial el diseno modular con archivos .h y .cpp separados.|0
+18|692|1768138372|Mandame fotico del tablero por favor que no alcancé a copiar.|0
+986|510|1768145546|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|0
+126|42|1768168773|Voy a almorzar al comedero estudiantil, ¿quién se anima?|1
+164|398|1768177524|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|0
+452|81|1768220554|Te deje los ejercicios de punteros y memoria dinamica en el correo.|1
+908|618|1768221381|¿Nos reunimos en Discord a las 8 PM para montar todo?|0
+138|311|1768227075|¿Alguien tiene el libro guia de estructuras de datos en PDF?|1
+193|5|1768238708|Voy a almorzar al comedero estudiantil, ¿quién se anima?|0
+598|104|1768246543|¿Nos reunimos en Discord a las 8 PM para montar todo?|1
+91|596|1768272436|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|1
+292|549|1768274388|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|1
+480|547|1768279075|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|1
+54|476|1768279648|Hola companero, te comparto los apuntes del parcial pasado.|1
+662|177|1768283995|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|1
+70|543|1768284365|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|0
+574|843|1768295403|Estan muy cheveres las fotos de la UdeA que agregaste al album.|1
+525|20|1768298566|¿Me prestas tu calculadora cientifica para el examen de mañana?|0
+897|38|1768310954|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|0
+554|354|1768321948|Nos vemos en el bloque 21 antes de que empiece la clase.|0
+994|566|1768385239|¿Tienes la clave del Wi-Fi de la biblioteca?|0
+540|910|1768404901|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|1
+105|893|1768411558|Voy a almorzar al comedero estudiantil, ¿quién se anima?|1
+879|883|1768412319|Te deje los ejercicios de punteros y memoria dinamica en el correo.|0
+318|564|1768458838|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|1
+73|663|1768527066|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|1
+675|499|1768527870|Hola, ¿ya terminaste el informe del desafio de Informatica?|1
+382|259|1768544998|Hola companero, ¿sabes si ya publicaron las notas del taller?|0
+548|293|1768575210|¿Nos reunimos en Discord a las 8 PM para montar todo?|1
+520|370|1768611715|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|1
+613|992|1768624784|Vamos por un cafe despues de la clase de POO.|1
+744|77|1768625128|¿Nos reunimos en Discord a las 8 PM para montar todo?|0
+568|548|1768628086|Felicitaciones por la presentacion del proyecto, salio excelente.|1
+927|81|1768637664|¿Confirmamos la sala de estudio para el viernes por la tarde?|0
+677|110|1768662423|¿A que hora es la clase de laboratorio este miercoles?|0
+984|690|1768696101|Quedo genial el diseno modular con archivos .h y .cpp separados.|1
+657|654|1768716637|¿A que hora es la clase de laboratorio este miercoles?|1
+216|751|1768735287|Subi los cambios al repositorio de GitHub, por favor hagan pull.|0
+352|608|1768812246|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|0
+902|422|1768831692|Nos faltan por definir los casos de prueba para la sustentacion.|1
+654|114|1768839221|¿Me ayudas a revisar por que se cae el programa al cerrar sesion?|1
+697|143|1768854137|¿A qué hora abre la sala de sistemas del bloque 10?|1
+676|887|1768865038|Hola, pasame por fa el enlace del repositorio del proyecto.|0
+618|256|1768867881|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|0
+276|184|1768874528|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|0
+236|703|1768875250|Hola companero, ¿sabes si ya publicaron las notas del taller?|0
+826|439|1768880932|¿Que tal te parecio la sustentacion pasada? Preguntaron mucho por los punteros.|1
+517|616|1768890399|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|0
+815|920|1768894130|¿Que tal te parecio la sustentacion pasada? Preguntaron mucho por los punteros.|1
+797|963|1768900077|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|1
+928|403|1768909393|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+918|600|1768917737|¿Me prestas tu calculadora cientifica para el examen de mañana?|0
+383|229|1768945817|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|0
+710|306|1768971308|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|1
+741|582|1768977017|Nos faltan por definir los casos de prueba para la sustentacion.|0
+899|396|1768988711|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|1
+758|648|1769028681|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|0
+841|676|1769034119|¿Me prestas tu calculadora cientifica para el examen de mañana?|0
+658|987|1769045242|¿A que hora es la clase de laboratorio este miercoles?|1
+287|860|1769045997|Nos vemos en el bloque 21 antes de que empiece la clase.|1
+669|878|1769063155|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+956|483|1769064845|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|1
+380|474|1769064921|Nos vemos en el bloque 21 antes de que empiece la clase.|0
+304|895|1769081472|¿Trabajamos en la rama de git de la interfaz grafica hoy?|1
+370|392|1769086671|¿Que tal te parecio la sustentacion pasada? Preguntaron mucho por los punteros.|0
+818|540|1769110333|Nos vemos en el bloque 21 antes de que empiece la clase.|0
+253|755|1769124418|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|1
+0|743|1769163093|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|0
+953|983|1769186604|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|1
+938|485|1769193136|¿A qué hora abre la sala de sistemas del bloque 10?|0
+629|173|1769210010|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|0
+210|741|1769226499|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|1
+547|756|1769251521|Nos faltan por definir los casos de prueba para la sustentacion.|1
+126|375|1769253708|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|1
+734|339|1769271253|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|0
+179|502|1769273851|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|0
+923|629|1769309849|El profesor Anibal explico hoy lo de la matriz triangular en bits.|0
+925|642|1769322802|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|1
+256|920|1769325015|Que buena nota sacamos en el preinforme del desafio 2.|1
+386|689|1769326995|Hola companero, te comparto los apuntes del parcial pasado.|0
+448|82|1769337505|Estuvo pesado el quiz de fisica, menos mal ya paso.|1
+665|70|1769350838|Quedo genial el diseno modular con archivos .h y .cpp separados.|0
+961|367|1769356264|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|1
+984|542|1769376322|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|1
+594|567|1769376493|¿Trabajamos en la rama de git de la interfaz grafica hoy?|0
+815|579|1769378051|Hola companero, ¿sabes si ya publicaron las notas del taller?|1
+862|946|1769382251|Nos vemos manana en la biblioteca central para estudiar.|0
+555|842|1769396217|Quedo genial el diseno modular con archivos .h y .cpp separados.|1
+9|992|1769409063|Subi los cambios al repositorio de GitHub, por favor hagan pull.|1
+644|745|1769415524|¿Me ayudas a revisar por que se cae el programa al cerrar sesion?|0
+73|406|1769419428|Estuvo pesado el quiz de fisica, menos mal ya paso.|0
+359|457|1769421203|Vamos por un cafe despues de la clase de POO.|1
+916|540|1769427800|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|0
+379|895|1769457546|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|1
+738|448|1769466074|Me avisas cuando llegues al bloque de ingenieria.|1
+318|954|1769477400|¿Tienes la clave del Wi-Fi de la biblioteca?|0
+849|283|1769479306|Hola, ¿ya terminaste el informe del desafio de Informatica?|1
+170|662|1769486350|Voy a almorzar al comedero estudiantil, ¿quién se anima?|1
+592|74|1769519673|Estuvo pesado el quiz de fisica, menos mal ya paso.|1
+512|41|1769520128|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|0
+171|66|1769534053|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|1
+721|71|1769537611|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|0
+823|528|1769541107|¿Alguien tiene el libro guia de estructuras de datos en PDF?|0
+341|478|1769548193|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|1
+709|680|1769576383|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|1
+882|799|1769604037|¿A qué hora abre la sala de sistemas del bloque 10?|1
+737|1|1769615560|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|1
+789|547|1769630307|¿Que tal te parecio la sustentacion pasada? Preguntaron mucho por los punteros.|0
+457|612|1769633306|Te deje los ejercicios de punteros y memoria dinamica en el correo.|0
+579|885|1769645651|¿Que tal te parecio la sustentacion pasada? Preguntaron mucho por los punteros.|1
+19|155|1769665375|El profesor Anibal explico hoy lo de la matriz triangular en bits.|0
+270|475|1769680412|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
+482|924|1769693022|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|1
+33|467|1769696487|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|0
+964|472|1769699119|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
+553|454|1769702088|Hola, pasame por fa el enlace del repositorio del proyecto.|0
+257|927|1769704528|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+950|330|1769706425|Mandame fotico del tablero por favor que no alcancé a copiar.|1
+183|787|1769721694|Me avisas cuando llegues al bloque de ingenieria.|1
+640|452|1769731803|Felicitaciones por la presentacion del proyecto, salio excelente.|1
+767|552|1769747702|Hola companero, ¿sabes si ya publicaron las notas del taller?|0
+893|256|1769750863|¿A qué hora abre la sala de sistemas del bloque 10?|1
+793|346|1769757095|Mandame fotico del tablero por favor que no alcancé a copiar.|1
+122|514|1769767384|Nos faltan por definir los casos de prueba para la sustentacion.|0
+390|148|1769780565|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|0
+922|562|1769782656|Hola, ¿ya terminaste el informe del desafio de Informatica?|1
+590|644|1769798822|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|0
+862|461|1769798895|Hola companero, ¿sabes si ya publicaron las notas del taller?|0
+478|884|1769817683|¿Tienes la clave del Wi-Fi de la biblioteca?|0
+185|687|1769824968|Quedo genial el diseno modular con archivos .h y .cpp separados.|1
+280|46|1769829589|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|1
+432|301|1769830282|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|0
+302|661|1769831036|Te deje los ejercicios de punteros y memoria dinamica en el correo.|1
+404|613|1769838177|Hola, ¿ya terminaste el informe del desafio de Informatica?|0
+626|623|1769846454|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|0
+523|368|1769860227|Que buena nota sacamos en el preinforme del desafio 2.|0
+863|786|1769876966|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|0
+815|281|1769884823|Hola companero, ¿sabes si ya publicaron las notas del taller?|0
+772|884|1769893947|Hola, pasame por fa el enlace del repositorio del proyecto.|1
+765|321|1769918148|¿A que hora es la clase de laboratorio este miercoles?|1
+728|986|1769928139|Nos faltan por definir los casos de prueba para la sustentacion.|1
+467|577|1769937324|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|1
+303|222|1769962373|Subi los cambios al repositorio de GitHub, por favor hagan pull.|0
+712|743|1769967846|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|0
+7|72|1769975475|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|0
+503|984|1770009745|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|1
+74|705|1770010347|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
+953|992|1770015022|¿A que hora es la clase de laboratorio este miercoles?|1
+660|676|1770063001|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|0
+149|859|1770081476|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|1
+893|868|1770089813|Me sale un segmentation fault al intentar acceder al indice de la matriz.|0
+76|606|1770089866|Estuvo pesado el quiz de fisica, menos mal ya paso.|0
+770|720|1770099291|Voy a almorzar al comedero estudiantil, ¿quién se anima?|0
+656|737|1770121901|Quedo genial el diseno modular con archivos .h y .cpp separados.|0
+504|149|1770122893|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
+328|738|1770125396|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|1
+253|230|1770148352|Nos vemos en el bloque 21 antes de que empiece la clase.|0
+723|219|1770155162|Me avisas cuando llegues al bloque de ingenieria.|1
+863|563|1770178550|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|1
+683|355|1770178993|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|1
+400|600|1770218454|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|1
+775|209|1770219166|Nos faltan por definir los casos de prueba para la sustentacion.|1
+35|129|1770255977|Te deje los ejercicios de punteros y memoria dinamica en el correo.|1
+246|211|1770257908|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
+422|192|1770297269|Nos faltan por definir los casos de prueba para la sustentacion.|0
+754|720|1770302410|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+677|379|1770313804|¿Nos reunimos en Discord a las 8 PM para montar todo?|1
+851|709|1770320579|Me avisas cuando llegues al bloque de ingenieria.|1
+102|291|1770342397|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|1
+372|441|1770347931|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|1
+226|620|1770378135|Hola, ¿ya terminaste el informe del desafio de Informatica?|0
+481|54|1770389603|¿Me prestas tu calculadora cientifica para el examen de mañana?|0
+794|401|1770395272|El profesor Anibal explico hoy lo de la matriz triangular en bits.|1
+718|959|1770395870|¿Que tal te parecio la sustentacion pasada? Preguntaron mucho por los punteros.|0
+518|109|1770428870|¿Nos reunimos en Discord a las 8 PM para montar todo?|1
+468|323|1770434143|Hola, ¿ya terminaste el informe del desafio de Informatica?|1
+717|868|1770435697|Hola companero, ¿sabes si ya publicaron las notas del taller?|0
+781|482|1770449199|Nos vemos manana en la biblioteca central para estudiar.|0
+660|562|1770454324|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|0
+817|252|1770466475|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+166|462|1770473276|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|1
+787|419|1770474663|Hola, pasame por fa el enlace del repositorio del proyecto.|1
+138|873|1770484774|¿Trabajamos en la rama de git de la interfaz grafica hoy?|0
+536|34|1770494114|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|0
+181|699|1770498764|Nos faltan por definir los casos de prueba para la sustentacion.|0
+278|239|1770506094|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|0
+798|523|1770518200|Vamos por un cafe despues de la clase de POO.|0
+778|777|1770528436|Nos faltan por definir los casos de prueba para la sustentacion.|1
+895|945|1770529497|¿Trabajamos en la rama de git de la interfaz grafica hoy?|0
+384|462|1770533905|Mandame fotico del tablero por favor que no alcancé a copiar.|0
+447|237|1770550749|Nos vemos en el bloque 21 antes de que empiece la clase.|1
+269|729|1770586041|Que buena nota sacamos en el preinforme del desafio 2.|1
+339|763|1770610757|Te deje los ejercicios de punteros y memoria dinamica en el correo.|1
+470|943|1770612635|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
+277|845|1770613456|Voy a almorzar al comedero estudiantil, ¿quién se anima?|1
+251|483|1770619994|¿Tienes la clave del Wi-Fi de la biblioteca?|1
+476|529|1770625117|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|0
+246|899|1770642648|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+487|306|1770649291|¿Alguien tiene el libro guia de estructuras de datos en PDF?|0
+294|978|1770651787|Hola companero, ¿sabes si ya publicaron las notas del taller?|1
+791|296|1770677374|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|0
+671|503|1770682905|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|0
+328|105|1770686666|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
+983|520|1770688094|Nos faltan por definir los casos de prueba para la sustentacion.|0
+696|772|1770747111|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|1
+258|854|1770748317|¿Me prestas tu calculadora cientifica para el examen de mañana?|0
+179|661|1770750580|Muy bacanas las fotos del carrusel, le di like a la tercera.|0
+718|411|1770765818|Mandame fotico del tablero por favor que no alcancé a copiar.|0
+293|496|1770768581|Hola, pasame por fa el enlace del repositorio del proyecto.|0
+135|344|1770769754|¿Me prestas tu calculadora cientifica para el examen de mañana?|0
+500|171|1770773965|Voy a almorzar al comedero estudiantil, ¿quién se anima?|0
+719|175|1770774485|Que buena nota sacamos en el preinforme del desafio 2.|1
+550|560|1770856383|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|0
+68|93|1770864352|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+159|775|1770879454|Estan muy cheveres las fotos de la UdeA que agregaste al album.|0
+425|942|1770880809|Estan muy cheveres las fotos de la UdeA que agregaste al album.|0
+626|905|1770892911|Hola companero, te comparto los apuntes del parcial pasado.|1
+850|957|1770907924|Muy bacanas las fotos del carrusel, le di like a la tercera.|1
+278|423|1770912450|Que buena nota sacamos en el preinforme del desafio 2.|0
+356|882|1770918665|¿Trabajamos en la rama de git de la interfaz grafica hoy?|0
+104|135|1770929209|Nos faltan por definir los casos de prueba para la sustentacion.|1
+327|171|1770977150|Me sale un segmentation fault al intentar acceder al indice de la matriz.|1
+746|426|1770995969|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|1
+661|60|1771001803|¿A qué hora abre la sala de sistemas del bloque 10?|0
+701|946|1771006297|Estan muy cheveres las fotos de la UdeA que agregaste al album.|1
+232|764|1771032627|Estuvo pesado el quiz de fisica, menos mal ya paso.|0
+513|522|1771038488|¿Alguien tiene el libro guia de estructuras de datos en PDF?|1
+899|750|1771118928|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|1
+560|964|1771124074|Nos vemos en el bloque 21 antes de que empiece la clase.|1
+953|36|1771124799|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|1
+889|792|1771125315|Vamos por un cafe despues de la clase de POO.|1
+32|30|1771143890|Felicitaciones por la presentacion del proyecto, salio excelente.|0
+752|789|1771152784|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|0
+67|337|1771171093|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|1
+845|920|1771199886|¿Que tal te parecio la sustentacion pasada? Preguntaron mucho por los punteros.|1
+88|410|1771200593|Nos faltan por definir los casos de prueba para la sustentacion.|0
+304|243|1771218404|¿A que hora es la clase de laboratorio este miercoles?|1
+846|153|1771231244|Nos faltan por definir los casos de prueba para la sustentacion.|1
+154|770|1771244801|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+983|531|1771258781|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
+333|568|1771276721|¿Trabajamos en la rama de git de la interfaz grafica hoy?|0
+603|823|1771278835|Estuvo pesado el quiz de fisica, menos mal ya paso.|0
+863|503|1771295628|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|0
+906|424|1771322614|Que buena nota sacamos en el preinforme del desafio 2.|1
+624|983|1771329726|Quedo genial el diseno modular con archivos .h y .cpp separados.|0
+520|726|1771342145|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
+636|576|1771354814|Hola companero, te comparto los apuntes del parcial pasado.|0
+778|648|1771372463|¿Trabajamos en la rama de git de la interfaz grafica hoy?|0
+308|430|1771388321|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|1
+947|108|1771388676|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|1
+302|864|1771393720|¿Nos reunimos en Discord a las 8 PM para montar todo?|0
+96|473|1771419443|Hola, pasame por fa el enlace del repositorio del proyecto.|0
+190|995|1771431728|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|1
+392|91|1771436885|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|1
+833|463|1771438658|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|0
+895|380|1771442340|Me sale un segmentation fault al intentar acceder al indice de la matriz.|0
+664|331|1771463656|Me sale un segmentation fault al intentar acceder al indice de la matriz.|1
+954|679|1771475786|Hola, pasame por fa el enlace del repositorio del proyecto.|1
+353|246|1771478382|Subi los cambios al repositorio de GitHub, por favor hagan pull.|1
+654|579|1771493359|Que buena nota sacamos en el preinforme del desafio 2.|0
+324|369|1771575255|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|0
+914|768|1771576476|Estuvo pesado el quiz de fisica, menos mal ya paso.|0
+873|494|1771578689|Te deje los ejercicios de punteros y memoria dinamica en el correo.|1
+159|797|1771579898|Estan muy cheveres las fotos de la UdeA que agregaste al album.|0
+415|837|1771589696|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|0
+118|911|1771591531|¿Me ayudas a revisar por que se cae el programa al cerrar sesion?|0
+273|163|1771627087|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|0
+229|867|1771631206|Hola companero, ¿sabes si ya publicaron las notas del taller?|1
+798|788|1771656521|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|0
+377|339|1771677719|Me avisas cuando llegues al bloque de ingenieria.|1
+351|710|1771733869|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|1
+279|197|1771779798|Nos vemos en el bloque 21 antes de que empiece la clase.|0
+390|937|1771804201|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|1
+95|230|1771807123|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|0
+733|463|1771825989|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
+307|45|1771861620|Nos vemos manana en la biblioteca central para estudiar.|1
+83|484|1771875836|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|1
+436|756|1771888994|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
+664|418|1771914994|Hola, pasame por fa el enlace del repositorio del proyecto.|0
+191|609|1771920655|Quedo genial el diseno modular con archivos .h y .cpp separados.|1
+348|969|1771926170|¿Nos reunimos en Discord a las 8 PM para montar todo?|1
+523|736|1771950516|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|0
+935|575|1771951403|¿Confirmamos la sala de estudio para el viernes por la tarde?|1
+640|815|1771956930|¿Me ayudas a revisar por que se cae el programa al cerrar sesion?|0
+750|907|1771961326|Nos vemos manana en la biblioteca central para estudiar.|1
+198|1|1771966373|Nos vemos manana en la biblioteca central para estudiar.|1
+63|683|1771966967|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|1
+17|398|1771969682|El profesor Anibal explico hoy lo de la matriz triangular en bits.|0
+616|734|1771970503|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|0
+457|323|1771983140|Que buena nota sacamos en el preinforme del desafio 2.|0
+845|638|1771986636|Hola, pasame por fa el enlace del repositorio del proyecto.|0
+875|884|1771995855|¿Me ayudas a revisar por que se cae el programa al cerrar sesion?|0
+752|526|1772004849|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|0
+813|282|1772014774|¿Alguien tiene el libro guia de estructuras de datos en PDF?|0
+296|335|1772026006|Hola, ¿ya terminaste el informe del desafio de Informatica?|1
+426|952|1772044668|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|0
+570|255|1772072118|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|0
+650|945|1772156483|¿Tienes la clave del Wi-Fi de la biblioteca?|0
+638|321|1772181731|Vamos por un cafe despues de la clase de POO.|1
+157|295|1772212730|Hola, pasame por fa el enlace del repositorio del proyecto.|0
+714|966|1772237236|Mandame fotico del tablero por favor que no alcancé a copiar.|1
+453|641|1772241673|Hola, pasame por fa el enlace del repositorio del proyecto.|0
+887|671|1772257660|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|0
+170|380|1772259084|¿Me ayudas a revisar por que se cae el programa al cerrar sesion?|1
+713|302|1772271069|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|1
+618|588|1772274633|¿Nos reunimos en Discord a las 8 PM para montar todo?|0
+227|768|1772303220|¿A que hora es la clase de laboratorio este miercoles?|1
+748|834|1772307777|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|1
+786|989|1772329627|Estuvo pesado el quiz de fisica, menos mal ya paso.|0
+44|855|1772354501|Nos faltan por definir los casos de prueba para la sustentacion.|0
+95|493|1772373110|¿Que tal te parecio la sustentacion pasada? Preguntaron mucho por los punteros.|0
+513|444|1772374664|Quedo genial el diseno modular con archivos .h y .cpp separados.|0
+883|700|1772384065|¿Me prestas tu calculadora cientifica para el examen de mañana?|1
+677|344|1772397276|¿Que tal te parecio la sustentacion pasada? Preguntaron mucho por los punteros.|1
+120|920|1772414791|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|0
+179|205|1772434546|El profesor Anibal explico hoy lo de la matriz triangular en bits.|1
+518|271|1772444504|Hola companero, ¿sabes si ya publicaron las notas del taller?|0
+943|688|1772451724|Me sale un segmentation fault al intentar acceder al indice de la matriz.|0
+792|832|1772467646|¿A qué hora abre la sala de sistemas del bloque 10?|0
+224|980|1772481824|¿Me prestas tu calculadora cientifica para el examen de mañana?|0
+444|909|1772489228|Nos vemos en el bloque 21 antes de que empiece la clase.|1
+910|961|1772503002|¿Nos reunimos en Discord a las 8 PM para montar todo?|1
+184|787|1772544238|¿A qué hora abre la sala de sistemas del bloque 10?|1
+673|447|1772555878|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|0
+342|440|1772567579|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|1
+0|535|1772573484|Hola companero, ¿sabes si ya publicaron las notas del taller?|1
+546|225|1772576202|¿Me ayudas a revisar por que se cae el programa al cerrar sesion?|1
+694|773|1772589549|Mandame fotico del tablero por favor que no alcancé a copiar.|0
+637|620|1772602444|Me avisas cuando llegues al bloque de ingenieria.|0
+122|12|1772604063|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|0
+102|697|1772612628|Hola, ¿ya terminaste el informe del desafio de Informatica?|0
+503|485|1772614161|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|0
+196|231|1772615927|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|0
+781|78|1772620281|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|1
+9|872|1772643746|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|0
+211|668|1772649856|Subi los cambios al repositorio de GitHub, por favor hagan pull.|0
+205|811|1772659934|Te deje los ejercicios de punteros y memoria dinamica en el correo.|1
+250|228|1772682115|¿Me ayudas a revisar por que se cae el programa al cerrar sesion?|0
+322|810|1772691922|Te deje los ejercicios de punteros y memoria dinamica en el correo.|1
+773|757|1772695962|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|0
+918|102|1772698061|Quedo genial el diseno modular con archivos .h y .cpp separados.|0
+501|295|1772707570|Nos faltan por definir los casos de prueba para la sustentacion.|1
+775|526|1772710058|¿Trabajamos en la rama de git de la interfaz grafica hoy?|0
+460|253|1772727069|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
+561|494|1772742832|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|0
+596|679|1772745548|Hola companero, ¿sabes si ya publicaron las notas del taller?|1
+151|600|1772753074|Estan muy cheveres las fotos de la UdeA que agregaste al album.|1
+975|31|1772790883|¿Que tal te parecio la sustentacion pasada? Preguntaron mucho por los punteros.|1
+509|934|1772802233|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|1
+242|309|1772807022|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|0
+794|335|1772808183|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
+970|229|1772822499|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|1
+282|412|1772826894|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|1
+307|878|1772843640|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|0
+474|646|1772860303|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
+440|930|1772870506|¿A qué hora abre la sala de sistemas del bloque 10?|0
+188|325|1772882935|Vamos por un cafe despues de la clase de POO.|0
+863|768|1772901894|¿A que hora es la clase de laboratorio este miercoles?|1
+183|579|1772905626|¿Me ayudas a revisar por que se cae el programa al cerrar sesion?|1
+838|353|1772914923|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|0
+912|586|1772927975|¿A que hora es la clase de laboratorio este miercoles?|0
+927|525|1772944200|Estuvo pesado el quiz de fisica, menos mal ya paso.|0
+248|971|1772955220|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|0
+744|981|1772955648|Te deje los ejercicios de punteros y memoria dinamica en el correo.|0
+854|378|1772969202|Estuvo pesado el quiz de fisica, menos mal ya paso.|0
+424|153|1772972758|Voy a almorzar al comedero estudiantil, ¿quién se anima?|0
+329|622|1772977257|Hola companero, te comparto los apuntes del parcial pasado.|0
+456|904|1772987242|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|0
+669|793|1772987295|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|1
+557|230|1772999254|Muy bacanas las fotos del carrusel, le di like a la tercera.|0
+114|77|1773001431|El profesor Anibal explico hoy lo de la matriz triangular en bits.|0
+149|819|1773018000|¿Me prestas tu calculadora cientifica para el examen de mañana?|0
+586|549|1773028211|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
+934|343|1773036175|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|0
+290|258|1773045691|Nos vemos en el bloque 21 antes de que empiece la clase.|0
+238|92|1773056105|Hola, ¿ya terminaste el informe del desafio de Informatica?|1
+423|55|1773059285|Hola, pasame por fa el enlace del repositorio del proyecto.|0
+69|724|1773067714|Hola, ¿ya terminaste el informe del desafio de Informatica?|0
+395|679|1773103807|Que buena nota sacamos en el preinforme del desafio 2.|0
+710|598|1773113526|Voy a almorzar al comedero estudiantil, ¿quién se anima?|1
+383|976|1773121712|¿Tienes la clave del Wi-Fi de la biblioteca?|1
+427|246|1773125411|Estuvo pesado el quiz de fisica, menos mal ya paso.|1
+881|112|1773128503|Mandame fotico del tablero por favor que no alcancé a copiar.|0
+485|718|1773138092|Felicitaciones por la presentacion del proyecto, salio excelente.|0
+764|702|1773159147|Nos vemos manana en la biblioteca central para estudiar.|1
+663|852|1773166413|Que buena nota sacamos en el preinforme del desafio 2.|1
+990|148|1773172425|Que buena nota sacamos en el preinforme del desafio 2.|1
+606|964|1773173901|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
+157|389|1773176673|¿Me ayudas a revisar por que se cae el programa al cerrar sesion?|1
+419|891|1773179503|Hola companero, te comparto los apuntes del parcial pasado.|1
+477|726|1773194417|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|0
+704|610|1773200666|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|0
+70|543|1773201791|¿Trabajamos en la rama de git de la interfaz grafica hoy?|1
+106|268|1773210143|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+997|827|1773213591|El profesor Anibal explico hoy lo de la matriz triangular en bits.|1
+904|53|1773220395|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|0
+422|266|1773225013|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|0
+11|658|1773265608|¿Nos reunimos en Discord a las 8 PM para montar todo?|1
+501|402|1773268222|Nos vemos manana en la biblioteca central para estudiar.|1
+670|0|1773282969|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+279|152|1773284689|Muy bacanas las fotos del carrusel, le di like a la tercera.|0
+139|999|1773284953|Vamos por un cafe despues de la clase de POO.|1
+912|307|1773284999|Me sale un segmentation fault al intentar acceder al indice de la matriz.|0
+951|878|1773301047|¿Trabajamos en la rama de git de la interfaz grafica hoy?|1
+590|782|1773316200|Que buena nota sacamos en el preinforme del desafio 2.|0
+194|781|1773346644|Que buena nota sacamos en el preinforme del desafio 2.|1
+254|985|1773358631|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
+528|178|1773373262|Nos vemos en el bloque 21 antes de que empiece la clase.|1
+291|85|1773379189|Muy bacanas las fotos del carrusel, le di like a la tercera.|1
+204|273|1773400095|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|1
+44|130|1773406596|Hola, pasame por fa el enlace del repositorio del proyecto.|0
+156|382|1773420686|El profesor Anibal explico hoy lo de la matriz triangular en bits.|0
+457|801|1773428943|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
+407|101|1773480844|¿A que hora es la clase de laboratorio este miercoles?|0
+796|838|1773495068|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|0
+256|331|1773502726|Me sale un segmentation fault al intentar acceder al indice de la matriz.|0
+46|918|1773508140|Que buena nota sacamos en el preinforme del desafio 2.|0
+663|111|1773514808|¿Me ayudas a revisar por que se cae el programa al cerrar sesion?|0
+872|507|1773550033|Hola companero, te comparto los apuntes del parcial pasado.|1
+380|680|1773554100|¿A que hora es la clase de laboratorio este miercoles?|1
+73|61|1773567444|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|1
+641|547|1773569011|Voy a almorzar al comedero estudiantil, ¿quién se anima?|1
+750|429|1773581391|Me avisas cuando llegues al bloque de ingenieria.|1
+819|431|1773596165|Estan muy cheveres las fotos de la UdeA que agregaste al album.|0
+743|652|1773613094|Felicitaciones por la presentacion del proyecto, salio excelente.|1
+970|98|1773616837|El profesor Anibal explico hoy lo de la matriz triangular en bits.|0
+785|377|1773630069|¿Que tal te parecio la sustentacion pasada? Preguntaron mucho por los punteros.|0
+226|341|1773641597|Hola companero, te comparto los apuntes del parcial pasado.|0
+585|533|1773690258|¿Tienes la clave del Wi-Fi de la biblioteca?|1
+523|484|1773693898|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|0
+519|307|1773703805|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|0
+597|491|1773721435|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|1
+888|493|1773723271|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|1
+490|472|1773731148|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|1
+26|211|1773732177|Mandame fotico del tablero por favor que no alcancé a copiar.|1
+650|550|1773812795|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|0
+558|216|1773818677|¿Me prestas tu calculadora cientifica para el examen de mañana?|0
+363|957|1773828808|Nos faltan por definir los casos de prueba para la sustentacion.|0
+160|245|1773832214|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|0
+759|114|1773859068|Subi los cambios al repositorio de GitHub, por favor hagan pull.|0
+403|881|1773865326|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|0
+833|658|1773875016|¿Tienes la clave del Wi-Fi de la biblioteca?|1
+590|41|1773878425|¿Me prestas tu calculadora cientifica para el examen de mañana?|1
+764|440|1773895339|Hola, pasame por fa el enlace del repositorio del proyecto.|1
+903|857|1773898490|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|1
+340|646|1773933237|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|0
+946|520|1773945927|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|0
+688|291|1773953202|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|1
+995|512|1773994562|¿Nos reunimos en Discord a las 8 PM para montar todo?|0
+583|640|1774002817|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|1
+825|962|1774015197|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
+286|461|1774036080|Voy a almorzar al comedero estudiantil, ¿quién se anima?|0
+264|944|1774041057|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|1
+579|698|1774041706|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|0
+883|732|1774051768|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+616|842|1774055114|El profesor Anibal explico hoy lo de la matriz triangular en bits.|1
+157|166|1774068183|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|0
+938|284|1774089765|Subi los cambios al repositorio de GitHub, por favor hagan pull.|1
+615|146|1774103019|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|1
+712|490|1774116234|Hola, pasame por fa el enlace del repositorio del proyecto.|0
+312|119|1774141954|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|0
+742|827|1774142754|¿Tienes la clave del Wi-Fi de la biblioteca?|1
+423|171|1774170196|Nos vemos manana en la biblioteca central para estudiar.|0
+109|134|1774199063|Nos vemos manana en la biblioteca central para estudiar.|1
+760|548|1774212597|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|0
+26|753|1774242736|Que buena nota sacamos en el preinforme del desafio 2.|1
+806|507|1774251580|¿Me ayudas a revisar por que se cae el programa al cerrar sesion?|1
+194|580|1774262153|El profesor Anibal explico hoy lo de la matriz triangular en bits.|1
+216|153|1774271513|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
+219|930|1774279749|Muy bacanas las fotos del carrusel, le di like a la tercera.|1
+625|200|1774292912|Estan muy cheveres las fotos de la UdeA que agregaste al album.|1
+576|971|1774316073|Que buena nota sacamos en el preinforme del desafio 2.|1
+367|768|1774322528|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
+158|282|1774324354|Vamos por un cafe despues de la clase de POO.|0
+955|329|1774330123|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|0
+544|394|1774357236|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|0
+754|36|1774372495|Nos vemos en el bloque 21 antes de que empiece la clase.|0
+216|959|1774376137|¿Me ayudas a revisar por que se cae el programa al cerrar sesion?|0
+921|590|1774377985|¿Confirmamos la sala de estudio para el viernes por la tarde?|0
+224|651|1774379770|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|1
+187|969|1774380962|Que buena nota sacamos en el preinforme del desafio 2.|0
+826|416|1774389096|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
+548|741|1774391502|¿A que hora es la clase de laboratorio este miercoles?|1
+220|468|1774394762|Me sale un segmentation fault al intentar acceder al indice de la matriz.|1
+529|970|1774410789|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|0
+259|37|1774412367|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|1
+44|303|1774459643|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|0
+328|205|1774460759|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|1
+236|123|1774462056|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|0
+995|216|1774466814|Hola, pasame por fa el enlace del repositorio del proyecto.|0
+794|742|1774492705|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|1
+543|522|1774506328|Hola companero, ¿sabes si ya publicaron las notas del taller?|1
+102|852|1774513505|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|0
+466|424|1774524163|Me sale un segmentation fault al intentar acceder al indice de la matriz.|1
+231|620|1774527182|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|1
+52|583|1774531548|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|1
+496|139|1774547425|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|1
+608|631|1774561509|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|0
+667|585|1774580000|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|0
+912|551|1774591161|¿Confirmamos la sala de estudio para el viernes por la tarde?|0
+149|262|1774619343|Nos faltan por definir los casos de prueba para la sustentacion.|0
+755|628|1774621109|¿Trabajamos en la rama de git de la interfaz grafica hoy?|1
+256|100|1774624235|Vamos por un cafe despues de la clase de POO.|1
+946|270|1774637711|Estuvo pesado el quiz de fisica, menos mal ya paso.|0
+492|572|1774647419|Que buena nota sacamos en el preinforme del desafio 2.|1
+319|340|1774648714|Me sale un segmentation fault al intentar acceder al indice de la matriz.|0
+406|964|1774654843|Hola companero, te comparto los apuntes del parcial pasado.|0
+773|147|1774679274|¿Que tal te parecio la sustentacion pasada? Preguntaron mucho por los punteros.|1
+972|253|1774689434|Nos vemos manana en la biblioteca central para estudiar.|0
+38|546|1774691231|Vamos por un cafe despues de la clase de POO.|1
+206|44|1774693096|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|1
+989|165|1774700743|¿Que tal te parecio la sustentacion pasada? Preguntaron mucho por los punteros.|0
+116|954|1774704177|Subi los cambios al repositorio de GitHub, por favor hagan pull.|0
+415|600|1774721301|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|0
+177|197|1774735272|¿A que hora es la clase de laboratorio este miercoles?|0
+617|970|1774739457|¿Me prestas tu calculadora cientifica para el examen de mañana?|1
+0|339|1774760022|Hola, pasame por fa el enlace del repositorio del proyecto.|1
+449|10|1774768171|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|1
+464|604|1774775713|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|0
+155|422|1774841469|Me avisas cuando llegues al bloque de ingenieria.|1
+957|267|1774853801|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|1
+249|128|1774885556|Hola companero, te comparto los apuntes del parcial pasado.|0
+103|339|1774897129|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|1
+43|684|1774938186|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|1
+803|211|1774943845|¿A que hora es la clase de laboratorio este miercoles?|1
+634|643|1774967161|¿A que hora es la clase de laboratorio este miercoles?|0
+561|508|1774969053|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|1
+537|214|1775014586|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|0
+965|725|1775034632|¿Trabajamos en la rama de git de la interfaz grafica hoy?|1
+311|293|1775052560|Estuvo pesado el quiz de fisica, menos mal ya paso.|1
+278|288|1775067558|Me sale un segmentation fault al intentar acceder al indice de la matriz.|1
+12|690|1775071676|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|0
+641|67|1775072652|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|0
+308|968|1775087836|Hola, pasame por fa el enlace del repositorio del proyecto.|1
+341|358|1775124878|Hola, ¿ya terminaste el informe del desafio de Informatica?|0
+591|519|1775138329|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|1
+450|359|1775148954|Mandame fotico del tablero por favor que no alcancé a copiar.|0
+357|226|1775158965|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|1
+497|492|1775172169|¿Alguien tiene el libro guia de estructuras de datos en PDF?|0
+576|558|1775178237|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|1
+184|973|1775187113|Nos vemos en el bloque 21 antes de que empiece la clase.|1
+874|585|1775191338|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|0
+720|456|1775199788|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|1
+398|4|1775207361|Felicitaciones por la presentacion del proyecto, salio excelente.|1
+989|246|1775219048|Subi los cambios al repositorio de GitHub, por favor hagan pull.|1
+14|268|1775239131|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|0
+969|87|1775267669|¿Trabajamos en la rama de git de la interfaz grafica hoy?|1
+823|779|1775281866|¿Me prestas tu calculadora cientifica para el examen de mañana?|0
+728|754|1775292806|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|0
+582|939|1775295984|Vamos por un cafe despues de la clase de POO.|0
+908|53|1775307760|Estan muy cheveres las fotos de la UdeA que agregaste al album.|0
+577|970|1775313676|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|1
+775|550|1775328677|Quedo genial el diseno modular con archivos .h y .cpp separados.|0
+238|616|1775342009|Nos vemos manana en la biblioteca central para estudiar.|1
+782|970|1775362231|Voy a almorzar al comedero estudiantil, ¿quién se anima?|1
+388|276|1775369062|¿Tienes la clave del Wi-Fi de la biblioteca?|1
+814|779|1775399742|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|0
+334|514|1775408723|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|0
+46|576|1775424726|¿Me ayudas a revisar por que se cae el programa al cerrar sesion?|0
+320|252|1775433169|Me sale un segmentation fault al intentar acceder al indice de la matriz.|1
+462|515|1775433976|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|0
+95|301|1775435541|¿Alguien tiene el libro guia de estructuras de datos en PDF?|0
+969|932|1775450359|¿Trabajamos en la rama de git de la interfaz grafica hoy?|1
+670|91|1775457590|Hola companero, ¿sabes si ya publicaron las notas del taller?|0
+12|63|1775458752|Hola, pasame por fa el enlace del repositorio del proyecto.|0
+879|481|1775463637|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|1
+845|55|1775479890|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|1
+19|233|1775526975|Vamos por un cafe despues de la clase de POO.|0
+688|317|1775537689|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|0
+772|989|1775570372|¿Tienes la clave del Wi-Fi de la biblioteca?|1
+79|135|1775589705|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|1
+271|990|1775635083|Vamos por un cafe despues de la clase de POO.|0
+358|312|1775636837|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|0
+588|841|1775638519|¿Confirmamos la sala de estudio para el viernes por la tarde?|1
+165|351|1775657723|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
+440|462|1775666972|Me avisas cuando llegues al bloque de ingenieria.|1
+589|702|1775669427|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|1
+693|718|1775715175|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
+450|169|1775717209|Hola companero, te comparto los apuntes del parcial pasado.|1
+200|337|1775718144|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|0
+545|720|1775721234|¿Nos reunimos en Discord a las 8 PM para montar todo?|1
+602|567|1775721369|Subi los cambios al repositorio de GitHub, por favor hagan pull.|0
+620|580|1775748099|¿Que tal te parecio la sustentacion pasada? Preguntaron mucho por los punteros.|0
+926|262|1775756452|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|1
+95|44|1775766930|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|1
+298|33|1775767053|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|1
+981|473|1775779781|¿Alguien tiene el libro guia de estructuras de datos en PDF?|0
+260|488|1775801837|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+904|624|1775808842|Me sale un segmentation fault al intentar acceder al indice de la matriz.|1
+542|366|1775810200|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|0
+600|221|1775818138|Nos vemos en el bloque 21 antes de que empiece la clase.|0
+451|45|1775834610|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|1
+585|392|1775837055|Me avisas cuando llegues al bloque de ingenieria.|0
+640|312|1775856563|Estuvo pesado el quiz de fisica, menos mal ya paso.|0
+411|449|1775863121|El profesor Anibal explico hoy lo de la matriz triangular en bits.|0
+730|292|1775868298|Muy bacanas las fotos del carrusel, le di like a la tercera.|1
+632|70|1775877582|Mandame fotico del tablero por favor que no alcancé a copiar.|1
+412|836|1775885291|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+609|69|1775892133|¿Alguien tiene el libro guia de estructuras de datos en PDF?|0
+514|382|1775911399|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|0
+557|710|1775924024|Nos faltan por definir los casos de prueba para la sustentacion.|0
+801|717|1775925418|Que buena nota sacamos en el preinforme del desafio 2.|0
+948|771|1775931579|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
+947|952|1775943586|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|0
+591|510|1775944010|Me sale un segmentation fault al intentar acceder al indice de la matriz.|1
+794|831|1775950590|Felicitaciones por la presentacion del proyecto, salio excelente.|1
+692|736|1775970190|¿Trabajamos en la rama de git de la interfaz grafica hoy?|1
+366|808|1775983659|Subi los cambios al repositorio de GitHub, por favor hagan pull.|1
+788|392|1775984191|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|1
+124|48|1776000702|Me avisas cuando llegues al bloque de ingenieria.|1
+604|423|1776005258|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|0
+747|976|1776007342|¿A que hora es la clase de laboratorio este miercoles?|0
+514|10|1776015509|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|0
+140|111|1776028973|Te deje los ejercicios de punteros y memoria dinamica en el correo.|0
+124|29|1776029490|Me sale un segmentation fault al intentar acceder al indice de la matriz.|0
+406|937|1776030614|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|1
+166|577|1776068907|Voy a almorzar al comedero estudiantil, ¿quién se anima?|1
+536|152|1776085572|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|1
+395|115|1776089361|Que buena nota sacamos en el preinforme del desafio 2.|0
+253|672|1776091745|Muy bacanas las fotos del carrusel, le di like a la tercera.|0
+647|527|1776118096|Me sale un segmentation fault al intentar acceder al indice de la matriz.|0
+240|753|1776122068|¿Confirmamos la sala de estudio para el viernes por la tarde?|0
+151|841|1776126768|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|0
+864|108|1776164346|Estuvo pesado el quiz de fisica, menos mal ya paso.|1
+456|246|1776181481|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|1
+506|409|1776186759|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|0
+441|149|1776193906|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|1
+546|746|1776214491|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
+25|47|1776215552|¿Me prestas tu calculadora cientifica para el examen de mañana?|0
+964|911|1776261616|Subi los cambios al repositorio de GitHub, por favor hagan pull.|0
+196|980|1776271809|Muy bacanas las fotos del carrusel, le di like a la tercera.|1
+369|257|1776274189|Vamos por un cafe despues de la clase de POO.|1
+887|468|1776280691|Estuvo pesado el quiz de fisica, menos mal ya paso.|1
+316|234|1776301249|¿Me ayudas a revisar por que se cae el programa al cerrar sesion?|1
+843|235|1776305125|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|1
+488|331|1776323079|Hola, ¿ya terminaste el informe del desafio de Informatica?|1
+660|86|1776327103|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|1
+111|787|1776329249|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|1
+428|623|1776329511|Muy bacanas las fotos del carrusel, le di like a la tercera.|1
+229|329|1776330330|Me avisas cuando llegues al bloque de ingenieria.|1
+443|677|1776340859|¿Me prestas tu calculadora cientifica para el examen de mañana?|1
+124|997|1776353790|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|1
+215|698|1776372828|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|0
+234|207|1776378388|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|1
+185|196|1776391274|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|0
+897|550|1776393355|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|1
+133|553|1776410559|Nos faltan por definir los casos de prueba para la sustentacion.|0
+13|761|1776433608|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|1
+745|240|1776443872|¿Me ayudas a revisar por que se cae el programa al cerrar sesion?|0
+55|182|1776452629|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|0
+988|52|1776471768|¿Me prestas tu calculadora cientifica para el examen de mañana?|0
+188|226|1776480606|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|0
+637|783|1776492995|Hola, ¿ya terminaste el informe del desafio de Informatica?|1
+706|288|1776536835|Hola companero, te comparto los apuntes del parcial pasado.|1
+397|248|1776556234|Felicitaciones por la presentacion del proyecto, salio excelente.|1
+598|866|1776556922|Hola, ¿ya terminaste el informe del desafio de Informatica?|1
+376|161|1776560275|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
+538|638|1776587872|¿A que hora es la clase de laboratorio este miercoles?|1
+748|469|1776632376|Me sale un segmentation fault al intentar acceder al indice de la matriz.|0
+368|573|1776647474|Hola companero, ¿sabes si ya publicaron las notas del taller?|0
+854|609|1776653230|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|0
+352|167|1776679186|¿Me ayudas a revisar por que se cae el programa al cerrar sesion?|0
+10|100|1776681819|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|0
+596|600|1776684579|Hola companero, te comparto los apuntes del parcial pasado.|0
+333|370|1776714111|Nos faltan por definir los casos de prueba para la sustentacion.|1
+693|306|1776729748|Nos faltan por definir los casos de prueba para la sustentacion.|0
+928|37|1776744832|El profesor Anibal explico hoy lo de la matriz triangular en bits.|1
+242|298|1776757402|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
+588|4|1776761314|Nos faltan por definir los casos de prueba para la sustentacion.|1
+20|326|1776761991|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
+882|283|1776762636|¿A qué hora abre la sala de sistemas del bloque 10?|1
+118|898|1776764927|Nos faltan por definir los casos de prueba para la sustentacion.|1
+789|133|1776789760|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
+377|688|1776796677|Subi los cambios al repositorio de GitHub, por favor hagan pull.|1
+561|408|1776809983|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+456|45|1776834746|¿Trabajamos en la rama de git de la interfaz grafica hoy?|1
+854|759|1776835421|Subi los cambios al repositorio de GitHub, por favor hagan pull.|0
+717|852|1776836549|Te deje los ejercicios de punteros y memoria dinamica en el correo.|1
+208|703|1776857829|¿Nos reunimos en Discord a las 8 PM para montar todo?|1
+898|420|1776862954|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|1
+438|285|1776866409|Hola, pasame por fa el enlace del repositorio del proyecto.|0
+237|64|1776870352|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|0
+692|790|1776870522|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|1
+55|657|1776871640|Quedo genial el diseno modular con archivos .h y .cpp separados.|0
+137|903|1776874237|Vamos por un cafe despues de la clase de POO.|1
+640|216|1776880050|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|0
+46|971|1776880378|¿A qué hora abre la sala de sistemas del bloque 10?|0
+482|500|1776892072|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+315|474|1776892190|Estan muy cheveres las fotos de la UdeA que agregaste al album.|0
+800|992|1776892688|Nos vemos en el bloque 21 antes de que empiece la clase.|1
+457|11|1776899052|Felicitaciones por la presentacion del proyecto, salio excelente.|0
+16|178|1776904256|¿A que hora es la clase de laboratorio este miercoles?|0
+843|631|1776919292|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|0
+248|73|1776934105|Estuvo pesado el quiz de fisica, menos mal ya paso.|1
+343|276|1776961979|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|1
+834|362|1776969929|¿Alguien tiene el libro guia de estructuras de datos en PDF?|0
+668|298|1776974884|¿Que tal te parecio la sustentacion pasada? Preguntaron mucho por los punteros.|1
+586|116|1776988860|El profesor Anibal explico hoy lo de la matriz triangular en bits.|1
+446|845|1777005859|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|0
+269|231|1777011445|Voy a almorzar al comedero estudiantil, ¿quién se anima?|0
+501|145|1777016651|Mandame fotico del tablero por favor que no alcancé a copiar.|1
+173|142|1777023423|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|1
+693|211|1777028946|¿A qué hora abre la sala de sistemas del bloque 10?|1
+719|464|1777090446|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|1
+847|551|1777097704|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|1
+529|782|1777122279|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|1
+826|439|1777126154|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|0
+690|83|1777130256|¿Trabajamos en la rama de git de la interfaz grafica hoy?|1
+716|412|1777135066|¿Nos reunimos en Discord a las 8 PM para montar todo?|1
+543|513|1777144500|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
+499|224|1777158189|Estuvo pesado el quiz de fisica, menos mal ya paso.|1
+29|184|1777169432|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|1
+521|722|1777174617|Me avisas cuando llegues al bloque de ingenieria.|1
+357|573|1777175712|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|0
+4|462|1777178072|Felicitaciones por la presentacion del proyecto, salio excelente.|0
+453|763|1777187074|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|0
+137|124|1777207958|Nos vemos en el bloque 21 antes de que empiece la clase.|1
+629|445|1777212549|Mandame fotico del tablero por favor que no alcancé a copiar.|0
+641|244|1777213961|¿Trabajamos en la rama de git de la interfaz grafica hoy?|0
+423|307|1777232633|¿A que hora es la clase de laboratorio este miercoles?|0
+630|287|1777234753|¿Confirmamos la sala de estudio para el viernes por la tarde?|0
+241|513|1777256938|¿A que hora es la clase de laboratorio este miercoles?|1
+62|407|1777257045|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|0
+884|71|1777269324|Me avisas cuando llegues al bloque de ingenieria.|1
+286|901|1777270035|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|0
+756|495|1777277787|Vamos por un cafe despues de la clase de POO.|1
+769|253|1777305024|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|1
+871|802|1777323058|¿Confirmamos la sala de estudio para el viernes por la tarde?|0
+459|603|1777334531|Hola, ¿ya terminaste el informe del desafio de Informatica?|0
+412|527|1777335704|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|1
+432|187|1777346424|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|0
+117|780|1777347198|Voy a almorzar al comedero estudiantil, ¿quién se anima?|0
+407|321|1777351276|Te deje los ejercicios de punteros y memoria dinamica en el correo.|0
+885|71|1777365880|Hola companero, ¿sabes si ya publicaron las notas del taller?|1
+961|974|1777386521|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|1
+62|89|1777387724|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|0
+333|385|1777405312|¿Alguien tiene el libro guia de estructuras de datos en PDF?|1
+946|76|1777407757|El profesor Anibal explico hoy lo de la matriz triangular en bits.|0
+30|917|1777426536|¿A que hora es la clase de laboratorio este miercoles?|1
+49|51|1777440752|Que buena nota sacamos en el preinforme del desafio 2.|1
+112|881|1777469370|Nos vemos manana en la biblioteca central para estudiar.|0
+898|476|1777472646|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|1
+574|662|1777485062|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|0
+553|741|1777490166|Nos vemos manana en la biblioteca central para estudiar.|1
+372|381|1777492333|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|1
+440|113|1777504174|¿Tienes la clave del Wi-Fi de la biblioteca?|1
+144|965|1777504886|Voy a almorzar al comedero estudiantil, ¿quién se anima?|0
+274|330|1777515804|Nos vemos en el bloque 21 antes de que empiece la clase.|0
+174|61|1777529913|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|1
+950|343|1777548304|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|1
+792|847|1777593701|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|0
+852|925|1777603082|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|1
+377|851|1777632706|Hola companero, te comparto los apuntes del parcial pasado.|0
+741|705|1777636406|Estuvo pesado el quiz de fisica, menos mal ya paso.|1
+774|987|1777638344|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
+562|134|1777664654|¿Trabajamos en la rama de git de la interfaz grafica hoy?|1
+113|794|1777667084|Te deje los ejercicios de punteros y memoria dinamica en el correo.|1
+720|299|1777708412|Voy a almorzar al comedero estudiantil, ¿quién se anima?|1
+227|442|1777723504|¿Alguien tiene el libro guia de estructuras de datos en PDF?|0
+895|40|1777749816|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|1
+639|731|1777750229|¿Tienes la clave del Wi-Fi de la biblioteca?|1
+228|912|1777764311|Hola, pasame por fa el enlace del repositorio del proyecto.|1
+586|52|1777789613|¿Me ayudas a revisar por que se cae el programa al cerrar sesion?|0
+784|440|1777828851|¿Que tal te parecio la sustentacion pasada? Preguntaron mucho por los punteros.|0
+815|57|1777843789|Hola companero, ¿sabes si ya publicaron las notas del taller?|1
+339|369|1777850720|Felicitaciones por la presentacion del proyecto, salio excelente.|1
+380|266|1777866718|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|0
+986|351|1777870826|¿Trabajamos en la rama de git de la interfaz grafica hoy?|0
+867|130|1777871199|¿A que hora es la clase de laboratorio este miercoles?|1
+387|314|1777882359|Hola, pasame por fa el enlace del repositorio del proyecto.|0
+431|361|1777885737|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|0
+706|120|1777899819|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|0
+92|931|1777902263|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
+720|419|1777910341|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|0
+585|367|1777927829|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|1
+833|689|1777980592|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|0
+230|964|1777986287|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|0
+874|33|1778014036|Nos vemos en el bloque 21 antes de que empiece la clase.|0
+891|640|1778014145|Mandame fotico del tablero por favor que no alcancé a copiar.|0
+289|743|1778017871|Subi los cambios al repositorio de GitHub, por favor hagan pull.|1
+965|360|1778019777|Quedo genial el diseno modular con archivos .h y .cpp separados.|1
+259|492|1778026503|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|1
+631|757|1778040638|Subi los cambios al repositorio de GitHub, por favor hagan pull.|1
+376|902|1778041342|Hola, pasame por fa el enlace del repositorio del proyecto.|1
+855|533|1778044309|Voy a almorzar al comedero estudiantil, ¿quién se anima?|1
+282|431|1778058016|¿Me prestas tu calculadora cientifica para el examen de mañana?|0
+725|576|1778059302|¿Me prestas tu calculadora cientifica para el examen de mañana?|0
+418|152|1778062588|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|0
+713|231|1778065478|¿Tienes la clave del Wi-Fi de la biblioteca?|0
+804|498|1778067476|¿Confirmamos la sala de estudio para el viernes por la tarde?|0
+238|262|1778076477|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+630|582|1778098202|¿Alguien tiene el libro guia de estructuras de datos en PDF?|0
+296|805|1778111651|¿Que tal te parecio la sustentacion pasada? Preguntaron mucho por los punteros.|0
+104|713|1778119435|¿Tienes la clave del Wi-Fi de la biblioteca?|0
+530|138|1778128125|Hola, ¿ya terminaste el informe del desafio de Informatica?|1
+903|665|1778128925|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
+976|337|1778131621|Subi los cambios al repositorio de GitHub, por favor hagan pull.|0
+467|865|1778137521|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|1
+369|183|1778142417|Hola, ¿ya terminaste el informe del desafio de Informatica?|0
+380|462|1778154534|Felicitaciones por la presentacion del proyecto, salio excelente.|1
+142|648|1778161377|Te deje los ejercicios de punteros y memoria dinamica en el correo.|1
+20|345|1778168836|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|1
+830|576|1778195028|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|0
+751|72|1778197344|Hola companero, te comparto los apuntes del parcial pasado.|0
+205|298|1778197504|¿Me ayudas a revisar por que se cae el programa al cerrar sesion?|0
+36|711|1778202924|Vamos por un cafe despues de la clase de POO.|1
+161|826|1778207760|Me sale un segmentation fault al intentar acceder al indice de la matriz.|0
+968|38|1778212780|Que buena nota sacamos en el preinforme del desafio 2.|0
+845|93|1778220611|¿Nos reunimos en Discord a las 8 PM para montar todo?|0
+622|824|1778249526|Me sale un segmentation fault al intentar acceder al indice de la matriz.|1
+762|892|1778304071|Me avisas cuando llegues al bloque de ingenieria.|1
+951|371|1778318461|Te deje los ejercicios de punteros y memoria dinamica en el correo.|0
+688|826|1778340454|Vamos por un cafe despues de la clase de POO.|0
+539|683|1778348837|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|0
+510|900|1778352900|Que buena nota sacamos en el preinforme del desafio 2.|0
+883|141|1778368265|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|0
+284|85|1778398749|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|0
+175|72|1778448097|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|1
+592|26|1778467548|Voy a almorzar al comedero estudiantil, ¿quién se anima?|1
+484|398|1778472652|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|0
+23|591|1778473777|Mandame fotico del tablero por favor que no alcancé a copiar.|0
+991|294|1778484045|Hola companero, ¿sabes si ya publicaron las notas del taller?|0
+320|437|1778486550|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|1
+621|147|1778488528|Me sale un segmentation fault al intentar acceder al indice de la matriz.|1
+426|979|1778490926|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|0
+688|137|1778508769|Estan muy cheveres las fotos de la UdeA que agregaste al album.|0
+538|385|1778527790|Nos faltan por definir los casos de prueba para la sustentacion.|1
+64|267|1778544075|Hola, ¿ya terminaste el informe del desafio de Informatica?|0
+183|951|1778552355|Nos vemos manana en la biblioteca central para estudiar.|0
+722|878|1778552848|Me sale un segmentation fault al intentar acceder al indice de la matriz.|0
+465|90|1778553444|¿Confirmamos la sala de estudio para el viernes por la tarde?|1
+216|935|1778558837|Felicitaciones por la presentacion del proyecto, salio excelente.|1
+227|219|1778566447|Nos vemos manana en la biblioteca central para estudiar.|1
+955|360|1778574846|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|1
+380|635|1778583635|Que buena nota sacamos en el preinforme del desafio 2.|1
+704|823|1778599902|Me avisas cuando llegues al bloque de ingenieria.|1
+884|994|1778607861|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|1
+697|898|1778623256|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|1
+499|238|1778628015|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|1
+802|724|1778665578|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|0
+186|616|1778677587|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|0
+953|627|1778688094|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
+804|537|1778694953|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|1
+239|835|1778700632|Voy a almorzar al comedero estudiantil, ¿quién se anima?|1
+536|42|1778714485|El profesor Anibal explico hoy lo de la matriz triangular en bits.|0
+673|614|1778799284|¿Nos reunimos en Discord a las 8 PM para montar todo?|1
+255|149|1778807772|Te deje los ejercicios de punteros y memoria dinamica en el correo.|1
+972|14|1778811678|Quedo genial el diseno modular con archivos .h y .cpp separados.|0
+515|555|1778817324|Me sale un segmentation fault al intentar acceder al indice de la matriz.|0
+627|289|1778824661|Me avisas cuando llegues al bloque de ingenieria.|1
+168|165|1778826698|Me sale un segmentation fault al intentar acceder al indice de la matriz.|0
+845|743|1778853211|¿Que tal te parecio la sustentacion pasada? Preguntaron mucho por los punteros.|0
+734|181|1778857838|¿A que hora es la clase de laboratorio este miercoles?|0
+378|319|1778884483|Voy a almorzar al comedero estudiantil, ¿quién se anima?|0
+611|612|1778886075|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|0
+648|444|1778888865|Hola, ¿ya terminaste el informe del desafio de Informatica?|0
+807|881|1778897173|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|1
+414|21|1778897411|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
+531|212|1778906852|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|1
+717|851|1778947186|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
+992|792|1778951383|Nos vemos manana en la biblioteca central para estudiar.|1
+266|388|1778984132|Felicitaciones por la presentacion del proyecto, salio excelente.|1
+220|855|1778998930|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|0
+482|25|1779006064|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|0
+497|461|1779017466|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|1
+665|82|1779024831|¿Tienes la clave del Wi-Fi de la biblioteca?|1
+931|619|1779048962|¿Trabajamos en la rama de git de la interfaz grafica hoy?|0
+600|979|1779061083|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|0
+878|164|1779066374|Me avisas cuando llegues al bloque de ingenieria.|1
+424|830|1779080504|Vamos por un cafe despues de la clase de POO.|0
+927|32|1779087340|Hola companero, te comparto los apuntes del parcial pasado.|0
+328|246|1779102988|Muy bacanas las fotos del carrusel, le di like a la tercera.|0
+660|803|1779115597|Voy a almorzar al comedero estudiantil, ¿quién se anima?|0
+39|405|1779123095|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|0
+926|867|1779124968|Estan muy cheveres las fotos de la UdeA que agregaste al album.|0
+990|770|1779126538|Estuvo pesado el quiz de fisica, menos mal ya paso.|0
+482|23|1779135934|Felicitaciones por la presentacion del proyecto, salio excelente.|0
+129|514|1779139893|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|1
+890|928|1779172428|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|0
+116|702|1779183118|Nos vemos en el bloque 21 antes de que empiece la clase.|1
+356|418|1779183973|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|0
+943|789|1779220254|Hola companero, ¿sabes si ya publicaron las notas del taller?|1
+460|762|1779229210|¿Confirmamos la sala de estudio para el viernes por la tarde?|1
+290|527|1779247051|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|0
+859|731|1779250477|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|0
+29|398|1779278635|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|1
+493|65|1779283806|Muy bacanas las fotos del carrusel, le di like a la tercera.|1
+600|103|1779293115|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|1
+220|980|1779294238|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
+14|754|1779311607|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|0
+511|563|1779326777|¿Confirmamos la sala de estudio para el viernes por la tarde?|1
+338|853|1779339279|¿Tienes la clave del Wi-Fi de la biblioteca?|1
+978|685|1779351485|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|0
+520|410|1779356089|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|0
+403|382|1779377814|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|1
+62|412|1779385106|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
+787|656|1779414394|Estan muy cheveres las fotos de la UdeA que agregaste al album.|1
+714|432|1779416912|Muy bacanas las fotos del carrusel, le di like a la tercera.|0
+230|155|1779468440|¿Alguien tiene el libro guia de estructuras de datos en PDF?|0
+95|408|1779475376|Hola companero, te comparto los apuntes del parcial pasado.|0
+934|545|1779486588|El profesor Anibal explico hoy lo de la matriz triangular en bits.|1
+171|741|1779498139|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|0
+356|319|1779511407|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|0
+627|54|1779527496|El profesor Anibal explico hoy lo de la matriz triangular en bits.|0
+9|8|1779528435|Estan muy cheveres las fotos de la UdeA que agregaste al album.|1
+766|759|1779537746|Felicitaciones por la presentacion del proyecto, salio excelente.|1
+231|710|1779554461|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|0
+48|995|1779556643|¿A qué hora abre la sala de sistemas del bloque 10?|1
+361|836|1779577363|Que buena nota sacamos en el preinforme del desafio 2.|1
+751|881|1779588712|¿Alguien tiene el libro guia de estructuras de datos en PDF?|0
+75|452|1779595258|Subi los cambios al repositorio de GitHub, por favor hagan pull.|1
+512|763|1779605119|¿A que hora es la clase de laboratorio este miercoles?|0
+167|508|1779633493|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|1
+743|849|1779680138|Hola companero, ¿sabes si ya publicaron las notas del taller?|1
+533|494|1779687018|¿Me prestas tu calculadora cientifica para el examen de mañana?|0
+433|374|1779687272|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|1
+151|56|1779711162|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|0
+709|69|1779760196|¿Confirmamos la sala de estudio para el viernes por la tarde?|0
+943|347|1779778391|Hola, ¿ya terminaste el informe del desafio de Informatica?|0
+421|124|1779780641|¿Tienes la clave del Wi-Fi de la biblioteca?|0
+902|387|1779785362|El profesor Anibal explico hoy lo de la matriz triangular en bits.|1
+720|717|1779800494|Voy a almorzar al comedero estudiantil, ¿quién se anima?|0
+750|814|1779817071|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|0
+136|45|1779821194|El profesor Anibal explico hoy lo de la matriz triangular en bits.|1
+798|409|1779848998|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|1
+487|321|1779862764|Felicitaciones por la presentacion del proyecto, salio excelente.|1
+818|938|1779864697|Hola companero, te comparto los apuntes del parcial pasado.|0
+265|538|1779873347|Hola, pasame por fa el enlace del repositorio del proyecto.|1
+26|91|1779875392|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|0
+674|441|1779888253|Estuvo pesado el quiz de fisica, menos mal ya paso.|1
+499|217|1779905950|¿Confirmamos la sala de estudio para el viernes por la tarde?|1
+2|349|1779916486|Mandame fotico del tablero por favor que no alcancé a copiar.|1
+166|379|1779920906|Felicitaciones por la presentacion del proyecto, salio excelente.|1
+700|360|1779924511|Mandame fotico del tablero por favor que no alcancé a copiar.|1
+728|254|1779936746|¿Alguien tiene el libro guia de estructuras de datos en PDF?|0
+178|724|1779973078|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|0
+29|35|1779973605|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
+974|338|1779983574|Hola, pasame por fa el enlace del repositorio del proyecto.|0
+764|108|1780011257|¿Tienes la clave del Wi-Fi de la biblioteca?|1
+650|680|1780019960|Hola companero, te comparto los apuntes del parcial pasado.|1
+123|548|1780022131|Felicitaciones por la presentacion del proyecto, salio excelente.|1
+606|325|1780038764|Subi los cambios al repositorio de GitHub, por favor hagan pull.|0
+389|99|1780045349|Hola companero, ¿sabes si ya publicaron las notas del taller?|1
+391|800|1780049802|¿Me prestas tu calculadora cientifica para el examen de mañana?|1
+283|860|1780062348|Hola, pasame por fa el enlace del repositorio del proyecto.|1
+809|991|1780063807|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|0
+267|669|1780064566|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|0
+315|267|1780067670|¿Nos reunimos en Discord a las 8 PM para montar todo?|1
+676|277|1780086948|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
+95|670|1780094204|¿Confirmamos la sala de estudio para el viernes por la tarde?|0
+536|998|1780099854|Hola companero, te comparto los apuntes del parcial pasado.|0
+849|643|1780134457|Voy a almorzar al comedero estudiantil, ¿quién se anima?|0
+540|720|1780139485|Hola companero, te comparto los apuntes del parcial pasado.|0
+851|706|1780141761|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+487|459|1780148012|¿Nos reunimos en Discord a las 8 PM para montar todo?|0
+443|983|1780153013|Mandame fotico del tablero por favor que no alcancé a copiar.|1
+904|19|1780216336|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|0
+42|315|1780235674|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|1
+34|593|1780242711|Vamos por un cafe despues de la clase de POO.|0
+990|866|1780273374|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+782|412|1780278820|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|1
+141|271|1780317257|Subi los cambios al repositorio de GitHub, por favor hagan pull.|0
+101|702|1780325715|El profesor Anibal explico hoy lo de la matriz triangular en bits.|1
+849|230|1780339344|Quedo genial el diseno modular con archivos .h y .cpp separados.|0
+279|127|1780348674|Estuvo pesado el quiz de fisica, menos mal ya paso.|1
+26|369|1780378604|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|0
+313|679|1780382271|¿Me prestas tu calculadora cientifica para el examen de mañana?|1
+900|250|1780399271|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|0
+674|457|1780407315|Nos faltan por definir los casos de prueba para la sustentacion.|1
+936|208|1780438793|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
+269|227|1780443162|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|0
+695|460|1780447503|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|1
+842|653|1780464587|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
+843|410|1780490293|¿Tienes la clave del Wi-Fi de la biblioteca?|0
+429|717|1780492638|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|1
+717|917|1780498756|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|0
+98|762|1780503953|Hola, pasame por fa el enlace del repositorio del proyecto.|0
+305|693|1780520182|Hola, ¿ya terminaste el informe del desafio de Informatica?|0
+517|466|1780522537|¿A que hora es la clase de laboratorio este miercoles?|1
+983|74|1780535626|Me sale un segmentation fault al intentar acceder al indice de la matriz.|1
+465|765|1780536769|Me avisas cuando llegues al bloque de ingenieria.|1
+560|534|1780545678|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|0
+777|528|1780546344|¿A que hora es la clase de laboratorio este miercoles?|0
+729|665|1780547995|Nos faltan por definir los casos de prueba para la sustentacion.|1
+179|114|1780556594|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|0
+532|7|1780583914|¿A qué hora abre la sala de sistemas del bloque 10?|0
+566|963|1780597239|Estuvo pesado el quiz de fisica, menos mal ya paso.|0
+350|174|1780598276|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|0
+777|673|1780625688|¿Me ayudas a revisar por que se cae el programa al cerrar sesion?|1
+529|257|1780627498|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|1
+433|916|1780632419|Hola companero, ¿sabes si ya publicaron las notas del taller?|1
+317|572|1780639260|¿A qué hora abre la sala de sistemas del bloque 10?|1
+21|705|1780675822|Hola companero, ¿sabes si ya publicaron las notas del taller?|0
+385|669|1780700973|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|0
+996|944|1780701506|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+701|833|1780714143|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
+377|919|1780715094|Hola companero, te comparto los apuntes del parcial pasado.|1
+334|345|1780721364|Muy bacanas las fotos del carrusel, le di like a la tercera.|1
+680|962|1780722004|¿Tienes la clave del Wi-Fi de la biblioteca?|0
+185|625|1780742321|Hola companero, ¿sabes si ya publicaron las notas del taller?|0
+861|635|1780746991|Nos vemos en el bloque 21 antes de que empiece la clase.|1
+696|599|1780753124|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+426|454|1780759199|Estan muy cheveres las fotos de la UdeA que agregaste al album.|1
+794|42|1780763239|Vamos por un cafe despues de la clase de POO.|1
+794|535|1780763368|¿Trabajamos en la rama de git de la interfaz grafica hoy?|1
+877|901|1780763469|¿Me prestas tu calculadora cientifica para el examen de mañana?|0
+387|563|1780771052|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|0
+794|289|1780772888|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|1
+910|80|1780786620|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|1
+189|379|1780799176|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|0
+38|748|1780802563|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|0
+512|122|1780806693|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|1
+89|747|1780824742|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|0
+383|912|1780833886|¿Trabajamos en la rama de git de la interfaz grafica hoy?|1
+649|796|1780834132|¿A que hora es la clase de laboratorio este miercoles?|1
+80|624|1780836056|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|0
+264|69|1780840383|Mandame fotico del tablero por favor que no alcancé a copiar.|0
+483|372|1780850658|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|0
+154|236|1780852531|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|0
+603|747|1780885972|Hola companero, ¿sabes si ya publicaron las notas del taller?|1
+87|536|1780887833|Vamos por un cafe despues de la clase de POO.|0
+297|968|1780889929|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|1
+192|568|1780904868|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|1
+679|692|1780914316|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|0
+235|387|1780933954|Hola, pasame por fa el enlace del repositorio del proyecto.|0
+278|855|1780942464|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|1
+299|888|1780969567|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|1
+291|28|1780970991|¿A que hora es la clase de laboratorio este miercoles?|0
+761|450|1780973645|Nos vemos en el bloque 21 antes de que empiece la clase.|0
+566|62|1780989125|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|1
+752|40|1780998914|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|0
+298|423|1781012393|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|0
+32|584|1781039212|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|1
+760|662|1781048871|Te deje los ejercicios de punteros y memoria dinamica en el correo.|1
+167|732|1781076942|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|0
+699|722|1781088593|¿Me prestas tu calculadora cientifica para el examen de mañana?|1
+456|383|1781124284|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|0
+670|598|1781124942|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|0
+746|1|1781139963|Voy a almorzar al comedero estudiantil, ¿quién se anima?|0
+990|671|1781151927|Hola, pasame por fa el enlace del repositorio del proyecto.|0
+934|372|1781155918|Nos faltan por definir los casos de prueba para la sustentacion.|1
+611|397|1781171591|Subi los cambios al repositorio de GitHub, por favor hagan pull.|0
+689|749|1781182955|¿Trabajamos en la rama de git de la interfaz grafica hoy?|0
+92|967|1781195018|¿Nos reunimos en Discord a las 8 PM para montar todo?|1
+442|719|1781229449|Mandame fotico del tablero por favor que no alcancé a copiar.|1
+841|741|1781253956|Que buena nota sacamos en el preinforme del desafio 2.|0
+536|80|1781279726|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|1
+244|271|1781280369|Hola, pasame por fa el enlace del repositorio del proyecto.|1
+22|849|1781281036|Muy bacanas las fotos del carrusel, le di like a la tercera.|0
+26|789|1781321529|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|0
+215|170|1781322639|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
+89|397|1781333021|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|1
+626|282|1781336348|Quedo genial el diseno modular con archivos .h y .cpp separados.|0
+971|808|1781353825|¿Nos reunimos en Discord a las 8 PM para montar todo?|1
+591|352|1781359017|¿Me ayudas a revisar por que se cae el programa al cerrar sesion?|0
+181|987|1781362702|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
+601|147|1781364596|Hola companero, te comparto los apuntes del parcial pasado.|1
+675|197|1781370299|Nos vemos en el bloque 21 antes de que empiece la clase.|1
+847|464|1781379164|Me avisas cuando llegues al bloque de ingenieria.|0
+730|319|1781387959|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|1
+919|597|1781401657|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|0
+295|678|1781436947|Quedo genial el diseno modular con archivos .h y .cpp separados.|0
+741|393|1781443410|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|1
+841|66|1781445510|Que buena nota sacamos en el preinforme del desafio 2.|0
+187|116|1781447861|¿Alguien tiene el libro guia de estructuras de datos en PDF?|1
+890|146|1781448091|Hola companero, te comparto los apuntes del parcial pasado.|0
+824|323|1781460856|Muy bacanas las fotos del carrusel, le di like a la tercera.|0
+921|58|1781559293|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|1
+118|993|1781561864|¿Nos reunimos en Discord a las 8 PM para montar todo?|0
+397|461|1781571023|Estuvo pesado el quiz de fisica, menos mal ya paso.|1
+431|646|1781581918|Hola companero, te comparto los apuntes del parcial pasado.|0
+832|595|1781594056|Subi los cambios al repositorio de GitHub, por favor hagan pull.|0
+179|625|1781605999|Estuvo pesado el quiz de fisica, menos mal ya paso.|1
+315|978|1781616177|Hola companero, te comparto los apuntes del parcial pasado.|0
+382|982|1781624019|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|0
+728|391|1781624195|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|1
+494|250|1781626204|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|1
+76|687|1781630153|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|0
+362|798|1781635762|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|0
+216|935|1781662370|¿Me ayudas a revisar por que se cae el programa al cerrar sesion?|1
+519|316|1781703392|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
+160|2|1781707575|¿Trabajamos en la rama de git de la interfaz grafica hoy?|1
+231|33|1781709977|Quedo genial el diseno modular con archivos .h y .cpp separados.|0
+841|734|1781730834|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|1
+154|6|1781758528|Nos vemos manana en la biblioteca central para estudiar.|0
+604|165|1781787489|Nos vemos manana en la biblioteca central para estudiar.|0
+115|908|1781800409|¿Trabajamos en la rama de git de la interfaz grafica hoy?|0
+138|985|1781810877|¿A que hora es la clase de laboratorio este miercoles?|1
+801|953|1781814801|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|0
+105|413|1781835785|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|0
+865|380|1781835944|Quedo genial el diseno modular con archivos .h y .cpp separados.|1
+782|6|1781837586|Hola, pasame por fa el enlace del repositorio del proyecto.|0
+947|276|1781859457|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|0
+53|102|1781868092|Nos vemos en el bloque 21 antes de que empiece la clase.|1
+473|802|1781889959|¿Me ayudas a revisar por que se cae el programa al cerrar sesion?|0
+827|554|1781891086|Quedo genial el diseno modular con archivos .h y .cpp separados.|0
+783|326|1781892882|Me avisas cuando llegues al bloque de ingenieria.|1
+110|775|1781907317|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|0
+818|630|1781912744|Me avisas cuando llegues al bloque de ingenieria.|0
+952|27|1781921630|¿A que hora es la clase de laboratorio este miercoles?|1
+657|825|1781953793|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|1
+369|571|1781957073|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|0
+121|571|1781964482|¿Que tal te parecio la sustentacion pasada? Preguntaron mucho por los punteros.|0
+575|422|1781975684|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|0
+246|584|1781977689|Nos faltan por definir los casos de prueba para la sustentacion.|0
+785|585|1781978332|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|0
+50|111|1781990752|Nos faltan por definir los casos de prueba para la sustentacion.|0
+16|267|1782011595|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|0
+587|414|1782015483|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|0
+523|397|1782033775|¿Que tal te parecio la sustentacion pasada? Preguntaron mucho por los punteros.|0
+547|518|1782035842|El profesor Anibal explico hoy lo de la matriz triangular en bits.|0
+302|265|1782044733|¿Alguien tiene el libro guia de estructuras de datos en PDF?|1
+873|913|1782060021|El profesor Anibal explico hoy lo de la matriz triangular en bits.|0
+634|83|1782066853|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|1
+32|828|1782067380|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|0
+12|869|1782094832|Que buena nota sacamos en el preinforme del desafio 2.|0
+211|852|1782097677|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|0
+222|350|1782101016|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|1
+135|396|1782121836|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|0
+811|696|1782165337|¿Que tal te parecio la sustentacion pasada? Preguntaron mucho por los punteros.|0
+269|81|1782168002|Mandame fotico del tablero por favor que no alcancé a copiar.|0
+420|362|1782191405|Vamos por un cafe despues de la clase de POO.|0
+588|392|1782194826|Nos faltan por definir los casos de prueba para la sustentacion.|1
+674|157|1782197818|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|0
+540|893|1782198153|Felicitaciones por la presentacion del proyecto, salio excelente.|0
+885|701|1782234107|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
+654|985|1782237445|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|1
+820|84|1782243845|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+231|190|1782252978|¿Que tal te parecio la sustentacion pasada? Preguntaron mucho por los punteros.|0
+559|223|1782265824|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
+109|158|1782296590|¿A qué hora abre la sala de sistemas del bloque 10?|1
+313|456|1782298082|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
+867|411|1782303369|¿Tienes la clave del Wi-Fi de la biblioteca?|0
+55|88|1782309815|¿Alguien tiene el libro guia de estructuras de datos en PDF?|0
+391|699|1782316468|Nos faltan por definir los casos de prueba para la sustentacion.|1
+719|681|1782330258|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
+641|695|1782334472|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|1
+369|3|1782348075|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+564|722|1782350791|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|0
+0|981|1782354562|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|0
+881|727|1782366902|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|0
+827|323|1782371611|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|0
+304|880|1782389141|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|0
+223|991|1782416430|Felicitaciones por la presentacion del proyecto, salio excelente.|1
+517|619|1782435094|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
+348|213|1782466942|Estuvo pesado el quiz de fisica, menos mal ya paso.|1
+721|31|1782472809|¿A qué hora abre la sala de sistemas del bloque 10?|0
+918|960|1782478630|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|1
+979|864|1782488329|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|1
+190|655|1782500026|¿Alguien tiene el libro guia de estructuras de datos en PDF?|0
+823|241|1782502854|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|0
+566|957|1782522706|Subi los cambios al repositorio de GitHub, por favor hagan pull.|1
+132|629|1782552940|Mandame fotico del tablero por favor que no alcancé a copiar.|1
+621|911|1782569347|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|0
+88|946|1782578850|Estan muy cheveres las fotos de la UdeA que agregaste al album.|1
+39|111|1782581540|Hola companero, ¿sabes si ya publicaron las notas del taller?|1
+940|965|1782587018|Me sale un segmentation fault al intentar acceder al indice de la matriz.|1
+148|543|1782587263|Hola, ¿ya terminaste el informe del desafio de Informatica?|1
+646|766|1782595418|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|1
+550|848|1782604155|¿A qué hora abre la sala de sistemas del bloque 10?|0
+482|948|1782608842|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|0
+433|80|1782609373|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|0
+724|156|1782612523|Nos faltan por definir los casos de prueba para la sustentacion.|1
+421|903|1782666855|¿Alguien tiene el libro guia de estructuras de datos en PDF?|0
+288|783|1782685974|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|1
+336|366|1782687261|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|1
+40|253|1782688730|¿Trabajamos en la rama de git de la interfaz grafica hoy?|0
+128|732|1782710821|Vamos por un cafe despues de la clase de POO.|0
+824|913|1782720963|Vamos por un cafe despues de la clase de POO.|0
+194|298|1782748980|¿Alguien tiene el libro guia de estructuras de datos en PDF?|1
+480|490|1782779680|Nos vemos en el bloque 21 antes de que empiece la clase.|0
+694|969|1782783995|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|1
+195|19|1782798798|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
+545|326|1782801384|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|0
+874|532|1782825708|Estan muy cheveres las fotos de la UdeA que agregaste al album.|0
+824|91|1782826371|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|1
+497|621|1782832541|Me avisas cuando llegues al bloque de ingenieria.|1
+476|452|1782836420|¿Tienes la clave del Wi-Fi de la biblioteca?|0
+69|480|1782838040|Mandame fotico del tablero por favor que no alcancé a copiar.|1
+358|631|1782838108|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|0
+941|421|1782843939|Felicitaciones por la presentacion del proyecto, salio excelente.|0
+972|773|1782850299|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|1
+307|997|1782868324|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
+66|202|1782879086|Hola, pasame por fa el enlace del repositorio del proyecto.|0
+502|729|1782883482|Hola companero, te comparto los apuntes del parcial pasado.|0
+935|94|1782890587|¿Nos reunimos en Discord a las 8 PM para montar todo?|0
+222|454|1782921516|Te deje los ejercicios de punteros y memoria dinamica en el correo.|1
+965|315|1782922859|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|1
+277|908|1782928312|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|1
+920|730|1782935453|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+721|610|1782959782|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|1
+316|747|1782973941|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|0
+886|152|1782983644|El profesor Anibal explico hoy lo de la matriz triangular en bits.|1
+392|241|1782989956|Quedo genial el diseno modular con archivos .h y .cpp separados.|1
+399|630|1783004192|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|0
+454|820|1783035693|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+949|816|1783059921|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|1
+475|772|1783062760|¿Tienes la clave del Wi-Fi de la biblioteca?|1
+770|766|1783063522|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|0
+123|972|1783067273|Nos faltan por definir los casos de prueba para la sustentacion.|0
+93|116|1783079308|Mandame fotico del tablero por favor que no alcancé a copiar.|1
+662|80|1783092341|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|0
+657|75|1783098638|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|1
+565|839|1783101030|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|1
+790|913|1783116425|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|0
+980|63|1783117047|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|1
+423|331|1783129218|Nos vemos manana en la biblioteca central para estudiar.|0
+533|111|1783153503|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|0
+474|849|1783156472|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|0
+317|472|1783163713|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|0
+974|414|1783173353|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|0
+368|984|1783180141|¿Trabajamos en la rama de git de la interfaz grafica hoy?|1
+448|739|1783181608|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|0
+676|152|1783199299|El profesor Anibal explico hoy lo de la matriz triangular en bits.|1
+389|284|1783213925|Mandame fotico del tablero por favor que no alcancé a copiar.|1
+828|56|1783214663|Hola, pasame por fa el enlace del repositorio del proyecto.|1
+385|429|1783221826|Nos vemos en el bloque 21 antes de que empiece la clase.|0
+445|161|1783224441|Hola, ¿ya terminaste el informe del desafio de Informatica?|1
+719|880|1783234763|Hola companero, te comparto los apuntes del parcial pasado.|0
+638|184|1783246944|¿Nos reunimos en Discord a las 8 PM para montar todo?|1
+397|480|1783255302|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|0
+971|868|1783257783|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|0
+948|802|1783267547|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|1
+296|113|1783278776|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|1
+670|687|1783307797|Nos vemos en el bloque 21 antes de que empiece la clase.|1
+88|566|1783325858|Hola, ¿ya terminaste el informe del desafio de Informatica?|1
+483|249|1783327210|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|0
+102|538|1783331962|Hola, ¿ya terminaste el informe del desafio de Informatica?|0
+333|201|1783352844|Estan muy cheveres las fotos de la UdeA que agregaste al album.|1
+350|419|1783353549|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|1
+733|794|1783357178|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|1
+356|360|1783363251|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|0
+203|512|1783367468|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|0
+984|794|1783396398|¿Tienes la clave del Wi-Fi de la biblioteca?|1
+405|905|1783396513|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|1
+826|44|1783415740|El profesor Anibal explico hoy lo de la matriz triangular en bits.|0
+653|260|1783420627|¿Confirmamos la sala de estudio para el viernes por la tarde?|0
+47|101|1783421005|Nos vemos manana en la biblioteca central para estudiar.|0
+715|530|1783437407|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|0
+96|38|1783447447|Hola companero, ¿sabes si ya publicaron las notas del taller?|0
+493|159|1783455773|El profesor Anibal explico hoy lo de la matriz triangular en bits.|1
+138|887|1783492029|Nos faltan por definir los casos de prueba para la sustentacion.|0
+898|491|1783530614|¿Trabajamos en la rama de git de la interfaz grafica hoy?|1
+53|171|1783569757|¿Alguien tiene el libro guia de estructuras de datos en PDF?|1
+280|377|1783576586|¿Nos reunimos en Discord a las 8 PM para montar todo?|1
+663|64|1783578233|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|1
+425|495|1783584092|Felicitaciones por la presentacion del proyecto, salio excelente.|1
+249|768|1783593028|Voy a almorzar al comedero estudiantil, ¿quién se anima?|1
+920|823|1783611308|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|0
+317|700|1783616117|¿Me prestas tu calculadora cientifica para el examen de mañana?|0
+997|944|1783626143|Voy a almorzar al comedero estudiantil, ¿quién se anima?|0
+338|555|1783633825|Me avisas cuando llegues al bloque de ingenieria.|0
+168|460|1783638214|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
+326|247|1783652222|Estan muy cheveres las fotos de la UdeA que agregaste al album.|1
+258|223|1783659786|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|1
+741|169|1783683010|Hola, pasame por fa el enlace del repositorio del proyecto.|0
+394|390|1783705148|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|1
+95|832|1783712732|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|1
+823|117|1783714593|Hola companero, te comparto los apuntes del parcial pasado.|0
+331|749|1783716718|Muy bacanas las fotos del carrusel, le di like a la tercera.|0
+449|127|1783726894|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|1
+316|988|1783737552|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|1
+777|722|1783740723|¿Trabajamos en la rama de git de la interfaz grafica hoy?|0
+477|100|1783753484|Quedo genial el diseno modular con archivos .h y .cpp separados.|1
+399|894|1783775115|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|1
+300|99|1783796784|Hola, pasame por fa el enlace del repositorio del proyecto.|1
+242|275|1783815725|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|1
+39|293|1783852956|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|0
+740|957|1783860207|Te deje los ejercicios de punteros y memoria dinamica en el correo.|1
+325|762|1783870449|Me sale un segmentation fault al intentar acceder al indice de la matriz.|1
+585|623|1783872810|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|0
+573|785|1783875731|Me sale un segmentation fault al intentar acceder al indice de la matriz.|1
+62|644|1783876632|Subi los cambios al repositorio de GitHub, por favor hagan pull.|0
+65|959|1783877480|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|0
+772|550|1783888655|Te deje los ejercicios de punteros y memoria dinamica en el correo.|0
+244|129|1783890072|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|0
+730|341|1783896215|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|1
+181|983|1783924339|Subi los cambios al repositorio de GitHub, por favor hagan pull.|1
+761|882|1783927431|¿Trabajamos en la rama de git de la interfaz grafica hoy?|1
+988|548|1783932462|Voy a almorzar al comedero estudiantil, ¿quién se anima?|0
+50|763|1783945676|Muy bacanas las fotos del carrusel, le di like a la tercera.|1
+30|66|1783949574|Estan muy cheveres las fotos de la UdeA que agregaste al album.|1
+922|888|1783955142|Muy bacanas las fotos del carrusel, le di like a la tercera.|0
+329|619|1783959461|¿Nos reunimos en Discord a las 8 PM para montar todo?|0
+416|668|1783961831|¿Me prestas tu calculadora cientifica para el examen de mañana?|0
+602|675|1783962245|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|1
+702|547|1783963024|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|1
+388|386|1783972080|¿A que hora es la clase de laboratorio este miercoles?|0
+833|260|1783990009|Mandame fotico del tablero por favor que no alcancé a copiar.|0
+704|798|1783992116|Hola, pasame por fa el enlace del repositorio del proyecto.|1
+969|773|1784007714|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|0
+413|439|1784018895|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|0
+710|135|1784028960|Hola companero, te comparto los apuntes del parcial pasado.|0
+407|734|1784061335|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|1
+493|691|1784066353|¿Me prestas tu calculadora cientifica para el examen de mañana?|0
+764|772|1784069917|Te deje los ejercicios de punteros y memoria dinamica en el correo.|0
+671|262|1784075232|Felicitaciones por la presentacion del proyecto, salio excelente.|0
+459|612|1784080448|Subi los cambios al repositorio de GitHub, por favor hagan pull.|1
+103|848|1784088989|Voy a almorzar al comedero estudiantil, ¿quién se anima?|0
+843|677|1784117146|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|0
+779|360|1784118539|Subi los cambios al repositorio de GitHub, por favor hagan pull.|1
+115|594|1784157563|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|0
+930|355|1784161548|El profesor Anibal explico hoy lo de la matriz triangular en bits.|0
+935|844|1784168130|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|1
+234|960|1784177378|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|1
+561|162|1784185807|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|0
+423|565|1784188931|Nos faltan por definir los casos de prueba para la sustentacion.|1
+740|332|1784191126|Nos faltan por definir los casos de prueba para la sustentacion.|1
+426|933|1784195880|Voy a almorzar al comedero estudiantil, ¿quién se anima?|1
+353|25|1784199109|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|1
+34|38|1784215787|Me sale un segmentation fault al intentar acceder al indice de la matriz.|1
+348|945|1784222626|Vamos por un cafe despues de la clase de POO.|1
+989|386|1784227926|Te deje los ejercicios de punteros y memoria dinamica en el correo.|1
+572|568|1784232297|¿Confirmamos la sala de estudio para el viernes por la tarde?|1
+579|872|1784285237|Nos vemos en el bloque 21 antes de que empiece la clase.|0
+206|109|1784286324|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|0
+285|685|1784287807|Felicitaciones por la presentacion del proyecto, salio excelente.|0
+757|953|1784328603|Estan muy cheveres las fotos de la UdeA que agregaste al album.|1
+713|980|1784329982|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|0
+793|312|1784340048|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|0
+810|654|1784347719|¿A qué hora abre la sala de sistemas del bloque 10?|1
+977|324|1784372800|El profesor Anibal explico hoy lo de la matriz triangular en bits.|0
+465|973|1784376055|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|0
+737|559|1784385176|Nos faltan por definir los casos de prueba para la sustentacion.|0
+737|416|1784393952|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|0
+613|331|1784394887|Nos vemos manana en la biblioteca central para estudiar.|0
+247|381|1784400961|¿Que tal te parecio la sustentacion pasada? Preguntaron mucho por los punteros.|1
+734|597|1784402344|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+706|721|1784408220|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
+686|883|1784424356|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|1
+887|631|1784439755|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|1
+989|740|1784461656|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|0
+802|461|1784461920|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|1
+707|487|1784469231|¿Trabajamos en la rama de git de la interfaz grafica hoy?|0
+585|562|1784473490|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|0
+752|711|1784475471|Voy a almorzar al comedero estudiantil, ¿quién se anima?|0
+710|938|1784481943|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|0
+650|833|1784499579|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+418|701|1784499582|Me avisas cuando llegues al bloque de ingenieria.|1
+278|717|1784508646|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|1
+692|978|1784531089|Hay que optimizar el contador de iteraciones para que no afecte el rendimiento.|0
+475|377|1784554437|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|0
+622|903|1784557998|Te deje los ejercicios de punteros y memoria dinamica en el correo.|0
+141|521|1784559643|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|0
+928|113|1784579380|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|0
+344|29|1784586173|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|0
+799|468|1784619957|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|0
+508|708|1784694114|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|1
+194|536|1784694979|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|0
+803|108|1784701351|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|0
+532|746|1784701420|Que buena nota sacamos en el preinforme del desafio 2.|0
+509|875|1784731657|El profesor Anibal explico hoy lo de la matriz triangular en bits.|0
+374|188|1784735944|Estuvo pesado el quiz de fisica, menos mal ya paso.|0
+662|302|1784740024|Me avisas cuando llegues al bloque de ingenieria.|1
+180|431|1784763721|Hola, pasame por fa el enlace del repositorio del proyecto.|1
+64|113|1784771485|¿Que tal te parecio la sustentacion pasada? Preguntaron mucho por los punteros.|0
+254|161|1784774505|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+818|494|1784779038|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|0
+643|729|1784812413|Me avisas cuando llegues al bloque de ingenieria.|1
+352|934|1784857520|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
+163|415|1784861788|Me sale un segmentation fault al intentar acceder al indice de la matriz.|1
+796|391|1784874748|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|1
+105|392|1784889169|Subi los cambios al repositorio de GitHub, por favor hagan pull.|1
+75|395|1784920007|¿Trabajamos en la rama de git de la interfaz grafica hoy?|1
+731|86|1784929855|¿A qué hora abre la sala de sistemas del bloque 10?|0
+594|97|1784959341|Hola, pasame por fa el enlace del repositorio del proyecto.|1
+0|794|1784977124|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|0
+67|318|1785005227|¿Alguien tiene el libro guia de estructuras de datos en PDF?|0
+629|608|1785014372|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|1
+956|806|1785036849|Muy bacanas las fotos del carrusel, le di like a la tercera.|0
+392|195|1785053734|¿Me ayudas a revisar por que se cae el programa al cerrar sesion?|0
+526|822|1785070333|¿Trabajamos en la rama de git de la interfaz grafica hoy?|1
+812|370|1785071010|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|0
+233|758|1785073330|Hola, ¿ya terminaste el informe del desafio de Informatica?|0
+210|530|1785096740|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|1
+519|848|1785103167|El profesor Anibal explico hoy lo de la matriz triangular en bits.|1
+363|332|1785127676|Que buena nota sacamos en el preinforme del desafio 2.|1
+199|34|1785131143|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|0
+502|187|1785150798|Muy bacanas las fotos del carrusel, le di like a la tercera.|1
+941|566|1785155424|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|0
+446|620|1785160510|Estan muy cheveres las fotos de la UdeA que agregaste al album.|1
+141|422|1785189755|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|1
+220|773|1785191489|Estan muy cheveres las fotos de la UdeA que agregaste al album.|1
+459|570|1785194661|Me avisas cuando llegues al bloque de ingenieria.|0
+927|661|1785198414|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|0
+480|464|1785202119|¿Me prestas tu calculadora cientifica para el examen de mañana?|1
+15|981|1785249013|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
+975|878|1785260902|¿Tienes la clave del Wi-Fi de la biblioteca?|0
+778|379|1785279865|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|0
+955|317|1785293403|¿Alguien tiene el libro guia de estructuras de datos en PDF?|1
+152|620|1785297502|Hola, pasame por fa el enlace del repositorio del proyecto.|1
+978|361|1785331005|El profesor Anibal explico hoy lo de la matriz triangular en bits.|0
+514|584|1785341514|Voy a almorzar al comedero estudiantil, ¿quién se anima?|0
+192|153|1785357492|Quedo genial el diseno modular con archivos .h y .cpp separados.|0
+448|921|1785366963|¿Trabajamos en la rama de git de la interfaz grafica hoy?|0
+180|823|1785379778|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|0
+851|127|1785384622|¿Vas hoy a la cafeteria del bloque 19 a almorzar?|1
+55|192|1785395939|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|1
+898|251|1785404772|El profesor Anibal explico hoy lo de la matriz triangular en bits.|1
+354|970|1785411320|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|0
+877|282|1785437841|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|0
+466|745|1785457982|¿Que tal te parecio la sustentacion pasada? Preguntaron mucho por los punteros.|1
+979|188|1785468648|Hola companero, te comparto los apuntes del parcial pasado.|0
+744|802|1785496999|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|1
+730|885|1785526985|Estan muy cheveres las fotos de la UdeA que agregaste al album.|0
+805|717|1785534271|Me avisas cuando llegues al bloque de ingenieria.|0
+16|207|1785539282|¿Nos reunimos en Discord a las 8 PM para montar todo?|1
+827|13|1785539907|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
+796|269|1785553870|Hola, ¿tienes un momento para revisar el codigo de la matriz compacta?|1
+113|98|1785555696|Ya casi acabamos el semestre, ¡animo con los ultimos trabajos!|0
+208|559|1785557889|Quedo genial el diseno modular con archivos .h y .cpp separados.|1
+799|871|1785592126|Voy a almorzar al comedero estudiantil, ¿quién se anima?|0
+429|204|1785643392|Te deje los ejercicios de punteros y memoria dinamica en el correo.|0
+759|431|1785652501|Estan muy cheveres las fotos de la UdeA que agregaste al album.|0
+832|130|1785662829|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+145|747|1785663323|Quedo genial el diseno modular con archivos .h y .cpp separados.|1
+385|596|1785676444|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|1
+626|826|1785748304|Hola, ¿ya terminaste el informe del desafio de Informatica?|1
+111|585|1785748503|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+40|253|1785764231|¿Ya leiste los requerimientos del desafio dos sobre iteraciones?|1
+12|17|1785764308|Vamos por un cafe despues de la clase de POO.|1
+106|210|1785777624|Te deje los ejercicios de punteros y memoria dinamica en el correo.|1
+390|611|1785802533|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|1
+685|926|1785818795|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|0
+514|941|1785821635|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|0
+820|475|1785821828|¿Vieron el meme que mandaron al grupo de WhatsApp de la facultad?|1
+887|611|1785836215|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|0
+308|487|1785868434|Oye, ¿viste la nueva actualizacion de los horarios del semestre?|1
+835|70|1785874652|Hola, pasame por fa el enlace del repositorio del proyecto.|0
+811|309|1785875974|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|1
+325|69|1785883221|Vamos por un cafe despues de la clase de POO.|0
+640|310|1785900552|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|0
+673|161|1785914727|¿Que tal te parecio la sustentacion pasada? Preguntaron mucho por los punteros.|1
+690|765|1785914805|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|1
+267|875|1785988695|Estuvo pesado el quiz de fisica, menos mal ya paso.|1
+403|626|1785990523|Revisa que la sobrecarga del operador de asignacion funcione bien con auto-asignacion.|0
+695|863|1785992414|Nos vemos en el bloque 21 antes de que empiece la clase.|0
+196|194|1785994763|¿Trabajamos en la rama de git de la interfaz grafica hoy?|0
+660|157|1785997031|¿Pudiste revisar el diagrama de clases en C++ que propusimos?|0
+14|270|1786004379|Estan muy cheveres las fotos de la UdeA que agregaste al album.|1
+818|892|1786015005|Nos faltan por definir los casos de prueba para la sustentacion.|1
+698|906|1786017734|Quedo genial el diseno modular con archivos .h y .cpp separados.|1
+425|556|1786019936|¿Alguien tiene el libro guia de estructuras de datos en PDF?|0
+121|182|1786027403|¿Alguien tiene el libro guia de estructuras de datos en PDF?|0
+99|240|1786037071|Hola, pasame por fa el enlace del repositorio del proyecto.|1
+281|230|1786039151|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|0
+630|827|1786058086|¿Me prestas tu calculadora cientifica para el examen de mañana?|1
+590|589|1786066989|Nos faltan por definir los casos de prueba para la sustentacion.|1
+545|287|1786078072|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
+142|252|1786085076|¿Confirmamos la sala de estudio para el viernes por la tarde?|1
+138|992|1786095488|Nos faltan por definir los casos de prueba para la sustentacion.|1
+384|82|1786095914|Hola, pasame por fa el enlace del repositorio del proyecto.|1
+713|567|1786123602|¿Confirmamos la sala de estudio para el viernes por la tarde?|1
+327|914|1786124501|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|0
+464|379|1786125852|Me avisas cuando llegues al bloque de ingenieria.|0
+693|918|1786138265|Nos vemos en el bloque 21 antes de que empiece la clase.|1
+478|998|1786138994|Muy bacanas las fotos del carrusel, le di like a la tercera.|1
+51|667|1786139121|Hola, ¿ya terminaste el informe del desafio de Informatica?|0
+489|962|1786145161|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|1
+717|65|1786158433|¿A que hora es la clase de laboratorio este miercoles?|0
+208|771|1786158722|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|1
+782|877|1786168850|Que buenas fotos subiste de tu viaje a Guatape, quedaron geniales.|1
+839|269|1786173280|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|1
+673|890|1786206419|Recuerda liberar la memoria dinamica con delete[] para evitar fugas.|1
+572|301|1786211133|Actualice el archivo de fotos.txt con las nuevas imagenes del album.|1
+587|692|1786226461|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|1
+448|853|1786227370|Me sale un segmentation fault al intentar acceder al indice de la matriz.|1
+353|340|1786234487|Buenisimo el avance, ya tenemos listas las metricas de eficiencia.|1
+612|897|1786244585|Me avisas cuando llegues al bloque de ingenieria.|1
+305|474|1786268554|Estuvo pesado el quiz de fisica, menos mal ya paso.|1
+733|665|1786285201|Me avisas cuando llegues al bloque de ingenieria.|0
+692|758|1786299464|Recuerda que tenemos reunion del grupo de estudio a las 4pm.|1
+509|910|1786306542|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|1
+815|816|1786311474|Hola, avisame cuando tengas un espacio y repasamos el preinforme.|0
+420|948|1786326298|Voy a almorzar al comedero estudiantil, ¿quién se anima?|1
+184|797|1786334380|Hola, pasame por fa el enlace del repositorio del proyecto.|1
+63|848|1786376059|¿Nos reunimos en Discord a las 8 PM para montar todo?|0
+850|928|1786383532|¿Trabajamos en la rama de git de la interfaz grafica hoy?|0
+815|7|1786394948|Estuve revisando el calculo de memoria en bytes y cuadra exacto.|0
+281|639|1786399788|Me sale un segmentation fault al intentar acceder al indice de la matriz.|1
+855|153|1786414814|Vamos por un cafe despues de la clase de POO.|1
+555|358|1786433652|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|1
+675|486|1786448347|Termine de corregir la funcion de busqueda binaria, quedo muy rapida.|1
+811|184|1786453778|¿Alguien tiene el libro guia de estructuras de datos en PDF?|1
+307|518|1786454722|Quedo perfecto el algoritmo para la seleccion ponderada de fotos.|0
+698|786|1786458264|Nos vemos manana en la biblioteca central para estudiar.|1
+502|808|1786460312|Hola companero, ¿sabes si ya publicaron las notas del taller?|0
+435|763|1786467972|Nos vemos en el bloque 21 antes de que empiece la clase.|1
+519|228|1786471566|¿A qué hora abre la sala de sistemas del bloque 10?|1
+256|201|1786483170|Muy bacanas las fotos del carrusel, le di like a la tercera.|0
+131|899|1786498673|Mandame fotico del tablero por favor que no alcancé a copiar.|0
+873|670|1786499740|Vamos por un cafe despues de la clase de POO.|0
