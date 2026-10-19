@@ -4,16 +4,37 @@
 #include <chrono>
 
 using namespace std;
+using namespace chrono;
 using namespace util;
 
 namespace {
 
-enum Seccion { SEC_USUARIOS = 0, SEC_ALBUMES, SEC_FOTOS, SEC_RELACIONES, SEC_MENSAJES };
+enum Archivo { ARCH_USUARIOS = 0, ARCH_ALBUMES, ARCH_FOTOS, ARCH_RELACIONES, ARCH_MENSAJES };
+
+const char* const NOMBRES_ARCHIVOS[5] = {
+    "usuarios.txt", "albumes.txt", "fotos.txt", "relaciones.txt", "mensajes.txt"
+};
+
+char* unirRuta(const char* carpeta, const char* nombre, size_t& bytes) {
+    size_t a = longitud(carpeta);
+    size_t b = longitud(nombre);
+    bool separador = a > 0 && carpeta[a - 1] != '/' && carpeta[a - 1] != '\\';
+    bytes = a + b + 2;
+    char* ruta = new char[bytes];
+    size_t p = 0;
+    sumarIteraciones(static_cast<long long>(a + b));
+    for (size_t i = 0; i < a; i++) ruta[p++] = carpeta[i];
+    if (separador) ruta[p++] = '/';
+    for (size_t i = 0; i < b; i++) ruta[p++] = nombre[i];
+    ruta[p] = '\0';
+    return ruta;
+}
 
 int dividir(char* linea, char* campos[], int maxCampos) {
     int n = 0;
     campos[n++] = linea;
     for (char* p = linea; *p != '\0'; ++p) {
+        sumarIteraciones(1);
         if (*p == '|' && n < maxCampos) {
             *p = '\0';
             campos[n++] = p + 1;
@@ -25,21 +46,28 @@ int dividir(char* linea, char* campos[], int maxCampos) {
 void quitarFinDeLinea(char* linea) {
     size_t n = longitud(linea);
     while (n > 0 && (linea[n - 1] == '\r' || linea[n - 1] == '\n')) {
+        sumarIteraciones(1);
         linea[--n] = '\0';
     }
 }
 
 }
 
+Plataforma::MarcoLocal::MarcoLocal(const Plataforma& p, size_t b) : dueno(p), bytes(b) {
+    dueno.registrarMemoriaLocal(bytes);
+}
+
+Plataforma::MarcoLocal::~MarcoLocal() { dueno.liberarMemoriaLocal(bytes); }
+
 Plataforma::Plataforma()
     : usuarios(nullptr), cantidadUsuarios(0), capacidadUsuarios(0),
       matrizCompacta(nullptr), tamanoMatrizBytes(0), indiceUsuarios(nullptr),
-      idxUsuarioAutenticado(-1), cantidadFotosInicio(0), cambioFotosUsado(false),
-      cambiosPendientes(false), rutaBD(nullptr),
-      contadorIteraciones(0), memoriaLocal(0) {
-    for (int i = 0; i < FOTOS_INICIO; i++) fotosInicio[i] = -1;
+      idxUsuarioAutenticado(-1), amigosInicio(nullptr), pesosInicio(nullptr),
+      cantidadAmigosInicio(0), cambioFotosUsado(false),
+      cambiosPendientes(false), perfilesModificados(false), rutaBD(nullptr),
+      memoriaLocal(0), memoriaLocalPico(0), componentesExternos(0) {
     unsigned int semilla = static_cast<unsigned int>(
-        chrono::steady_clock::now().time_since_epoch().count());
+        steady_clock::now().time_since_epoch().count());
     try {
         random_device rd;
         semilla ^= rd();
@@ -56,6 +84,7 @@ void Plataforma::liberar() {
     delete[] matrizCompacta;
     delete[] indiceUsuarios;
     delete[] rutaBD;
+    liberarCacheInicio();
     usuarios = nullptr;
     matrizCompacta = nullptr;
     indiceUsuarios = nullptr;
@@ -64,6 +93,7 @@ void Plataforma::liberar() {
     tamanoMatrizBytes = 0;
     idxUsuarioAutenticado = -1;
 }
+
 
 size_t Plataforma::indiceTriangular(int i, int j) const {
     if (i > j) { int t = i; i = j; j = t; }
@@ -95,6 +125,7 @@ bool Plataforma::sonAmigos(int idxA, int idxB) const { return leerEstado(idxA, i
 
 void Plataforma::redimensionarUsuarios(int nuevaCapacidad) {
     Usuario* nuevo = new Usuario[nuevaCapacidad];
+    sumarIteraciones(cantidadUsuarios);
     for (int i = 0; i < cantidadUsuarios; i++) nuevo[i].intercambiar(usuarios[i]);
     delete[] usuarios;
     usuarios = nuevo;
@@ -107,17 +138,23 @@ void Plataforma::construirIndice() {
     int n = cantidadUsuarios;
     if (n == 0) return;
 
+
+    MarcoLocal marco(*this, 8 * sizeof(int) + 3 * sizeof(int*));
+    MarcoLocal temporales(*this, 2 * static_cast<size_t>(n) * sizeof(int));
     int* origen = new int[n];
     int* destino = new int[n];
+    sumarIteraciones(n);
     for (int i = 0; i < n; i++) origen[i] = i;
 
     for (int ancho = 1; ancho < n; ancho *= 2) {
+        sumarIteraciones(1);
         for (int lo = 0; lo < n; lo += 2 * ancho) {
+            sumarIteraciones(1);
             int mid = (lo + ancho < n) ? lo + ancho : n;
             int hi = (lo + 2 * ancho < n) ? lo + 2 * ancho : n;
             int i = lo, j = mid, k = lo;
             while (i < mid && j < hi) {
-                contadorIteraciones++;
+                sumarIteraciones(1);
                 if (comparar(usuarios[origen[i]].getNombreUsuario(),
                                    usuarios[origen[j]].getNombreUsuario()) <= 0) {
                     destino[k++] = origen[i++];
@@ -125,8 +162,8 @@ void Plataforma::construirIndice() {
                     destino[k++] = origen[j++];
                 }
             }
-            while (i < mid) { contadorIteraciones++; destino[k++] = origen[i++]; }
-            while (j < hi)  { contadorIteraciones++; destino[k++] = origen[j++]; }
+            while (i < mid) { sumarIteraciones(1); destino[k++] = origen[i++]; }
+            while (j < hi)  { sumarIteraciones(1); destino[k++] = origen[j++]; }
         }
         int* t = origen; origen = destino; destino = t;
     }
@@ -143,13 +180,44 @@ void Plataforma::finalizarUsuarios() {
     matrizCompacta = new unsigned char[tamanoMatrizBytes]();
 }
 
+
+
 int Plataforma::getCantidadUsuarios() const { return cantidadUsuarios; }
+int Plataforma::getCapacidadUsuarios() const { return capacidadUsuarios; }
+size_t Plataforma::getTamanoMatrizBytes() const { return tamanoMatrizBytes; }
+const char* Plataforma::getRutaBD() const { return seguro(rutaBD); }
+bool Plataforma::isCambioFotosUsado() const { return cambioFotosUsado; }
+bool Plataforma::hayCambiosPendientes() const { return cambiosPendientes || perfilesModificados; }
+int Plataforma::getSesionActual() const { return idxUsuarioAutenticado; }
+
+bool Plataforma::setRutaBD(const char* carpeta) {
+    if (!campoValido(carpeta, true)) return false;
+    char* nueva = copiar(carpeta);
+    delete[] rutaBD;
+    rutaBD = nueva;
+    return true;
+}
+
+void Plataforma::setSemilla(unsigned int semilla) { generador.seed(semilla); }
+
+bool Plataforma::renombrarUsuario(int idx, const char* nuevoNombre) {
+    MarcoLocal marco(*this, sizeof(idx) + sizeof(nuevoNombre) + sizeof(int));
+    if (idx < 0 || idx >= cantidadUsuarios || !campoValido(nuevoNombre)) return false;
+    if (iguales(usuarios[idx].getNombreUsuario(), nuevoNombre)) return true;
+    if (buscarUsuario(nuevoNombre) != -1) return false;
+    if (!usuarios[idx].setNombreUsuario(nuevoNombre)) return false;
+    construirIndice();
+    perfilesModificados = true;
+    cambiosPendientes = true;
+    return true;
+}
 
 int Plataforma::buscarUsuario(const char* nombreUsuario) const {
     if (cantidadUsuarios == 0 || !indiceUsuarios || !nombreUsuario) return -1;
+    MarcoLocal marco(*this, sizeof(nombreUsuario) + 5 * sizeof(int));   // izq, der, med, idxReal, comp
     int izq = 0, der = cantidadUsuarios - 1;
     while (izq <= der) {
-        contadorIteraciones++;
+        sumarIteraciones(1);
         int med = izq + (der - izq) / 2;
         int idxReal = indiceUsuarios[med];
         int comp = comparar(usuarios[idxReal].getNombreUsuario(), nombreUsuario);
@@ -165,37 +233,44 @@ const Usuario* Plataforma::consultarUsuario(int idx) const {
     return &usuarios[idx];
 }
 
-bool Plataforma::cargarDatos(const char* rutaArchivo) {
-    ifstream archivo(rutaArchivo);
-    if (!archivo.is_open()) return false;
+int Plataforma::usuarioDeLinea(const char* nombre, int& ultimo) const {
+    if (ultimo != -1) {
+        if (iguales(usuarios[ultimo].getNombreUsuario(), nombre)) return ultimo;
+    }
+    ultimo = buscarUsuario(nombre);
+    return ultimo;
+}
 
-    liberar();
-    delete[] rutaBD;
-    rutaBD = copiar(rutaArchivo);
+// ---------------- Carga ----------------
+
+bool Plataforma::cargarArchivo(int archivo, const char* carpeta) {
+    size_t bytesRuta = 0;
+    char* ruta = unirRuta(carpeta, NOMBRES_ARCHIVOS[archivo], bytesRuta);
+    registrarMemoriaLocal(bytesRuta);
+    registrarComponenteExterno(EXT_ARCHIVOS);
+    ifstream entrada(ruta);
+    delete[] ruta;
+    liberarMemoriaLocal(bytesRuta);
+    if (!entrada.is_open()) return false;
 
     char linea[4096];
     char* campos[8];
-    int seccion = SEC_USUARIOS;
-    bool usuariosFinalizados = false;
+    int ultimoUsuario = -1;
+    int ultimoAlbum = -1;
 
-    while (archivo.getline(linea, sizeof(linea))) {
-        contadorIteraciones++;
+
+    MarcoLocal marco(*this, sizeof(archivo) + sizeof(carpeta) + sizeof(ruta) + sizeof(bytesRuta) +
+                            sizeof(entrada) + sizeof(linea) + sizeof(campos) +
+                            sizeof(ultimoUsuario) + sizeof(ultimoAlbum) +
+                            sizeof(Usuario) + 6 * sizeof(int) + 5 * sizeof(long long) +
+                            2 * sizeof(char*) + sizeof(bool));
+
+    while (entrada.getline(linea, sizeof(linea))) {
+        sumarIteraciones(1);
         quitarFinDeLinea(linea);
-        if (linea[0] == '\0') continue;
+        if (!contiene(linea, '|')) continue;
 
-        if (!contiene(linea, '|')) {
-            if (seccion == SEC_USUARIOS && !usuariosFinalizados) {
-                finalizarUsuarios();
-                usuariosFinalizados = true;
-            }
-            if (comienzaCon(linea, "ALBUMES")) seccion = SEC_ALBUMES;
-            else if (comienzaCon(linea, "FOTOS")) seccion = SEC_FOTOS;
-            else if (comienzaCon(linea, "RELACIONES")) seccion = SEC_RELACIONES;
-            else if (comienzaCon(linea, "MENSAJES")) seccion = SEC_MENSAJES;
-            continue;
-        }
-
-        if (seccion == SEC_USUARIOS) {
+        if (archivo == ARCH_USUARIOS) {
             if (dividir(linea, campos, 8) != 8) continue;
             if (cantidadUsuarios >= capacidadUsuarios) {
                 redimensionarUsuarios(capacidadUsuarios == 0 ? 256 : capacidadUsuarios * 2);
@@ -205,20 +280,30 @@ bool Plataforma::cargarDatos(const char* rutaArchivo) {
                           campos[4], campos[5], campos[6], campos[7]);
             usuarios[cantidadUsuarios].intercambiar(nuevo);
             cantidadUsuarios++;
-        } else if (seccion == SEC_ALBUMES) {
+        } else if (archivo == ARCH_ALBUMES) {
             if (dividir(linea, campos, 4) != 4) continue;
-            int idx = buscarUsuario(campos[0]);
+            int idx = usuarioDeLinea(campos[0], ultimoUsuario);
             if (idx != -1) usuarios[idx].agregarAlbum(campos[1], campos[2], campos[3][0]);
-        } else if (seccion == SEC_FOTOS) {
+        } else if (archivo == ARCH_FOTOS) {
             if (dividir(linea, campos, 6) != 6) continue;
-            int idx = buscarUsuario(campos[0]);
+            int previo = ultimoUsuario;
+            int idx = usuarioDeLinea(campos[0], ultimoUsuario);
             if (idx == -1) continue;
-            int ia = usuarios[idx].buscarAlbum(campos[1], contadorIteraciones);
+            if (idx != previo) ultimoAlbum = -1;
+            int ia = -1;
+            if (idx == ultimoUsuario && ultimoAlbum != -1 && iguales(
+                    usuarios[idx].getAlbum(ultimoAlbum)->getNombre(), campos[1])) {
+                ia = ultimoAlbum;
+            } else {
+                ia = usuarios[idx].buscarAlbum(campos[1]);
+            }
             if (ia == -1) continue;
-            usuarios[idx].getAlbum(ia)->agregarFoto(campos[4], aEntero(campos[2]),
-                                                    static_cast<int>(aEntero(campos[3])),
-                                                    static_cast<int>(aEntero(campos[5])));
-        } else if (seccion == SEC_RELACIONES) {
+            ultimoUsuario = idx;
+            ultimoAlbum = ia;
+            usuarios[idx].agregarFoto(ia, campos[4], aEntero(campos[2]),
+                                      static_cast<int>(aEntero(campos[3])),
+                                      static_cast<int>(aEntero(campos[5])));
+        } else if (archivo == ARCH_RELACIONES) {
             if (dividir(linea, campos, 3) != 3) continue;
             long long a = aEntero(campos[0]);
             long long b = aEntero(campos[1]);
@@ -230,210 +315,333 @@ bool Plataforma::cargarDatos(const char* rutaArchivo) {
             } else if (e == 1 && leerEstado(ia, ib) != 3) {
                 escribirEstado(ia, ib, ia < ib ? 1 : 2);
             }
-        } else if (seccion == SEC_MENSAJES) {
+        } else {
             if (dividir(linea, campos, 4) != 4) continue;
             long long emisor = aEntero(campos[0]);
             long long dest = aEntero(campos[1]);
             if (emisor < 0 || dest < 0 || emisor >= cantidadUsuarios || dest >= cantidadUsuarios) continue;
-
             char* ultimo = nullptr;
-            for (char* p = campos[3]; *p != '\0'; ++p) if (*p == '|') ultimo = p;
+            for (char* p = campos[3]; *p != '\0'; ++p) {
+                sumarIteraciones(1);
+                if (*p == '|') ultimo = p;
+            }
             bool leido = false;
             if (ultimo) { leido = (ultimo[1] == '1'); *ultimo = '\0'; }
             usuarios[dest].recibirMensaje(campos[3], aEntero(campos[2]),
-                                          static_cast<int>(emisor), leido, contadorIteraciones);
+                                          static_cast<int>(emisor), leido);
         }
     }
-    archivo.close();
-
-    if (!usuariosFinalizados) finalizarUsuarios();
-    cambiosPendientes = false;
-    return cantidadUsuarios > 0;
-}
-
-bool Plataforma::guardarCambios(const char* rutaArchivo) {
-    if (!cambiosPendientes) return true;
-    const char* ruta = rutaArchivo ? rutaArchivo : rutaBD;
-    if (!ruta) return false;
-
-    ofstream archivo(ruta);
-    if (!archivo.is_open()) return false;
-
-    int totalAlbumes = 0, totalFotos = 0, totalMensajes = 0;
-    for (int i = 0; i < cantidadUsuarios; i++) {
-        totalAlbumes += usuarios[i].getCantidadAlbumes();
-        totalMensajes += usuarios[i].getCantidadMensajes();
-        for (int a = 0; a < usuarios[i].getCantidadAlbumes(); a++) {
-            totalFotos += usuarios[i].getAlbum(a)->getCantidadFotos();
-        }
-    }
-
-    for (int i = 0; i < cantidadUsuarios; i++) {
-        const Usuario& u = usuarios[i];
-        archivo << u.getNombreUsuario() << '|' << u.getCorreo() << '|' << u.getContrasena() << '|'
-                << u.getFechaNacimiento() << '|' << u.getFechaInscripcion() << '|'
-                << u.getCiudad() << '|' << u.getPais() << '|' << u.getFotoPerfil() << '\n';
-    }
-
-    archivo << "ALBUMES " << totalAlbumes << '\n';
-    for (int i = 0; i < cantidadUsuarios; i++) {
-        const Usuario& u = usuarios[i];
-        for (int a = 0; a < u.getCantidadAlbumes(); a++) {
-            const Album* alb = u.getAlbum(a);
-            archivo << u.getNombreUsuario() << '|' << alb->getNombre() << '|'
-                    << alb->getRuta() << '|' << alb->getPrivacidad() << '\n';
-        }
-    }
-
-    archivo << "FOTOS " << totalFotos << '\n';
-    for (int i = 0; i < cantidadUsuarios; i++) {
-        const Usuario& u = usuarios[i];
-        for (int a = 0; a < u.getCantidadAlbumes(); a++) {
-            const Album* alb = u.getAlbum(a);
-            for (int f = 0; f < alb->getCantidadFotos(); f++) {
-                const Foto* foto = alb->getFoto(f);
-                archivo << u.getNombreUsuario() << '|' << alb->getNombre() << '|'
-                        << foto->getFechaCaptura() << '|' << foto->getTamano() << '|'
-                        << foto->getRuta() << '|' << foto->getLikes() << '\n';
-            }
-        }
-    }
-
-    int totalRel = 0;
-    size_t pares = (static_cast<size_t>(cantidadUsuarios) * (cantidadUsuarios - 1)) / 2;
-    for (size_t k = 0; k < pares; k++) {
-        if (((matrizCompacta[k / 4] >> ((k % 4) * 2)) & 0x03) != 0) totalRel++;
-    }
-    archivo << "RELACIONES " << totalRel << '\n';
-    size_t k = 0;
-    for (int i = 0; i < cantidadUsuarios; i++) {
-        for (int j = i + 1; j < cantidadUsuarios; j++, k++) {
-            int e = (matrizCompacta[k / 4] >> ((k % 4) * 2)) & 0x03;
-            if (e == 3) archivo << i << '|' << j << "|3\n";
-            else if (e == 1) archivo << i << '|' << j << "|1\n";
-            else if (e == 2) archivo << j << '|' << i << "|1\n";
-        }
-    }
-
-    archivo << "MENSAJES " << totalMensajes << '\n';
-    for (int d = 0; d < cantidadUsuarios; d++) {
-        const Usuario& u = usuarios[d];
-        for (int m = 0; m < u.getCantidadMensajes(); m++) {
-            const Mensaje* msg = u.getMensaje(m);
-            archivo << msg->getEmisor() << '|' << d << '|' << msg->getFechaEnvio() << '|'
-                    << msg->getContenido() << '|' << (msg->isLeido() ? 1 : 0) << '\n';
-        }
-    }
-
-    archivo.close();
-    if (archivo.fail()) return false;
-    cambiosPendientes = false;
     return true;
 }
 
+bool Plataforma::cargarDatos(const char* carpeta) {
+    int a = 0;
+    MarcoLocal marco(*this, sizeof(carpeta) + sizeof(a));
+    liberar();
+    rutaBD = copiar(carpeta);
+
+    if (!cargarArchivo(ARCH_USUARIOS, carpeta)) return false;
+    finalizarUsuarios();
+    if (cantidadUsuarios == 0) return false;
+
+    for (a = ARCH_ALBUMES; a <= ARCH_MENSAJES; a++) {
+        sumarIteraciones(1);
+        if (!cargarArchivo(a, carpeta)) return false;
+    }
+    cambiosPendientes = false;
+    perfilesModificados = false;
+    return true;
+}
+
+
+
+bool Plataforma::guardarUsuarios(const char* carpeta) const {
+    size_t bytesRuta = 0;
+    char* ruta = unirRuta(carpeta, NOMBRES_ARCHIVOS[ARCH_USUARIOS], bytesRuta);
+    registrarMemoriaLocal(bytesRuta);
+    registrarComponenteExterno(EXT_ARCHIVOS);
+    ofstream salida(ruta);
+    delete[] ruta;
+    liberarMemoriaLocal(bytesRuta);
+    if (!salida.is_open()) return false;
+
+    MarcoLocal marco(*this, sizeof(carpeta) + sizeof(bytesRuta) + sizeof(ruta) + sizeof(int*) + sizeof(int));
+    for (int i = 0; i < cantidadUsuarios; i++) {
+        sumarIteraciones(1);
+        const Usuario& u = usuarios[i];
+        salida << u.getNombreUsuario() << '|' << u.getCorreo() << '|' << u.getContrasena() << '|'
+               << u.getFechaNacimiento() << '|' << u.getFechaInscripcion() << '|' << u.getCiudad() << '|'
+               << u.getPais() << '|' << u.getFotoPerfil() << '\n';
+    }
+    salida.close();
+    return !salida.fail();
+}
+
+bool Plataforma::guardarAlbumes(const char* carpeta) const {
+    size_t bytesRuta = 0;
+    char* ruta = unirRuta(carpeta, NOMBRES_ARCHIVOS[ARCH_ALBUMES], bytesRuta);
+    registrarMemoriaLocal(bytesRuta);
+    registrarComponenteExterno(EXT_ARCHIVOS);
+    ofstream salida(ruta);
+    delete[] ruta;
+    liberarMemoriaLocal(bytesRuta);
+    if (!salida.is_open()) return false;
+
+    MarcoLocal marco(*this, sizeof(carpeta) + sizeof(bytesRuta) + sizeof(ruta) + sizeof(int*) + 2 * sizeof(int));
+    for (int i = 0; i < cantidadUsuarios; i++) {
+        sumarIteraciones(1);
+        const Usuario& u = usuarios[i];
+        for (int a = 0; a < u.getCantidadAlbumes(); a++) {
+            sumarIteraciones(1);
+            const Album* alb = u.getAlbum(a);
+            salida << u.getNombreUsuario() << '|' << alb->getNombre() << '|' << alb->getRuta() << '|'
+                   << alb->getPrivacidad() << '\n';
+        }
+    }
+    salida.close();
+    return !salida.fail();
+}
+
+bool Plataforma::guardarFotos(const char* carpeta) const {
+    size_t bytesRuta = 0;
+    char* ruta = unirRuta(carpeta, NOMBRES_ARCHIVOS[ARCH_FOTOS], bytesRuta);
+    registrarMemoriaLocal(bytesRuta);
+    registrarComponenteExterno(EXT_ARCHIVOS);
+    ofstream salida(ruta);
+    delete[] ruta;
+    liberarMemoriaLocal(bytesRuta);
+    if (!salida.is_open()) return false;
+
+    MarcoLocal marco(*this, sizeof(carpeta) + sizeof(bytesRuta) + sizeof(ruta) + sizeof(int*) + 3 * sizeof(int));
+    for (int i = 0; i < cantidadUsuarios; i++) {
+        sumarIteraciones(1);
+        const Usuario& u = usuarios[i];
+        for (int a = 0; a < u.getCantidadAlbumes(); a++) {
+            sumarIteraciones(1);
+            const Album* alb = u.getAlbum(a);
+            for (int f = 0; f < alb->getCantidadFotos(); f++) {
+                sumarIteraciones(1);
+                const Foto* foto = alb->getFoto(f);
+                salida << u.getNombreUsuario() << '|' << alb->getNombre() << '|'
+                       << foto->getFechaCaptura() << '|' << foto->getTamano() << '|'
+                       << foto->getRuta() << '|' << foto->getLikes() << '\n';
+            }
+        }
+    }
+    salida.close();
+    return !salida.fail();
+}
+
+bool Plataforma::guardarRelaciones(const char* carpeta) const {
+    size_t bytesRuta = 0;
+    char* ruta = unirRuta(carpeta, NOMBRES_ARCHIVOS[ARCH_RELACIONES], bytesRuta);
+    registrarMemoriaLocal(bytesRuta);
+    registrarComponenteExterno(EXT_ARCHIVOS);
+    ofstream salida(ruta);
+    delete[] ruta;
+    liberarMemoriaLocal(bytesRuta);
+    if (!salida.is_open()) return false;
+
+    MarcoLocal marco(*this, sizeof(carpeta) + sizeof(bytesRuta) + sizeof(ruta) + sizeof(int*) +
+                            sizeof(size_t) + 3 * sizeof(int));
+    size_t k = 0;
+    for (int i = 0; i < cantidadUsuarios; i++) {
+        sumarIteraciones(1);
+        for (int j = i + 1; j < cantidadUsuarios; j++, k++) {
+            sumarIteraciones(1);
+            int e = (matrizCompacta[k / 4] >> ((k % 4) * 2)) & 0x03;
+            if (e == 3) salida << i << '|' << j << "|3\n";
+            else if (e == 1) salida << i << '|' << j << "|1\n";
+            else if (e == 2) salida << j << '|' << i << "|1\n";
+        }
+    }
+    salida.close();
+    return !salida.fail();
+}
+
+bool Plataforma::guardarMensajes(const char* carpeta) const {
+    size_t bytesRuta = 0;
+    char* ruta = unirRuta(carpeta, NOMBRES_ARCHIVOS[ARCH_MENSAJES], bytesRuta);
+    registrarMemoriaLocal(bytesRuta);
+    registrarComponenteExterno(EXT_ARCHIVOS);
+    ofstream salida(ruta);
+    delete[] ruta;
+    liberarMemoriaLocal(bytesRuta);
+    if (!salida.is_open()) return false;
+
+    MarcoLocal marco(*this, sizeof(carpeta) + sizeof(bytesRuta) + sizeof(ruta) + sizeof(int*) + 4 * sizeof(int));
+    int total = 0;
+    for (int i = 0; i < cantidadUsuarios; i++) {
+        sumarIteraciones(1);
+        total += usuarios[i].getCantidadMensajes();
+    }
+    salida << "MENSAJES " << total << '\n';
+    for (int d = 0; d < cantidadUsuarios; d++) {
+        sumarIteraciones(1);
+        const Usuario& u = usuarios[d];
+        for (int m = 0; m < u.getCantidadMensajes(); m++) {
+            sumarIteraciones(1);
+            const Mensaje* msg = u.getMensaje(m);
+            salida << msg->getEmisor() << '|' << d << '|' << msg->getFechaEnvio() << '|'
+                   << msg->getContenido() << '|' << (msg->isLeido() ? 1 : 0) << '\n';
+        }
+    }
+    salida.close();
+    return !salida.fail();
+}
+
+bool Plataforma::guardarCambios(const char* carpeta) {
+    MarcoLocal marco(*this, sizeof(carpeta) + sizeof(const char*));
+    if (!cambiosPendientes && !perfilesModificados) return true;
+    const char* destino = carpeta ? carpeta : rutaBD;
+    if (!destino) return false;
+
+    if (perfilesModificados) {
+        if (!guardarUsuarios(destino)) return false;
+        if (!guardarAlbumes(destino)) return false;
+    }
+    if (!guardarFotos(destino)) return false;
+    if (!guardarRelaciones(destino)) return false;
+    if (!guardarMensajes(destino)) return false;
+    cambiosPendientes = false;
+    perfilesModificados = false;
+    return true;
+}
+
+// ---------------- Sesion y fotos de inicio ----------------
+
 bool Plataforma::autenticar(const char* nombreUsuario, const char* contrasena) {
+    MarcoLocal marco(*this, sizeof(nombreUsuario) + sizeof(contrasena) + sizeof(int));
     int idx = buscarUsuario(nombreUsuario);
     if (idx == -1) return false;
     if (!iguales(usuarios[idx].getContrasena(), contrasena)) return false;
     idxUsuarioAutenticado = idx;
-    cantidadFotosInicio = 0;
+    liberarCacheInicio();
     cambioFotosUsado = false;
     return true;
 }
 
 void Plataforma::cerrarSesion() {
     idxUsuarioAutenticado = -1;
-    cantidadFotosInicio = 0;
+    liberarCacheInicio();
     cambioFotosUsado = false;
 }
 
-int Plataforma::getSesionActual() const { return idxUsuarioAutenticado; }
-
 int Plataforma::listarAmigos(int idx, int* destino) const {
+    MarcoLocal marco(*this, sizeof(idx) + sizeof(destino) + 2 * sizeof(int));   // cuenta, j
     int cuenta = 0;
     for (int j = 0; j < cantidadUsuarios; j++) {
-        contadorIteraciones++;
+        sumarIteraciones(1);
         if (j != idx && leerEstado(idx, j) == 3) destino[cuenta++] = j;
     }
     return cuenta;
 }
 
-int Plataforma::elegirFotosInicio(int salida[], int maximo, bool excluirPrevias) {
-    if (idxUsuarioAutenticado < 0) return 0;
-    int n = cantidadUsuarios;
-    int* amigos = new int[n];
-    int na = listarAmigos(idxUsuarioAutenticado, amigos);
-    int* pesos = new int[na > 0 ? na : 1];
-    registrarMemoriaLocal(static_cast<size_t>(n) * sizeof(int) + static_cast<size_t>(na) * sizeof(int));
+void Plataforma::liberarCacheInicio() {
+    delete[] amigosInicio;
+    delete[] pesosInicio;
+    amigosInicio = nullptr;
+    pesosInicio = nullptr;
+    cantidadAmigosInicio = 0;
+}
+
+void Plataforma::prepararAmigosInicio() {
+    liberarCacheInicio();
+    if (idxUsuarioAutenticado < 0) return;
+
+    int* temporal = new int[cantidadUsuarios];
+    const size_t bytesTemporal = static_cast<size_t>(cantidadUsuarios) * sizeof(int);
+    registrarMemoriaLocal(bytesTemporal);
+    MarcoLocal marco(*this, sizeof(temporal) + sizeof(bytesTemporal) + 5 * sizeof(int));
+    int na = listarAmigos(idxUsuarioAutenticado, temporal);
+
+
+    amigosInicio = (na > 0) ? new int[na] : nullptr;
+    pesosInicio = (na > 0) ? new int[na] : nullptr;
+    cantidadAmigosInicio = na;
+    sumarIteraciones(na);
+    for (int a = 0; a < na; a++) {
+        amigosInicio[a] = temporal[a];
+        pesosInicio[a] = 0;
+    }
+    delete[] temporal;
+    liberarMemoriaLocal(bytesTemporal);
+
 
     for (int a = 0; a < na; a++) {
-        bool previa = false;
-        if (excluirPrevias) {
-            for (int p = 0; p < cantidadFotosInicio; p++) {
-                contadorIteraciones++;
-                if (fotosInicio[p] == amigos[a]) previa = true;
+        sumarIteraciones(1);
+        for (int g = a + 1; g < na; g++) {
+            sumarIteraciones(1);
+            if (leerEstado(amigosInicio[a], amigosInicio[g]) == 3) {
+                pesosInicio[a]++;
+                pesosInicio[g]++;
             }
         }
-        if (previa) { pesos[a] = 0; continue; }
-        int comun = 0;
-        for (int g = 0; g < na; g++) {
-            contadorIteraciones++;
-            if (g != a && leerEstado(amigos[a], amigos[g]) == 3) comun++;
-        }
-        pesos[a] = (comun <= 10) ? 2 : (comun <= 20 ? 5 : 7);
     }
+    sumarIteraciones(na);
+    for (int a = 0; a < na; a++) {
+        int comun = pesosInicio[a];
+        pesosInicio[a] = (comun <= 10) ? 2 : (comun <= 20 ? 5 : 7);
+    }
+}
+
+int Plataforma::sortearFotosInicio(int salida[], int maximo) {
+
+    MarcoLocal marco(*this, sizeof(int*) + sizeof(maximo) + 5 * sizeof(int) +
+                            sizeof(uniform_int_distribution<int>));
+    int total = 0;
+    sumarIteraciones(cantidadAmigosInicio);
+    for (int a = 0; a < cantidadAmigosInicio; a++) total += pesosInicio[a];
 
     int elegidos = 0;
-    while (elegidos < maximo) {
-        int total = 0;
-        for (int a = 0; a < na; a++) { contadorIteraciones++; total += pesos[a]; }
-        if (total == 0) break;
+    while (elegidos < maximo && total > 0) {
+        sumarIteraciones(1);
+        registrarComponenteExterno(EXT_ALEATORIOS);
         uniform_int_distribution<int> dist(0, total - 1);
         int tiro = dist(generador);
         int acumulado = 0;
-        for (int a = 0; a < na; a++) {
-            contadorIteraciones++;
-            if (pesos[a] == 0) continue;
-            acumulado += pesos[a];
+        for (int a = 0; a < cantidadAmigosInicio; a++) {
+            sumarIteraciones(1);
+            if (pesosInicio[a] == 0) continue;
+            acumulado += pesosInicio[a];
             if (tiro < acumulado) {
-                salida[elegidos++] = amigos[a];
-                pesos[a] = 0;
+                salida[elegidos++] = amigosInicio[a];
+                total -= pesosInicio[a];
+                pesosInicio[a] = 0;
                 break;
             }
         }
     }
-
-    delete[] amigos;
-    delete[] pesos;
     return elegidos;
 }
 
 int Plataforma::seleccionarFotosInicio(int salida[]) {
-    int n = elegirFotosInicio(salida, FOTOS_INICIO, false);
-    for (int i = 0; i < n; i++) fotosInicio[i] = salida[i];
-    cantidadFotosInicio = n;
-    return n;
+    MarcoLocal marco(*this, sizeof(int*));
+    if (idxUsuarioAutenticado < 0) return 0;
+    prepararAmigosInicio();
+    return sortearFotosInicio(salida, FOTOS_INICIO);
 }
 
 int Plataforma::actualizarFotosInicio(int salida[]) {
+    MarcoLocal marco(*this, sizeof(int*) + sizeof(int));
     if (cambioFotosUsado) return -1;
-    int n = elegirFotosInicio(salida, FOTOS_INICIO, true);
+    int n = sortearFotosInicio(salida, FOTOS_INICIO);
     if (n == 0) return 0;
-    for (int i = 0; i < n; i++) fotosInicio[i] = salida[i];
-    cantidadFotosInicio = n;
     cambioFotosUsado = true;
     return n;
 }
+
+
 
 bool Plataforma::solicitudPendienteHaciaMi(int idxOtro) const {
     int yo = idxUsuarioAutenticado;
     if (yo < 0 || idxOtro < 0 || idxOtro >= cantidadUsuarios || idxOtro == yo) return false;
     int e = leerEstado(yo, idxOtro);
-
     return (idxOtro < yo) ? (e == 1) : (e == 2);
 }
 
-Plataforma::ResultadoSolicitud Plataforma::enviarSolicitud(int idxDestino) {
+ResultadoSolicitud Plataforma::enviarSolicitud(int idxDestino) {
+    MarcoLocal marco(*this, sizeof(idxDestino) + 2 * sizeof(int));
     int yo = idxUsuarioAutenticado;
     if (yo < 0 || idxDestino < 0 || idxDestino >= cantidadUsuarios) return SOL_INVALIDA;
     if (idxDestino == yo) return SOL_A_SI_MISMO;
@@ -446,44 +654,50 @@ Plataforma::ResultadoSolicitud Plataforma::enviarSolicitud(int idxDestino) {
 }
 
 int Plataforma::obtenerSolicitudesRecibidas(int salida[], int maximo) const {
+    MarcoLocal marco(*this, sizeof(int*) + sizeof(maximo) + 2 * sizeof(int));
     if (idxUsuarioAutenticado < 0) return 0;
     int cuenta = 0;
     for (int i = 0; i < cantidadUsuarios; i++) {
-        contadorIteraciones++;
+        sumarIteraciones(1);
         if (solicitudPendienteHaciaMi(i) && cuenta < maximo) salida[cuenta++] = i;
     }
     return cuenta;
 }
 
 bool Plataforma::aceptarSolicitud(int idxOrigen) {
+    MarcoLocal marco(*this, sizeof(idxOrigen));
     if (!solicitudPendienteHaciaMi(idxOrigen)) return false;
     escribirEstado(idxUsuarioAutenticado, idxOrigen, 3);
     cambiosPendientes = true;
     return true;
 }
 
+
 int Plataforma::sugerirAmigos(int K, int sugeridosOut[], int coincidenciasOut[]) const {
     int yo = idxUsuarioAutenticado;
     if (yo < 0 || K <= 0) return 0;
+    if (K > MAX_SUGERENCIAS) K = MAX_SUGERENCIAS;
     int n = cantidadUsuarios;
     int* amigos = new int[n];
+    const size_t bytesAmigos = static_cast<size_t>(n) * sizeof(int);
+    registrarMemoriaLocal(bytesAmigos);
+    MarcoLocal marco(*this, sizeof(K) + 2 * sizeof(int*) + 8 * sizeof(int) + sizeof(amigos) + sizeof(bytesAmigos));
     int na = listarAmigos(yo, amigos);
-    registrarMemoriaLocal(static_cast<size_t>(n) * sizeof(int));
 
     int cantidad = 0;
     for (int u = 0; u < n; u++) {
-        contadorIteraciones++;
+        sumarIteraciones(1);
         if (u == yo || leerEstado(yo, u) != 0) continue;
         int comun = 0;
         for (int a = 0; a < na; a++) {
-            contadorIteraciones++;
+            sumarIteraciones(1);
             if (leerEstado(u, amigos[a]) == 3) comun++;
         }
         if (comun == 0) continue;
         if (cantidad < K || comun > coincidenciasOut[cantidad - 1]) {
             int pos = (cantidad < K) ? cantidad : K - 1;
             while (pos > 0 && coincidenciasOut[pos - 1] < comun) {
-                contadorIteraciones++;
+                sumarIteraciones(1);
                 coincidenciasOut[pos] = coincidenciasOut[pos - 1];
                 sugeridosOut[pos] = sugeridosOut[pos - 1];
                 pos--;
@@ -494,10 +708,12 @@ int Plataforma::sugerirAmigos(int K, int sugeridosOut[], int coincidenciasOut[])
         }
     }
     delete[] amigos;
+    liberarMemoriaLocal(bytesAmigos);
     return cantidad;
 }
 
-Plataforma::ResultadoMensaje Plataforma::enviarMensaje(int idxDestino, const char* contenido) {
+
+ResultadoMensaje Plataforma::enviarMensaje(int idxDestino, const char* contenido) {
     int yo = idxUsuarioAutenticado;
     if (yo < 0 || idxDestino < 0 || idxDestino >= cantidadUsuarios || idxDestino == yo) return MSG_INVALIDO;
     if (!sonAmigos(yo, idxDestino)) return MSG_NO_AMIGO;
@@ -506,85 +722,101 @@ Plataforma::ResultadoMensaje Plataforma::enviarMensaje(int idxDestino, const cha
     if (largo > static_cast<size_t>(MAX_MENSAJE)) return MSG_MUY_LARGO;
 
     char* limpio = new char[largo + 1];
+    const size_t bytesLimpio = largo + 1;
+    registrarMemoriaLocal(bytesLimpio);
+    MarcoLocal marco(*this, sizeof(idxDestino) + sizeof(contenido) + sizeof(yo) + sizeof(largo) +
+                            sizeof(limpio) + sizeof(bytesLimpio) + sizeof(size_t) + sizeof(char) +
+                            sizeof(long long));
+    sumarIteraciones(static_cast<long long>(largo));
     for (size_t i = 0; i < largo; i++) {
-        contadorIteraciones++;
         char c = contenido[i];
         if (c == '|') c = '/';
         else if (c == '\n' || c == '\r') c = ' ';
         limpio[i] = c;
     }
     limpio[largo] = '\0';
-    registrarMemoriaLocal(largo + 1);
 
-    long long ahora = static_cast<long long>(chrono::duration_cast<chrono::seconds>(
-        chrono::system_clock::now().time_since_epoch()).count());
-    usuarios[idxDestino].recibirMensaje(limpio, ahora, yo, false, contadorIteraciones);
+    registrarComponenteExterno(EXT_RELOJ);
+    long long ahora = static_cast<long long>(duration_cast<seconds>(
+        system_clock::now().time_since_epoch()).count());
+    usuarios[idxDestino].recibirMensaje(limpio, ahora, yo, false);
     delete[] limpio;
+    liberarMemoriaLocal(bytesLimpio);
     cambiosPendientes = true;
     return MSG_OK;
 }
 
 int Plataforma::obtenerNoLeidos(int salida[], int maximo) const {
+    MarcoLocal marco(*this, sizeof(int*) + sizeof(maximo));
     if (idxUsuarioAutenticado < 0) return 0;
-    return usuarios[idxUsuarioAutenticado].obtenerNoLeidos(salida, maximo, contadorIteraciones);
+    return usuarios[idxUsuarioAutenticado].obtenerNoLeidos(salida, maximo);
 }
 
 void Plataforma::marcarLeido(int idxMsg) {
+    MarcoLocal marco(*this, sizeof(idxMsg));
     if (idxUsuarioAutenticado < 0) return;
-    Mensaje* m = usuarios[idxUsuarioAutenticado].getMensaje(idxMsg);
-    if (m && !m->isLeido()) {
-        m->marcarLeido();
-        cambiosPendientes = true;
-    }
+    if (usuarios[idxUsuarioAutenticado].marcarMensajeLeido(idxMsg)) cambiosPendientes = true;
 }
 
 int Plataforma::buscarRecibidos(long long inicio, long long fin, int salida[], int maximo) const {
+    MarcoLocal marco(*this, sizeof(inicio) + sizeof(fin) + sizeof(int*) + sizeof(maximo));
     if (idxUsuarioAutenticado < 0) return 0;
-    return usuarios[idxUsuarioAutenticado].buscarMensajesPorFecha(inicio, fin, salida, maximo,
-                                                                  contadorIteraciones);
+    return usuarios[idxUsuarioAutenticado].buscarMensajesPorFecha(inicio, fin, salida, maximo);
 }
 
+
 void Plataforma::darLike(int idxUsuario, int idxAlbum, int idxFoto) {
+    MarcoLocal marco(*this, 3 * sizeof(int));
     if (idxUsuario < 0 || idxUsuario >= cantidadUsuarios) return;
-    Album* alb = usuarios[idxUsuario].getAlbum(idxAlbum);
-    if (!alb) return;
-    Foto* f = alb->getFoto(idxFoto);
-    if (!f) return;
-    f->darLike();
-    cambiosPendientes = true;
+    if (usuarios[idxUsuario].darLikeFoto(idxAlbum, idxFoto)) cambiosPendientes = true;
 }
 
 void Plataforma::quitarLike(int idxUsuario, int idxAlbum, int idxFoto) {
+    MarcoLocal marco(*this, 3 * sizeof(int));
     if (idxUsuario < 0 || idxUsuario >= cantidadUsuarios) return;
-    Album* alb = usuarios[idxUsuario].getAlbum(idxAlbum);
-    if (!alb) return;
-    Foto* f = alb->getFoto(idxFoto);
-    if (!f) return;
-    int antes = f->getLikes();
-    f->quitarLike();
-    if (f->getLikes() != antes) cambiosPendientes = true;
+    if (usuarios[idxUsuario].quitarLikeFoto(idxAlbum, idxFoto)) cambiosPendientes = true;
 }
+
 
 void Plataforma::reiniciarMetricas() {
-    contadorIteraciones = 0;
+    reiniciarIteraciones();
     memoriaLocal = 0;
+    memoriaLocalPico = 0;
+    componentesExternos = 0;
 }
 
-void Plataforma::sumarIteraciones(long long n) const { contadorIteraciones += n; }
+void Plataforma::sumarIteraciones(long long n) const { util::sumarIteraciones(n); }
 
-void Plataforma::registrarMemoriaLocal(size_t bytes) const { memoriaLocal += bytes; }
-
-long long Plataforma::getContadorIteraciones() const { return contadorIteraciones; }
-
-size_t Plataforma::getMemoriaEstimada() const {
-    return medirConsumoMemoriaTotal() + memoriaLocal;
+void Plataforma::registrarMemoriaLocal(size_t bytes) const {
+    memoriaLocal += bytes;
+    if (memoriaLocal > memoriaLocalPico) memoriaLocalPico = memoriaLocal;
 }
 
-size_t Plataforma::medirConsumoMemoriaTotal() const {
+void Plataforma::liberarMemoriaLocal(size_t bytes) const {
+    memoriaLocal = (bytes > memoriaLocal) ? 0 : memoriaLocal - bytes;
+}
+
+void Plataforma::registrarComponenteExterno(int componente) const { componentesExternos |= componente; }
+
+int Plataforma::getComponentesExternos() const { return componentesExternos; }
+
+long long Plataforma::getContadorIteraciones() const { return iteraciones(); }
+
+size_t Plataforma::medirMemoriaEstructuras() const {
+
+    const long long iteracionesPrevias = iteraciones();
+
     size_t total = sizeof(*this);
     total += tamanoMatrizBytes * sizeof(unsigned char);
     if (indiceUsuarios) total += static_cast<size_t>(cantidadUsuarios) * sizeof(int);
+    total += static_cast<size_t>(cantidadAmigosInicio) * 2 * sizeof(int);
     if (rutaBD) total += (longitud(rutaBD) + 1) * sizeof(char);
     for (int i = 0; i < capacidadUsuarios; i++) total += usuarios[i].obtenerMemoria();
+
+    fijarIteraciones(iteracionesPrevias);
     return total;
 }
+
+size_t Plataforma::getMemoriaActual() const { return medirMemoriaEstructuras() + memoriaLocal; }
+
+size_t Plataforma::getMemoriaPico() const { return medirMemoriaEstructuras() + memoriaLocalPico; }

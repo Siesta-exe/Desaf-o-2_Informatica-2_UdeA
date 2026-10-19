@@ -1,6 +1,7 @@
 #include "mensaje.h"
 #include "utilidades.h"
-
+#include <iostream>
+using namespace std;
 using namespace util;
 
 Mensaje::Mensaje() : contenido(nullptr), fechaEnvio(0), emisor(-1), leido(false) {}
@@ -31,13 +32,24 @@ long long Mensaje::getFechaEnvio() const { return fechaEnvio; }
 int Mensaje::getEmisor() const { return emisor; }
 bool Mensaje::isLeido() const { return leido; }
 
-void Mensaje::setContenido(const char* valor) {
+bool Mensaje::setContenido(const char* valor) {
+    if (!campoValido(valor, true)) return false;
+    if (longitud(valor) > static_cast<size_t>(MAX_CONTENIDO)) return false;
     char* nuevo = copiar(valor);
     delete[] contenido;
     contenido = nuevo;
+    return true;
 }
-void Mensaje::setFechaEnvio(long long valor) { fechaEnvio = valor; }
-void Mensaje::setEmisor(int valor) { emisor = valor; }
+bool Mensaje::setFechaEnvio(long long valor) {
+    if (valor < 0) return false;
+    fechaEnvio = valor;
+    return true;
+}
+bool Mensaje::setEmisor(int valor) {
+    if (valor < 0) return false;
+    emisor = valor;
+    return true;
+}
 void Mensaje::setLeido(bool valor) { leido = valor; }
 void Mensaje::marcarLeido() { leido = true; }
 
@@ -54,7 +66,7 @@ size_t Mensaje::obtenerMemoria() const {
     return mem;
 }
 
-std::ostream& operator<<(std::ostream& os, const Mensaje& m) {
+ostream& operator<<(ostream& os, const Mensaje& m) {
     char fecha[20];
     formatearFecha(m.fechaEnvio, fecha, true);
     os << "[" << fecha << "] " << m.getContenido();

@@ -1,6 +1,7 @@
 #include "foto.h"
 #include "utilidades.h"
-
+#include <iostream>
+using namespace std;
 using namespace util;
 
 Foto::Foto() : ruta(nullptr), fechaCaptura(0), tamano(0), likes(0) {}
@@ -31,13 +32,23 @@ long long Foto::getFechaCaptura() const { return fechaCaptura; }
 int Foto::getTamano() const { return tamano; }
 int Foto::getLikes() const { return likes; }
 
-void Foto::setRuta(const char* valor) {
+bool Foto::setRuta(const char* valor) {
+    if (!campoValido(valor)) return false;
     char* nueva = copiar(valor);
     delete[] ruta;
     ruta = nueva;
+    return true;
 }
-void Foto::setFechaCaptura(long long valor) { fechaCaptura = valor; }
-void Foto::setTamano(int valor) { tamano = valor; }
+bool Foto::setFechaCaptura(long long valor) {
+    if (valor < 0) return false;
+    fechaCaptura = valor;
+    return true;
+}
+bool Foto::setTamano(int valor) {
+    if (valor < 0) return false;
+    tamano = valor;
+    return true;
+}
 void Foto::setLikes(int valor) { likes = valor < 0 ? 0 : valor; }
 
 void Foto::darLike() { likes++; }
@@ -56,7 +67,7 @@ size_t Foto::obtenerMemoria() const {
     return mem;
 }
 
-std::ostream& operator<<(std::ostream& os, const Foto& f) {
+ostream& operator<<(ostream& os, const Foto& f) {
     char fecha[20];
     formatearFecha(f.fechaCaptura, fecha, false, false);
     os << "Ruta: " << f.getRuta() << " | Likes: " << f.likes << " | Captura: " << fecha;

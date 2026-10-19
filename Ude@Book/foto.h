@@ -23,9 +23,9 @@ public:
     int getTamano() const;
     int getLikes() const;
 
-    void setRuta(const char* valor);
-    void setFechaCaptura(long long valor);
-    void setTamano(int valor);
+    bool setRuta(const char* valor);
+    bool setFechaCaptura(long long valor);
+    bool setTamano(int valor);
     void setLikes(int valor);
 
     void darLike();

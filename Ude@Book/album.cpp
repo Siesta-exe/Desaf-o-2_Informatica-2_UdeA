@@ -1,6 +1,6 @@
 #include "album.h"
 #include "utilidades.h"
-
+using namespace std;
 using namespace util;
 
 namespace {
@@ -13,6 +13,7 @@ char normalizarPrivacidad(char c) {
 
 void Album::redimensionarFotos(int nuevaCapacidad) {
     Foto* nuevoArr = new Foto[nuevaCapacidad];
+    sumarIteraciones(cantidadFotos);
     for (int i = 0; i < cantidadFotos; i++) {
         nuevoArr[i].intercambiar(fotos[i]);
     }
@@ -36,6 +37,7 @@ Album::Album(const Album& otro)
       cantidadFotos(otro.cantidadFotos), capacidadFotos(otro.cantidadFotos) {
     if (capacidadFotos > 0) {
         fotos = new Foto[capacidadFotos];
+        sumarIteraciones(cantidadFotos);
         for (int i = 0; i < cantidadFotos; i++) fotos[i] = otro.fotos[i];
     }
 }
@@ -47,6 +49,7 @@ Album& Album::operator=(const Album& otro) {
         Foto* nuevasFotos = nullptr;
         if (otro.cantidadFotos > 0) {
             nuevasFotos = new Foto[otro.cantidadFotos];
+            sumarIteraciones(otro.cantidadFotos);
             for (int i = 0; i < otro.cantidadFotos; i++) nuevasFotos[i] = otro.fotos[i];
         }
         delete[] nombre;
@@ -89,16 +92,20 @@ const Foto* Album::getFoto(int indice) const {
     return &fotos[indice];
 }
 
-void Album::setNombre(const char* valor) {
+bool Album::setNombre(const char* valor) {
+    if (!campoValido(valor)) return false;
     char* nuevo = copiar(valor);
     delete[] nombre;
     nombre = nuevo;
+    return true;
 }
 
-void Album::setRuta(const char* valor) {
+bool Album::setRuta(const char* valor) {
+    if (!campoValido(valor)) return false;
     char* nuevo = copiar(valor);
     delete[] ruta;
     ruta = nuevo;
+    return true;
 }
 
 void Album::setPrivacidad(char valor) { privacidad = normalizarPrivacidad(valor); }

@@ -5,6 +5,9 @@
 #include <ostream>
 
 class Mensaje {
+public:
+    static constexpr int MAX_CONTENIDO = 512;
+
 private:
     char* contenido;
     long long fechaEnvio;
@@ -23,9 +26,9 @@ public:
     int getEmisor() const;
     bool isLeido() const;
 
-    void setContenido(const char* valor);
-    void setFechaEnvio(long long valor);
-    void setEmisor(int valor);
+    bool setContenido(const char* valor);
+    bool setFechaEnvio(long long valor);
+    bool setEmisor(int valor);
     void setLeido(bool valor);
     void marcarLeido();
 
