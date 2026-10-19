@@ -31,8 +31,8 @@ public:
     Foto* getFoto(int indice);
     const Foto* getFoto(int indice) const;
 
-    void setNombre(const char* valor);
-    void setRuta(const char* valor);
+    bool setNombre(const char* valor);
+    bool setRuta(const char* valor);
     void setPrivacidad(char valor);
 
     Foto* agregarFoto(const char* ruta, long long fecha, int tamano, int likes);

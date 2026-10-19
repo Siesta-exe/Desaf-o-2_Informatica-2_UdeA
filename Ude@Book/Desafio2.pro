@@ -2,8 +2,7 @@ QT = core
 
 CONFIG += c++17 cmdline
 
-# Ruta absoluta a la base de datos (Qt ejecuta desde la carpeta de compilacion, no del codigo)
-DEFINES += RUTA_BD=\\\"$$PWD/base_datos.txt\\\"
+DEFINES += RUTA_DATOS=\\\"$$PWD\\\"
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -32,4 +31,8 @@ HEADERS += \
     utilidades.h
 
 DISTFILES += \
-    base_datos.txt
+    albumes.txt \
+    fotos.txt \
+    mensajes.txt \
+    relaciones.txt \
+    usuarios.txt

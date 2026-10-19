@@ -5,7 +5,20 @@
 using namespace std;
 using namespace util;
 
+using MarcoLocal = Plataforma::MarcoLocal;
+constexpr int FOTOS_INICIO = Plataforma::FOTOS_INICIO;
+constexpr int MAX_MENSAJE = Plataforma::MAX_MENSAJE;
+
+static const Plataforma* medidor = nullptr;
+static size_t marcoMain = 0;
+
+static void iniciarMedicion(Plataforma& red, size_t bytesFuncionalidad) {
+    red.reiniciarMetricas();
+    red.registrarMemoriaLocal(marcoMain + bytesFuncionalidad);
+}
+
 static int leerLinea(char* destino, int tam) {
+    MarcoLocal marco(*medidor, sizeof(destino) + sizeof(tam) + sizeof(size_t));
     cin.getline(destino, tam);
     if (cin.eof() && cin.gcount() == 0) return -1;
     if (cin.fail() && !cin.eof()) {
@@ -14,13 +27,15 @@ static int leerLinea(char* destino, int tam) {
         return 0;
     }
     size_t n = longitud(destino);
-    while (n > 0 && destino[n - 1] == '\r') destino[--n] = '\0';
+    while (n > 0 && destino[n - 1] == '\r') { medidor->sumarIteraciones(1); destino[--n] = '\0'; }
     return 1;
 }
 
 static bool leerEntero(const char* mensaje, int& valor) {
     char buffer[64];
+    MarcoLocal marco(*medidor, sizeof(mensaje) + sizeof(buffer) + sizeof(int));   // r
     while (true) {
+        medidor->sumarIteraciones(1);
         cout << mensaje;
         int r = leerLinea(buffer, sizeof(buffer));
         if (r == -1) return false;
@@ -32,13 +47,26 @@ static bool leerEntero(const char* mensaje, int& valor) {
     }
 }
 
-static void mostrarMetricas(const Plataforma& red) {
-    size_t memoria = red.getMemoriaEstimada();
+static void mostrarMetricas(const Plataforma& red, bool conNota = false) {
+    const size_t actual = red.getMemoriaActual();
+    const size_t pico = red.getMemoriaPico();
+    const int ext = red.getComponentesExternos();
     cout << "\n--------------------------------------------------" << endl;
     cout << " [METRICAS DE EFICIENCIA]" << endl;
-    cout << "  -> Iteraciones ejecutadas : " << red.getContadorIteraciones() << endl;
-    cout << "  -> Memoria consumida      : " << memoria << " bytes ("
-         << (memoria / 1024.0) << " KiB)" << endl;
+    cout << "  -> Iteraciones (directas e indirectas) : " << red.getContadorIteraciones() << endl;
+    cout << "  -> Memoria actual  : " << actual << " bytes (" << (actual / 1024.0) << " KiB)" << endl;
+    cout << "  -> Memoria pico    : " << pico << " bytes (" << (pico / 1024.0) << " KiB)  [cota superior]" << endl;
+    cout << "  -> Componentes externos usados : ";
+    if (ext == EXT_NINGUNO) cout << "ninguno";
+    if (ext & EXT_ARCHIVOS) cout << "archivos(fstream) ";
+    if (ext & EXT_ALEATORIOS) cout << "aleatorios(<random>) ";
+    if (ext & EXT_RELOJ) cout << "reloj(<chrono>) ";
+    cout << endl;
+    if (conNota) {
+        cout << "  (Memoria actual = estructuras vivas + locales/parametros/temporales vivos.\n"
+                     "   Bytes solicitados por el programa; no incluye overhead del asignador ni buffers internos de la STL.)"
+                  << endl;
+    }
     cout << "--------------------------------------------------" << endl;
 }
 
@@ -50,6 +78,7 @@ static const char* nombreDe(const Plataforma& red, int idx) {
 static void mostrarFotosInicio(const Plataforma& red, const int fotos[], int cantidad) {
     cout << "\nFotos de perfil de algunos de tus amigos:" << endl;
     for (int i = 0; i < cantidad; i++) {
+        red.sumarIteraciones(1);
         const Usuario* amigo = red.consultarUsuario(fotos[i]);
         if (amigo) cout << "  [" << (i + 1) << "] " << amigo->getNombreUsuario()
                         << " -> " << amigo->getFotoPerfil() << endl;
@@ -57,7 +86,8 @@ static void mostrarFotosInicio(const Plataforma& red, const int fotos[], int can
 }
 
 static void menuAdministrarAmistades(Plataforma& red) {
-    red.reiniciarMetricas();
+    // locales: op, idx, tam, cantidad, i, sel (int), nombre[128], solicitudes (int*)
+    iniciarMedicion(red, 6 * sizeof(int) + sizeof(char[128]) + sizeof(int*));
 
     cout << "\n=== ADMINISTRAR AMISTADES ===" << endl;
     cout << "1. Enviar solicitud de amistad" << endl;
@@ -67,7 +97,6 @@ static void menuAdministrarAmistades(Plataforma& red) {
 
     if (op == 1) {
         char nombre[128];
-        red.registrarMemoriaLocal(sizeof(nombre));
         cout << "Ingrese el nombre de usuario de destino: ";
         if (leerLinea(nombre, sizeof(nombre)) != 1) { cout << "Nombre invalido." << endl; return; }
 
@@ -77,15 +106,15 @@ static void menuAdministrarAmistades(Plataforma& red) {
             return;
         }
         switch (red.enviarSolicitud(idx)) {
-        case Plataforma::SOL_OK:
+        case SOL_OK:
             cout << "Solicitud enviada correctamente a " << nombre << "." << endl; break;
-        case Plataforma::SOL_A_SI_MISMO:
+        case SOL_A_SI_MISMO:
             cout << "No puedes enviarte una solicitud a ti mismo." << endl; break;
-        case Plataforma::SOL_YA_AMIGOS:
+        case SOL_YA_AMIGOS:
             cout << "Ya son amigos." << endl; break;
-        case Plataforma::SOL_YA_ENVIADA:
+        case SOL_YA_ENVIADA:
             cout << "Ya enviaste una solicitud pendiente a ese usuario." << endl; break;
-        case Plataforma::SOL_YA_RECIBIDA:
+        case SOL_YA_RECIBIDA:
             cout << "Ese usuario ya te envio una solicitud: aceptala en la opcion 2." << endl; break;
         default:
             cout << "No se pudo enviar la solicitud." << endl; break;
@@ -94,7 +123,8 @@ static void menuAdministrarAmistades(Plataforma& red) {
         int tam = red.getCantidadUsuarios();
         if (tam < 1) tam = 1;
         int* solicitudes = new int[tam];
-        red.registrarMemoriaLocal(static_cast<size_t>(tam) * sizeof(int));
+        const size_t bytesSolicitudes = static_cast<size_t>(tam) * sizeof(int);
+        red.registrarMemoriaLocal(bytesSolicitudes);
         int cantidad = red.obtenerSolicitudesRecibidas(solicitudes, tam);
         if (cantidad > tam) cantidad = tam;
 
@@ -103,6 +133,7 @@ static void menuAdministrarAmistades(Plataforma& red) {
         } else {
             cout << "\nSolicitudes de amistad recibidas:" << endl;
             for (int i = 0; i < cantidad; i++) {
+                red.sumarIteraciones(1);
                 cout << (i + 1) << ". " << nombreDe(red, solicitudes[i]) << endl;
             }
             int sel;
@@ -114,16 +145,16 @@ static void menuAdministrarAmistades(Plataforma& red) {
             }
         }
         delete[] solicitudes;
+        red.liberarMemoriaLocal(bytesSolicitudes);
     } else {
         cout << "Opcion no valida." << endl;
     }
 }
 
 static void menuVisitarPerfil(Plataforma& red) {
-    red.reiniciarMetricas();
+    iniciarMedicion(red, 11 * sizeof(int) + 4 * sizeof(void*) + sizeof(bool) + sizeof(char[128]));
 
     char nombre[128];
-    red.registrarMemoriaLocal(sizeof(nombre));
     cout << "\nIngrese el nombre de usuario del amigo a visitar: ";
     if (leerLinea(nombre, sizeof(nombre)) != 1) { cout << "Nombre invalido." << endl; return; }
 
@@ -146,22 +177,24 @@ static void menuVisitarPerfil(Plataforma& red) {
 
     int totalAlbumes = amigo->getCantidadAlbumes();
     int* visibles = new int[totalAlbumes > 0 ? totalAlbumes : 1];
-    red.registrarMemoriaLocal(static_cast<size_t>(totalAlbumes) * sizeof(int));
+    const size_t bytesVisibles = static_cast<size_t>(totalAlbumes > 0 ? totalAlbumes : 1) * sizeof(int);
+    red.registrarMemoriaLocal(bytesVisibles);
     int cantVisibles = 0;
     for (int i = 0; i < totalAlbumes; i++) {
         red.sumarIteraciones(1);
-
         if (amigo->getAlbum(i)->puedeVisualizar(true, false)) visibles[cantVisibles++] = i;
     }
 
     if (cantVisibles == 0) {
         cout << "Este usuario no tiene albumes accesibles para ti." << endl;
         delete[] visibles;
+        red.liberarMemoriaLocal(bytesVisibles);
         return;
     }
 
     cout << "\nAlbumes accesibles:" << endl;
     for (int i = 0; i < cantVisibles; i++) {
+        red.sumarIteraciones(1);
         const Album* alb = amigo->getAlbum(visibles[i]);
         cout << (i + 1) << ". " << alb->getNombre() << " [" << alb->getPrivacidadTexto() << "] ("
              << alb->getCantidadFotos() << " fotos)" << endl;
@@ -179,8 +212,8 @@ static void menuVisitarPerfil(Plataforma& red) {
         } else {
             int actual = 0;
             bool enCarrusel = true;
-            red.registrarMemoriaLocal(sizeof(actual) + sizeof(enCarrusel));
             while (enCarrusel) {
+                red.sumarIteraciones(1);
                 const Foto* f = alb->getFoto(actual);
                 cout << "\n------------------------------------------" << endl;
                 cout << "Album: " << alb->getNombre() << " [Foto " << (actual + 1) << "/" << total << "]" << endl;
@@ -189,7 +222,6 @@ static void menuVisitarPerfil(Plataforma& red) {
                 cout << "1. Siguiente\n2. Previa\n3. Dar / Quitar like\n4. Salir del album" << endl;
                 int opC;
                 if (!leerEntero("Opcion: ", opC)) break;
-                red.sumarIteraciones(1);
 
                 if (opC == 1) {
                     actual = (actual + 1) % total;
@@ -211,13 +243,15 @@ static void menuVisitarPerfil(Plataforma& red) {
         }
     }
     delete[] visibles;
+    red.liberarMemoriaLocal(bytesVisibles);
 }
 
 static void menuSugerenciasAmistad(Plataforma& red) {
-    red.reiniciarMetricas();
+    iniciarMedicion(red, 4 * sizeof(int) + 2 * sizeof(int[20]));
 
     int k = 0;
     while (true) {
+        red.sumarIteraciones(1);
         if (!leerEntero("\nIngrese la cantidad K de sugerencias (1 - 20): ", k)) return;
         if (k >= 1 && k <= 20) break;
         cout << "K debe estar entre 1 y 20." << endl;
@@ -225,7 +259,6 @@ static void menuSugerenciasAmistad(Plataforma& red) {
 
     int sugeridos[20];
     int coincidencias[20];
-    red.registrarMemoriaLocal(sizeof(sugeridos) + sizeof(coincidencias) + sizeof(k));
     int cantidad = red.sugerirAmigos(k, sugeridos, coincidencias);
 
     if (cantidad == 0) {
@@ -235,6 +268,7 @@ static void menuSugerenciasAmistad(Plataforma& red) {
 
     cout << "\n=== SUGERENCIAS DE AMISTAD ===" << endl;
     for (int i = 0; i < cantidad; i++) {
+        red.sumarIteraciones(1);
         cout << (i + 1) << ". " << nombreDe(red, sugeridos[i]) << " -> "
              << coincidencias[i] << " amigos en comun" << endl;
     }
@@ -242,7 +276,7 @@ static void menuSugerenciasAmistad(Plataforma& red) {
     int sel;
     if (leerEntero("\nEnviar solicitud a una sugerencia (numero, 0 para omitir): ", sel)
         && sel > 0 && sel <= cantidad) {
-        if (red.enviarSolicitud(sugeridos[sel - 1]) == Plataforma::SOL_OK) {
+        if (red.enviarSolicitud(sugeridos[sel - 1]) == SOL_OK) {
             cout << "Solicitud enviada exitosamente a " << nombreDe(red, sugeridos[sel - 1]) << "." << endl;
         } else {
             cout << "No se pudo enviar la solicitud." << endl;
@@ -255,7 +289,8 @@ static void mostrarMensaje(const Plataforma& red, const Mensaje* m) {
 }
 
 static void menuAdministrarMensajes(Plataforma& red) {
-    red.reiniciarMetricas();
+    iniciarMedicion(red, 7 * sizeof(int) + 3 * sizeof(void*) + sizeof(char[128]) + sizeof(char[1024]) +
+                         2 * sizeof(char[64]) + 2 * sizeof(long long));
 
     cout << "\n=== ADMINISTRAR MENSAJES ===" << endl;
     cout << "1. Enviar mensaje a un amigo" << endl;
@@ -270,7 +305,6 @@ static void menuAdministrarMensajes(Plataforma& red) {
     if (op == 1) {
         char nombre[128];
         char texto[1024];
-        red.registrarMemoriaLocal(sizeof(nombre) + sizeof(texto));
         cout << "Ingrese el nombre del amigo destinatario: ";
         if (leerLinea(nombre, sizeof(nombre)) != 1) { cout << "Nombre invalido." << endl; return; }
 
@@ -280,23 +314,24 @@ static void menuAdministrarMensajes(Plataforma& red) {
             return;
         }
 
-        cout << "Escriba el mensaje (max " << Plataforma::MAX_MENSAJE << " caracteres): ";
+        cout << "Escriba el mensaje (max " << MAX_MENSAJE << " caracteres): ";
         int r = leerLinea(texto, sizeof(texto));
         if (r == -1) return;
-        if (r == 0) { cout << "El mensaje excede los " << Plataforma::MAX_MENSAJE << " caracteres." << endl; return; }
+        if (r == 0) { cout << "El mensaje excede los " << MAX_MENSAJE << " caracteres." << endl; return; }
 
         switch (red.enviarMensaje(idxDest, texto)) {
-        case Plataforma::MSG_OK: cout << "Mensaje enviado exitosamente." << endl; break;
-        case Plataforma::MSG_VACIO: cout << "No se pueden enviar mensajes vacios." << endl; break;
-        case Plataforma::MSG_MUY_LARGO: cout << "El mensaje excede los " << Plataforma::MAX_MENSAJE << " caracteres." << endl; break;
-        case Plataforma::MSG_NO_AMIGO: cout << "Solo puedes escribirle a tus amigos." << endl; break;
+        case MSG_OK: cout << "Mensaje enviado exitosamente." << endl; break;
+        case MSG_VACIO: cout << "No se pueden enviar mensajes vacios." << endl; break;
+        case MSG_MUY_LARGO: cout << "El mensaje excede los " << MAX_MENSAJE << " caracteres." << endl; break;
+        case MSG_NO_AMIGO: cout << "Solo puedes escribirle a tus amigos." << endl; break;
         default: cout << "Error al enviar el mensaje." << endl; break;
         }
     } else if (op == 2) {
         int tam = actual->getCantidadMensajes();
         if (tam < 1) tam = 1;
         int* noLeidos = new int[tam];
-        red.registrarMemoriaLocal(static_cast<size_t>(tam) * sizeof(int));
+        const size_t bytesNoLeidos = static_cast<size_t>(tam) * sizeof(int);
+        red.registrarMemoriaLocal(bytesNoLeidos);
         int cantidad = red.obtenerNoLeidos(noLeidos, tam);
         if (cantidad > tam) cantidad = tam;
 
@@ -304,16 +339,17 @@ static void menuAdministrarMensajes(Plataforma& red) {
             cout << "No tienes mensajes nuevos sin leer." << endl;
         } else {
             cout << "\n--- Mensajes nuevos (" << cantidad << ") ---" << endl;
+            red.sumarIteraciones(cantidad);   // ciclo de visualizacion
             for (int i = 0; i < cantidad; i++) mostrarMensaje(red, actual->getMensaje(noLeidos[i]));
+            red.sumarIteraciones(cantidad);   // ciclo de marcado como leidos
             for (int i = 0; i < cantidad; i++) red.marcarLeido(noLeidos[i]);
-            red.sumarIteraciones(cantidad);
             cout << "Los mensajes mostrados fueron marcados como leidos." << endl;
         }
         delete[] noLeidos;
+        red.liberarMemoriaLocal(bytesNoLeidos);
     } else if (op == 3) {
         char fInicio[64], fFin[64];
         long long inicio, fin;
-        red.registrarMemoriaLocal(sizeof(fInicio) + sizeof(fFin) + sizeof(inicio) + sizeof(fin));
         cout << "Fecha inicio (AAAA-MM-DD): ";
         if (leerLinea(fInicio, sizeof(fInicio)) != 1 || !parsearFecha(fInicio, inicio)) {
             cout << "Fecha de inicio invalida." << endl; return;
@@ -328,7 +364,8 @@ static void menuAdministrarMensajes(Plataforma& red) {
         int tam = actual->getCantidadMensajes();
         if (tam < 1) tam = 1;
         int* resultado = new int[tam];
-        red.registrarMemoriaLocal(static_cast<size_t>(tam) * sizeof(int));
+        const size_t bytesResultado = static_cast<size_t>(tam) * sizeof(int);
+        red.registrarMemoriaLocal(bytesResultado);
         int cantidad = red.buscarRecibidos(inicio, fin, resultado, tam);
         if (cantidad > tam) cantidad = tam;
 
@@ -337,48 +374,76 @@ static void menuAdministrarMensajes(Plataforma& red) {
         } else {
             cout << "\n--- Mensajes recibidos del " << fInicio << " al " << fFin
                  << " (" << cantidad << ") ---" << endl;
+            red.sumarIteraciones(cantidad);   // ciclo de visualizacion
             for (int i = 0; i < cantidad; i++) mostrarMensaje(red, actual->getMensaje(resultado[i]));
         }
         delete[] resultado;
+        red.liberarMemoriaLocal(bytesResultado);
     } else {
         cout << "Opcion no valida." << endl;
     }
 }
 
+
+static void guardarYReportar(Plataforma& red) {
+    if (!red.hayCambiosPendientes()) return;
+    cout << "\nGuardando cambios en la base de datos..." << endl;
+    iniciarMedicion(red, 0);
+    if (!red.guardarCambios()) cout << "Advertencia: no se pudieron guardar los cambios." << endl;
+    mostrarMetricas(red);
+}
+
 int main(int argc, char** argv) {
     Plataforma redSocial;
+    medidor = &redSocial;
+
+
+    const char* candidatas[8];
+    int nc = 0;
+    bool cargada = false;
+    int i = 0;
+    bool ejecutando = true;
+    char usuarioInput[128], claveInput[128];
+    bool sesionActiva = true;
+    int opcion = 0;
+    int fotosInicio[FOTOS_INICIO];
+    int cantFotos = 0;
+    char respuesta[16];
+    int nuevas = 0;
+    marcoMain = sizeof(argc) + sizeof(argv) + sizeof(candidatas) + sizeof(nc) + sizeof(cargada) +
+                sizeof(i) + sizeof(ejecutando) + sizeof(usuarioInput) + sizeof(claveInput) +
+                sizeof(sesionActiva) + sizeof(opcion) + sizeof(fotosInicio) + sizeof(cantFotos) +
+                sizeof(respuesta) + sizeof(nuevas);
 
     cout << "==========================================" << endl;
     cout << "    INICIALIZANDO PLATAFORMA UDE@BOOK     " << endl;
     cout << "==========================================" << endl;
 
-    const char* candidatas[8];
-    int nc = 0;
-    if (argc > 1) candidatas[nc++] = argv[1];
-#ifdef RUTA_BD
-    candidatas[nc++] = RUTA_BD;
-#endif
-    candidatas[nc++] = "base_datos.txt";
-    candidatas[nc++] = "../base_datos.txt";
-    candidatas[nc++] = "../../base_datos.txt";
+    if (argc > 2) redSocial.setSemilla(static_cast<unsigned int>(aEntero(argv[2])));   // sorteos reproducibles
 
-    redSocial.reiniciarMetricas();
-    bool cargada = false;
-    for (int i = 0; i < nc && !cargada; i++) {
+    if (argc > 1) candidatas[nc++] = argv[1];
+#ifdef RUTA_DATOS
+    candidatas[nc++] = RUTA_DATOS;
+#endif
+    candidatas[nc++] = ".";
+    candidatas[nc++] = "..";
+    candidatas[nc++] = "../..";
+
+    iniciarMedicion(redSocial, 0);
+    for (i = 0; i < nc && !cargada; i++) {
+        redSocial.sumarIteraciones(1);
         cargada = redSocial.cargarDatos(candidatas[i]);
-        if (cargada) cout << "Base de datos cargada desde: " << candidatas[i] << endl;
+        if (cargada) cout << "Datos cargados desde la carpeta: " << candidatas[i] << endl;
     }
     if (!cargada) {
-        cout << "Error: no se pudo cargar 'base_datos.txt'. Ubiquelo junto al ejecutable\n"
-                "o pase su ruta como argumento." << endl;
+        cout << "Error: no se pudieron cargar los archivos de datos (usuarios, albumes, fotos,\n"
+                "relaciones y mensajes .txt). Ubiquelos junto al ejecutable o pase la carpeta como argumento." << endl;
         return 1;
     }
     cout << "Usuarios cargados: " << redSocial.getCantidadUsuarios() << endl;
-    mostrarMetricas(redSocial);
+    mostrarMetricas(redSocial, true);
 
-    bool ejecutando = true;
     while (ejecutando) {
-        char usuarioInput[128], claveInput[128];
         cout << "\n--- INICIO DE SESION (escriba 'salir' como usuario para terminar) ---" << endl;
         cout << "Usuario : ";
         if (leerLinea(usuarioInput, sizeof(usuarioInput)) == -1) break;
@@ -386,32 +451,30 @@ int main(int argc, char** argv) {
         cout << "Clave   : ";
         if (leerLinea(claveInput, sizeof(claveInput)) == -1) break;
 
-        redSocial.reiniciarMetricas();
+        // Funcionalidad II: ingreso + fotos de amigos (+ actualizacion unica opcional)
+        iniciarMedicion(redSocial, 0);
         if (!redSocial.autenticar(usuarioInput, claveInput)) {
             cout << "Error: Credenciales invalidas. Intente de nuevo." << endl;
             continue;
         }
 
-        cout << "\n¡ Bienvenido a Ude@Book, " << usuarioInput << "!" << endl;
+        cout << "\n¡Bienvenido a Ude@Book, " << usuarioInput << "!" << endl;
 
-        int fotosInicio[Plataforma::FOTOS_INICIO];
-        redSocial.registrarMemoriaLocal(sizeof(usuarioInput) + sizeof(claveInput) + sizeof(fotosInicio));
-        int cantFotos = redSocial.seleccionarFotosInicio(fotosInicio);
+        cantFotos = redSocial.seleccionarFotosInicio(fotosInicio);
         if (cantFotos == 0) {
             cout << "\nAun no tienes amigos para mostrar sus fotos de perfil." << endl;
         } else {
             mostrarFotosInicio(redSocial, fotosInicio, cantFotos);
-            char respuesta[16];
             cout << "\nPuede cambiar este grupo de fotos UNA sola vez ¿Desea cambiarlo? (S/N): ";
             if (leerLinea(respuesta, sizeof(respuesta)) == 1 && (respuesta[0] == 'S' || respuesta[0] == 's')) {
-                int nuevas = redSocial.actualizarFotosInicio(fotosInicio);
+                nuevas = redSocial.actualizarFotosInicio(fotosInicio);
                 if (nuevas > 0) mostrarFotosInicio(redSocial, fotosInicio, nuevas);
                 else cout << "No hay otros amigos distintos para mostrar." << endl;
             }
         }
         mostrarMetricas(redSocial);
 
-        bool sesionActiva = true;
+        sesionActiva = true;
         while (sesionActiva) {
             cout << "\n==========================================" << endl;
             cout << "   Menu de opciones - " << nombreDe(redSocial, redSocial.getSesionActual()) << endl;
@@ -422,7 +485,6 @@ int main(int argc, char** argv) {
             cout << "4. Administrar mensajes" << endl;
             cout << "5. Cerrar sesion" << endl;
             cout << "6. Salir del programa" << endl;
-            int opcion;
             if (!leerEntero("Opcion: ", opcion)) { ejecutando = false; break; }
 
             switch (opcion) {
@@ -444,7 +506,7 @@ int main(int argc, char** argv) {
                 break;
             case 5:
                 redSocial.cerrarSesion();
-                redSocial.guardarCambios();
+                guardarYReportar(redSocial);
                 sesionActiva = false;
                 cout << "Sesion cerrada correctamente." << endl;
                 break;
@@ -460,10 +522,7 @@ int main(int argc, char** argv) {
         }
     }
 
-    cout << "\nGuardando cambios en la base de datos..." << endl;
-    if (!redSocial.guardarCambios()) {
-        cout << "Advertencia: no se pudieron guardar los cambios." << endl;
-    }
+    guardarYReportar(redSocial);
     cout << "¡Proceso finalizado con exito!" << endl;
     return 0;
 }

@@ -2,6 +2,8 @@
 
 namespace {
 
+long long g_iteraciones = 0;
+
 const long long DESFASE_COLOMBIA_SEG = 5LL * 3600LL;
 
 long long diasDesdeCivil(long long a, int m, int d) {
@@ -40,10 +42,15 @@ int diasDelMes(long long a, int m) {
 
 namespace util {
 
+void reiniciarIteraciones() { g_iteraciones = 0; }
+long long iteraciones() { return g_iteraciones; }
+void sumarIteraciones(long long n) { g_iteraciones += n; }
+void fijarIteraciones(long long valor) { g_iteraciones = valor; }
+
 size_t longitud(const char* s) {
     size_t n = 0;
     if (!s) return 0;
-    while (s[n] != '\0') n++;
+    while (s[n] != '\0') { g_iteraciones++; n++; }
     return n;
 }
 
@@ -51,14 +58,14 @@ char* copiar(const char* origen) {
     if (!origen) return nullptr;
     size_t n = longitud(origen);
     char* destino = new char[n + 1];
-    for (size_t i = 0; i <= n; i++) destino[i] = origen[i];
+    for (size_t i = 0; i <= n; i++) { g_iteraciones++; destino[i] = origen[i]; }
     return destino;
 }
 
 int comparar(const char* a, const char* b) {
     a = a ? a : "";
     b = b ? b : "";
-    while (*a != '\0' && *a == *b) { a++; b++; }
+    while (*a != '\0' && *a == *b) { g_iteraciones++; a++; b++; }
     return static_cast<int>(static_cast<unsigned char>(*a)) - static_cast<int>(static_cast<unsigned char>(*b));
 }
 
@@ -72,6 +79,7 @@ const char* seguro(const char* s) {
 
 bool comienzaCon(const char* s, const char* prefijo) {
     while (*prefijo != '\0') {
+        g_iteraciones++;
         if (*s != *prefijo) return false;
         s++; prefijo++;
     }
@@ -79,44 +87,62 @@ bool comienzaCon(const char* s, const char* prefijo) {
 }
 
 bool contiene(const char* s, char c) {
-    for (; *s != '\0'; s++) if (*s == c) return true;
+    for (; *s != '\0'; s++) {
+        g_iteraciones++;
+        if (*s == c) return true;
+    }
     return false;
 }
 
 bool soloEspacios(const char* s) {
     for (; *s != '\0'; s++) {
+        g_iteraciones++;
         if (*s != ' ' && *s != '\t' && *s != '\r' && *s != '\n') return false;
     }
     return true;
 }
 
+bool campoValido(const char* s, bool permitirPipe) {
+    if (!s) return false;
+    bool hayContenido = false;
+    for (; *s != '\0'; s++) {
+        g_iteraciones++;
+        if (*s == '\n' || *s == '\r') return false;
+        if (*s == '|' && !permitirPipe) return false;
+        if (*s != ' ' && *s != '\t') hayContenido = true;
+    }
+    return hayContenido;
+}
+
 bool esEnteroNoNegativo(const char* s) {
-    while (*s == ' ' || *s == '\t') s++;
+    while (*s == ' ' || *s == '\t') { g_iteraciones++; s++; }
     if (*s == '\0') return false;
     int digitos = 0;
-    while (*s >= '0' && *s <= '9') { s++; digitos++; }
-    while (*s == ' ' || *s == '\t' || *s == '\r') s++;
+    while (*s >= '0' && *s <= '9') { g_iteraciones++; s++; digitos++; }
+    while (*s == ' ' || *s == '\t' || *s == '\r') { g_iteraciones++; s++; }
     return digitos > 0 && digitos < 10 && *s == '\0';
 }
 
 long long aEntero(const char* s) {
-    while (*s == ' ' || *s == '\t') s++;
+    while (*s == ' ' || *s == '\t') { g_iteraciones++; s++; }
     bool negativo = false;
     if (*s == '-') { negativo = true; s++; }
     else if (*s == '+') { s++; }
     long long v = 0;
-    while (*s >= '0' && *s <= '9') { v = v * 10 + (*s - '0'); s++; }
+    while (*s >= '0' && *s <= '9') { g_iteraciones++; v = v * 10 + (*s - '0'); s++; }
     return negativo ? -v : v;
 }
 
 bool parsearFecha(const char* s, long long& timestamp) {
-    while (*s == ' ' || *s == '\t') s++;
+    while (*s == ' ' || *s == '\t') { g_iteraciones++; s++; }
     if (longitud(s) < 10) return false;
     for (int i = 0; i < 10; i++) {
+        g_iteraciones++;
         if (i == 4 || i == 7) { if (s[i] != '-') return false; }
         else if (s[i] < '0' || s[i] > '9') return false;
     }
     for (int i = 10; s[i] != '\0'; i++) {
+        g_iteraciones++;
         if (s[i] != ' ' && s[i] != '\t' && s[i] != '\r') return false;
     }
     long long a = (s[0] - '0') * 1000 + (s[1] - '0') * 100 + (s[2] - '0') * 10 + (s[3] - '0');

@@ -18,6 +18,15 @@ long long aEntero(const char* s);
 bool parsearFecha(const char* s, long long& timestamp);
 void formatearFecha(long long ts, char* destino, bool conHora, bool aplicarDesfase = true);
 
+
+bool campoValido(const char* s, bool permitirPipe = false);
+
+
+void reiniciarIteraciones();
+long long iteraciones();
+void sumarIteraciones(long long n);
+void fijarIteraciones(long long valor);
+
 }
 
 #endif
